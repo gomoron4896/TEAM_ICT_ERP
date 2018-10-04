@@ -10,6 +10,7 @@
 	
 	<context:property-placeholder location="classpath:config/db.properties"/>
 	
+	
 	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
 		<property name="driverClassName" value="${db.driverClassName}"></property>
 		<property name="jdbcUrl" value="${db.jdbcUrl}"></property>
@@ -36,8 +37,8 @@
 	
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSourceProxy"></property>
-		<property name="mapperLocations" value="classpath:mapper/*.xml"></property>
-		<property name="configLocation" value="classpath:config/mybatis.xml"></property>
+		<property name="configLocation" value="classpath:/config/mybatis.xml"></property>
+		<property name="mapperLocations" value="classpath:/mapper/*.xml"></property>
 	</bean>
 		
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">

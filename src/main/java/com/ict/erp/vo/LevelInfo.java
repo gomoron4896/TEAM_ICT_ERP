@@ -1,7 +1,9 @@
 package com.ict.erp.vo;
 
 import org.apache.ibatis.type.Alias;
+import org.springframework.stereotype.Component;
 
+@Component
 @Alias("Li")
 public class LevelInfo {
 

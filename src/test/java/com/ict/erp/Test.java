@@ -15,7 +15,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.ict.erp.vo.LevelInfo;
 
-@RunWith(SpringJUnit4ClassRunner.class)
+/*@RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/root-context.xml")
 public class Test {
 	@Autowired
@@ -50,4 +50,4 @@ public class Test {
 		assertEquals(ss.delete("SQL.LEVELINFO.deleteLevelInfo",li), 1);
 	}
 
-}
+}*/

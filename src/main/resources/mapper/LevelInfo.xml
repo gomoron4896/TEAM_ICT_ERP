@@ -3,7 +3,32 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="SQL.LEVELINFO">
-	<select id="selectLevelInfo" resultType="Li">
+	<select id="selectLevelInfo" resultType="Li" parameterType="Li">
 		select * from level_info
+		<where>
+			<if test="liname!=null">liname like '%' || #{liname} || '%'</if>
+		</where>
+		order by linum
 	</select>
+	
+	<insert id="insertLevelInfo" parameterType="Li">
+		insert into level_info(linum, lilevel, liname, lidesc)
+		values(seq_linum.nextval,#{lilevel},#{liname},#{lidesc})
+	</insert>
+	
+	<update id="updateLevelInfo" parameterType="Li">
+		update level_info
+		<set>
+			<if test="lilevel!=null">lilevel = #{lilevel},</if>
+			<if test="liname!=null">liname = #{liname},</if>
+			<if test="lidesc!=null">lidesc = #{lidesc},</if>
+		</set>
+		where linum = #{linum}
+	</update>
+	
+	<delete id="deleteLevelInfo" parameterType="Li">
+		delete from level_info 
+		where linum = #{linum}
+	</delete>
+	
 </mapper>
