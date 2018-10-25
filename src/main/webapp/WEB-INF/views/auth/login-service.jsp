@@ -37,7 +37,7 @@
         </div>
     </div>
     <script type="text/javascript">
-		var naver_id_login = new naver_id_login("6YMliXHS8Jl1gfQMQp23", "http://localhost/url/auth:login-service-cb");
+		var naver_id_login = new naver_id_login("6YMliXHS8Jl1gfQMQp23", "http://localhost/url/auth:login-cb");
 	  	var state = naver_id_login.getUniqState();
 	  	naver_id_login.setButton("green", 3, 80);
 	  	naver_id_login.setDomain("http://localhost/url/auth:login-service");
