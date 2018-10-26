@@ -21,4 +21,4 @@ public class LoginController {
 		
 		return uis.putUserInfo(null);
 	}*/
-}
+} 
