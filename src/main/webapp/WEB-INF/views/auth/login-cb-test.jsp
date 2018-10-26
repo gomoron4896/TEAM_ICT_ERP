@@ -86,12 +86,6 @@
 								naverLogin.reprompt();
 								return;
 							}
- 		
- 		
-							alert(ui_email);
-							alert(ui_img);
-							alert(birthday);
-							alert(ui_name);
 
 							var xhr = new XMLHttpRequest();
 							var data = {
@@ -101,37 +95,57 @@
 									ui_name:ui_name
 								};
 							data = JSON.stringify(data)
-							alert(data);
 							var url = "/login";
 							var method = "POST";
-							xhr.open(method, url,false);
+							xhr.open(method, url);
 							xhr.setRequestHeader("Content-type", "application/json");
-
 							xhr.onreadystatechange = function() {
 
-								if (xhr.readyState == 4) {
-									alert(xhr.responseText);
-									if (xhr.status == "200") {
-										if (xhr.responseText == '1') {
-											alert("추가 성공!");
-											location.href = '/main:main';
-										}
-									} else {
-										alert(xhr.status);
-										alert("추가 실패");
-									}
-								}
 							}
 							xhr.send(data);
-							
-							alert("회원가입이 완료되었습니다.");
+
 							window.location.replace("http://localhost/url/main:main");
-											/*window.location.replace("http://" + window.location.hostname + ( (location.port==""||location.port==undefined)?"":":" + location.port) + "/sample/main.html"); */
+							
+							/*window.location.replace("http://" + window.location.hostname + ( (location.port==""||location.port==undefined)?"":":" + location.port) + "/sample/main.html"); */
 						} else {
 							console.log("callback 처리에 실패하였습니다.");
 						}
 					});
 		});
+		
+		/* function insertUser(ui_email,ui_id,ui_img,ui_name) {
+			 var xhr = new XMLHttpRequest();
+			var data = {
+					ui_id:ui_id,
+					ui_email:ui_email,
+					ui_img:ui_img,
+					ui_name:ui_name
+				};
+			data = JSON.stringify(data)
+			alert(data);
+			var url = "/login";
+			var method = "POST";
+			xhr.open(method, url,false);
+			xhr.setRequestHeader("Content-type", "application/json");
+
+			xhr.onreadystatechange = function() {
+
+				if (xhr.readyState == 4) {
+					alert(xhr.responseText);
+					if (xhr.status == "200") {
+						
+						if (xhr.responseText == '1') {
+							alert("회원가입이 완료되었습니다.");
+							location.href = '/main:main';
+						}
+					} else {
+						alert(xhr.status);
+						alert("추가 실패");
+					}
+				}
+			}
+			xhr.send(data);  
+		} */
 	</script>
 </body>
 

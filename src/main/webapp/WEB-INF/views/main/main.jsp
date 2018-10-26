@@ -8,5 +8,6 @@
 </head>
 <body>
 나는 메인 페이지
+<%=session.getAttribute("login") %>
 </body>
 </html>
