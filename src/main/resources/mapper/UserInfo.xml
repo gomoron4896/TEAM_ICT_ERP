@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="SQL.USERINFO">
+	
+	<select id="selectUserInfoList" resultType="Ui" parameterType="Ui">
+		select * from user_info
+	</select>
+	
+	<select id="selectUserInfo" resultType="Ui" parameterType="Ui">
+		select * from user_info
+		<where>
+			<if test="ui_id!=null">ui_id like '%' || #{ui_id} || '%'</if>
+		</where>
+	</select>
+
+	<insert id="insertUserInfo" parameterType="Ui">
+		insert into
+		user_info(ui_num, ui_email, ui_id, ui_name, ui_img, ui_level, ui_prefund)
+		values(seq_ui_num.nextval,#{ui_email},#{ui_id},#{ui_name},#{ui_img},1,1000000)
+	</insert>
+
+	<update id="updateUserInfo" parameterType="Ui">
+		update user_info
+		<set>
+			<if test="liUser!=null">ui_name = #{ui_name},</if>
+			<if test="liname!=null">ui_img = #{ui_img},</if>
+		</set>
+		where ui_id = #{ui_id}
+	</update>
+
+	<delete id="deleteUserInfo" parameterType="Ui">
+		delete from user_info
+		where ui_id = #{ui_id}
+	</delete>
+
+</mapper>

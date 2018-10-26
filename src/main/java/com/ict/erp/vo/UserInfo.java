@@ -1,4 +1,4 @@
-/*package com.ict.erp.vo;
+package com.ict.erp.vo;
 
 import org.apache.ibatis.type.Alias;
 import org.springframework.stereotype.Component;
@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Alias("Ui")
 public class UserInfo {
+
 	private Integer ui_num;
 	private Integer ui_id;
 	private String ui_name;
@@ -71,10 +72,8 @@ public class UserInfo {
 		this.ui_level = ui_level;
 		this.ui_prefund = ui_prefund;
 	}
-	public UserInfo() {
-		
-	}
 	
+	public UserInfo() {}
 	
 }
-*/
+
