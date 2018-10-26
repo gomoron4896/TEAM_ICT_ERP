@@ -16,6 +16,7 @@
 	<!-- <beans:bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" /> -->
 	<resources mapping="/sufee/**" location="/resources/sufee/"/>
 	<resources mapping="/fl/**" location="/resources/freelancer/"/>
+	<resources mapping="/dn/**" location="/resources/donate/"/>
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

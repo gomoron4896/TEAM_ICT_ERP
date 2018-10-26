@@ -3,12 +3,13 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="ver" value="1.2"/>
 <!DOCTYPE html>
+ 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>project nest :: 가능성의 둥지</title>
     <meta name="description" content="project nest">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<!--
     <link rel="apple-touch-icon" href="apple-icon.png">
     <link rel="shortcut icon" href="favicon.ico">
 
@@ -18,7 +19,7 @@
     <link rel="stylesheet" href="/sufee/css/themify-icons.css">
     <link rel="stylesheet" href="/sufee/css/flag-icon.min.css">
     <link rel="stylesheet" href="/sufee/css/cs-skin-elastic.css">
-    <!-- <link rel="stylesheet" href="assets/css/bootstrap-select.less"> -->
+    <link rel="stylesheet" href="assets/css/bootstrap-select.less">
     <link rel="stylesheet" href="/sufee/scss/style.css">
     
    	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
@@ -28,4 +29,5 @@
     <script src="/sufee/js/plugins.js"></script>
     <script src="/sufee/js/main.js"></script>
 
-    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script>
+ -->
