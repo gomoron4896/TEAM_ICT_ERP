@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -11,7 +12,8 @@
     
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Montserrat:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="/dn/css/styles-merged.css">
-    <link rel="stylesheet" href="/dn/css/style.css">
+    <link rel="stylesheet" href="/dn/css/custom.css?ver=${ver}">
+    <link rel="shortcut icon" href="/dn/img/favicon.ico">
     <!-- <link rel="stylesheet" href="/dn/css/custom.css">  -->
 
     <!--[if lt IE 9]>
@@ -31,43 +33,39 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html" title="uiCookies:Enlight">Enlight</a>
+            <a class="navbar-brand" href="main:index" title="project nest">project nest</a>
           </div>
-
+		<!-- 상단바 우측 메뉴 -->
           <div id="navbar-collapse" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="index.html">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="news.html">News</a></li>
-              <li><a href="causes.html">Causes</a></li>
+              <li class="active"><a href="main:index">메인으로</a></li>
+              <li><a href="causes.html">전체 프로젝트</a></li>
               <li class="dropdown">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Pages</a>
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">카테고리</a>
                 <ul class="dropdown-menu">
-                  <li><a href="about.html">About Us</a></li>
-                  <li><a href="testimonial.html">Testimonial</a></li>
-                  <li><a href="cause-single.html">Cause Single</a></li>
-                  <li><a href="gallery.html">Gallery</a></li>
+                  <li><a href="about.html">카테고리 1</a></li>
+                  <li><a href="testimonial.html">카테고리 2</a></li>
+                  <li><a href="cause-single.html">카테고리 3</a></li>
+                  <li><a href="gallery.html">카테고리 4</a></li>
                   <li class="dropdown-submenu dropdown">
-                    <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span>Sub Menu</span></a>
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span>드랍 메뉴</span></a>
                     <ul class="dropdown-menu">
-                      <li><a href="#">Second Level Menu</a></li>
-                      <li><a href="#">Second Level Menu</a></li>
-                      <li><a href="#">Second Level Menu</a></li>
-                      <li><a href="#">Second Level Menu</a></li>
+                      <li><a href="#">드랍 하위 메뉴</a></li>
+                      <li><a href="#">드랍 하위 메뉴</a></li>
+                      <li><a href="#">드랍 하위 메뉴</a></li>
+                      <li><a href="#">드랍 하위 메뉴</a></li>
                     </ul>
                   </li>
-                  <li><a href="news.html">News</a></li>
-                  <li><a href="contact.html">Contact</a></li>
                 </ul>
               </li>
               
-              <li class="probootstra-cta-button last"><a href="donate.html" class="btn btn-primary">Donate</a></li>
+              <li class="probootstra-cta-button last"><a href="/localhost/url/auth:login-service" class="btn btn-primary">로그인</a></li>
             </ul>
           </div>
         </div>
       </nav>
       
-      <section class="probootstrap-hero" style="background-image: url(/dn/img/hero_bg_bw_1.jpg)"  data-stellar-background-ratio="0.5">
+      <section class="probootstrap-hero" style="background-image: url(/dn/img/img_index_featured_bg.jpg)" data-stellar-background-ratio="0.5">
         <div class="container">
           <div class="row">
             <div class="col-md-12">
@@ -124,8 +122,8 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12 text-center section-heading probootstrap-animate" data-animate-effect="fadeIn">
-              <h2>Most Popular Causes</h2>
-              <p class="lead">Sed a repudiandae impedit voluptate nam Deleniti dignissimos perspiciatis nostrum porro nesciunt</p>
+              <h2>유저가 ♡사랑♡한 아이디어들</h2>
+              <p class="lead">유저들로부터 가장 많은 LOVEIT을 받은 프로젝트들 입니다.</p>
             </div>
           </div>
           <div class="row">
@@ -458,10 +456,14 @@
           </div>
         </div>
       </footer>
-
+      
     <script src="/dn/js/scripts.min.js"></script>
     <script src="/dn/js/main.min.js"></script>
     <script src="/dn/js/custom.js"></script>
+    
+    <script>
+
+    </script>
     
   </body>
 </html>
