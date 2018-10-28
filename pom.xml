@@ -168,11 +168,6 @@
 			<artifactId>mybatis</artifactId>
 			<version>3.4.6</version>
 		</dependency>
-		<dependency>
-			<groupId>antlr</groupId>
-			<artifactId>antlr</artifactId>
-			<version>2.7.7</version>
-		</dependency>
 		<!-- mybatis-spring -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
@@ -234,7 +229,7 @@
 			<artifactId>aspectjtools</artifactId>
 			<version>1.8.9</version>
 		</dependency>
-
+		
 		<dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjweaver</artifactId>
@@ -247,13 +242,14 @@
 			<artifactId>cglib-nodep</artifactId>
 			<version>2.2.2</version>
 		</dependency>
-
+		
 		<!-- lombok -->
 		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.16.22</version>
-			<scope>provided</scope>
+		    <groupId>org.projectlombok</groupId>
+		    <artifactId>lombok</artifactId>
+		    <version>1.16.22</version>
+		    <scope>provided</scope>
 		</dependency>
 	</dependencies>
+
 </project>
