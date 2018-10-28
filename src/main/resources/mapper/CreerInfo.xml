@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="SQL.CREERINFO">
+	
+	<select id="selectCreerInfoList" resultType="Cri" parameterType="Cri">
+		select * from creer_info
+	</select>
+	
+	<select id="selectCreerInfoList" resultType="Cri" parameterType="Cri">
+		select * from creer_info
+		<where>
+			<if test="crr_name!=null">crr_name like '%' || #{crr_name} || '%'</if>
+		</where>
+	</select>
+
+	<insert id="insertCreerInfoList" parameterType="Cri">
+		insert into
+		ctgory_info(crr_num, ui_num, crr_name, crr_age, crr_addr, crr_job, crr_exp, crr_desc)
+		values(seq_crr_num.nextval,#{ui_num},#{crr_name},#{crr_age},#{crr_addr},#{crr_job},#{crr_exp},#{crr_desc})
+	</insert>
+
+	<update id="updateCreerInfoList" parameterType="Cri">
+		update creer_info
+		<set>
+			<if test="crr_name!=null">crr_name = #{crr_name},</if>
+			<if test="crr_age!=null">crr_age = #{crr_age},</if>
+			<if test="crr_addr!=null">crr_addr = #{crr_addr},</if>
+			<if test="crr_job!=null">crr_job = #{crr_job},</if>
+			<if test="crr_exp!=null">crr_exp = #{crr_exp},</if>
+			<if test="crr_desc!=null">crr_desc = #{crr_desc},</if>
+		</set>
+		where ui_num = #{ui_num}
+	</update>
+
+	<delete id="deleteCreerInfo" parameterType="Cri">
+		delete from creer_info
+		where ui_num = #{ui_num}
+	</delete>
+
+</mapper>
