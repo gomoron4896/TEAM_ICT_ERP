@@ -102,9 +102,9 @@
 							xhr.onreadystatechange = function() {
 
 							}
-							xhr.send(data);
+							xhr.send(data);                                                                                      
 
-							window.location.replace("http://localhost/url/main:main");
+							 window.location.replace("http://localhost/url/main:main");
 							
 							/*window.location.replace("http://" + window.location.hostname + ( (location.port==""||location.port==undefined)?"":":" + location.port) + "/sample/main.html"); */
 						} else {

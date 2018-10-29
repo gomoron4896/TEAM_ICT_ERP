@@ -34,12 +34,12 @@ public class UserInfoController {
 			session.removeAttribute("login");
 		}
 		session.setAttribute("login", user);
-		return "main/main";
+		return "main/index";
 	}
 
 	@RequestMapping(value = "/logout", method = RequestMethod.POST)
 	public String logoutUser(HttpSession session, @RequestBody UserInfo ui) {
 		session.invalidate();
-		return "main/main";
+		return "main/index";
 	}
 }
