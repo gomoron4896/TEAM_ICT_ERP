@@ -8,7 +8,7 @@
 		select * from creer_info
 	</select>
 	
-	<select id="selectCreerInfoList" resultType="Cri" parameterType="Cri">
+	<select id="selectCreerInfo" resultType="Cri" parameterType="Cri">
 		select * from creer_info
 		<where>
 			<if test="crr_name!=null">crr_name like '%' || #{crr_name} || '%'</if>

@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 public class CreerInfo {
 	private Integer crr_num;
 	private Integer ui_num;
-	private String crr_name;
 	private Integer crr_age;
 	private String crr_addr;
 	private String crr_job;
@@ -25,12 +24,6 @@ public class CreerInfo {
 	}
 	public void setUi_num(Integer ui_num) {
 		this.ui_num = ui_num;
-	}
-	public String getCrr_name() {
-		return crr_name;
-	}
-	public void setCrr_name(String crr_name) {
-		this.crr_name = crr_name;
 	}
 	public Integer getCrr_age() {
 		return crr_age;
@@ -64,16 +57,14 @@ public class CreerInfo {
 	}
 	@Override
 	public String toString() {
-		return "CreerInfo [crr_num=" + crr_num + ", ui_num=" + ui_num + ", crr_name=" + crr_name + ", crr_age="
-				+ crr_age + ", crr_addr=" + crr_addr + ", crr_job=" + crr_job + ", crr_exp=" + crr_exp + ", crr_desc="
-				+ crr_desc + "]";
+		return "CreerInfo [crr_num=" + crr_num + ", ui_num=" + ui_num + ", crr_age=" + crr_age + ", crr_addr="
+				+ crr_addr + ", crr_job=" + crr_job + ", crr_exp=" + crr_exp + ", crr_desc=" + crr_desc + "]";
 	}
-	public CreerInfo(Integer crr_num, Integer ui_num, String crr_name, Integer crr_age, String crr_addr, String crr_job,
-			String crr_exp, String crr_desc) {
+	public CreerInfo(Integer crr_num, Integer ui_num, Integer crr_age, String crr_addr, String crr_job, String crr_exp,
+			String crr_desc) {
 		super();
 		this.crr_num = crr_num;
 		this.ui_num = ui_num;
-		this.crr_name = crr_name;
 		this.crr_age = crr_age;
 		this.crr_addr = crr_addr;
 		this.crr_job = crr_job;
