@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="SQL.CTGORYINFO">
+	
+	<select id="selectCtgoryInfoList" resultType="Ci" parameterType="Ci">
+		select * from ctgory_info
+	</select>
+	
+	<select id="selectCtgoryInfo" resultType="Ci" parameterType="Ci">
+		select * from ctgory_info
+		<where>
+			<if test="cate_name!=null">cate_name like '%' || #{cate_name} || '%'</if>
+		</where>
+	</select>
+
+	<insert id="insertCtgoryInfo" parameterType="Ci">
+		insert into
+		ctgory_info(cate_num, cate_code, cate_name, cate_desc)
+		values(seq_cate_num.nextval,#{cate_code},#{cate_name},#{cate_desc})
+	</insert>
+
+	<update id="updateCtgoryInfo" parameterType="Ci">
+		update ctgory_info
+		<set>
+			<if test="cate_code!=null">cate_code = #{cate_code},</if>
+			<if test="cate_name!=null">cate_name = #{cate_name},</if>
+			<if test="cate_desc!=null">cate_desc = #{cate_desc},</if>
+		</set>
+		where cate_num = #{cate_num}
+	</update>
+
+	<delete id="deleteCtgoryInfo" parameterType="Ci">
+		delete from ctgory_info
+		where cate_num = #{cate_num}
+	</delete>
+
+</mapper>
