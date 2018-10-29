@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="SQL.PJHEADINFO">
+	
+	<select id="selectPjHeadInfoList" resultType="Pjh" parameterType="Pjh">
+		select * from pjhead_info
+	</select>
+	
+	<select id="selectPjHeadInfo" resultType="Pjh" parameterType="Pjh">
+		select * from pjhead_info
+		<where>
+			<if test="pjh_num!=null">pjh_num like '%' || #{pjh_num} || '%'</if>
+		</where>
+	</select>
+
+	<insert id="insertPjHeadInfo" parameterType="Pjh">
+		insert into
+		pjhead_info(pjh_num, ui_num, cate_code, pjh_intro, pjh_name, pjh_img, pjh_startdat, pjh_enddat, pjh_goalmoney, pjh_nowmoney, pjh_criticsum, pjh_lovit, pjh_status)
+		values(seq_pjh_num.nextval,#{ui_num},#{cate_code},#{pjh_intro},#{pjh_name},#{pjh_img},#{pjh_startdat},#{pjh_enddat},#{pjh_goalmoney},#{pjh_nowmoney},#{pjh_criticsum},#{pjh_lovit},#{pjh_status})
+	</insert>
+
+	<update id="updatePjHeadInfo" parameterType="Pjh">
+		update pjhead_info
+		<set>
+			<if test="pjh_intro!=null">pjh_intro = #{pjh_intro},</if>
+			<if test="pjh_name!=null">pjh_name = #{pjh_name},</if>
+			<if test="pjh_img!=null">pjh_img = #{pjh_img},</if>
+			<if test="pjh_startdat!=null">pjh_startdat = #{pjh_startdat},</if>
+			<if test="pjh_enddat!=null">pjh_enddat = #{pjh_enddat},</if>
+			<if test="pjh_goalmoney!=null">pjh_goalmoney = #{pjh_goalmoney},</if>
+			<if test="pjh_criticsum!=null">pjh_criticsum = #{pjh_criticsum},</if>
+		</set>
+		where pjh_num = #{pjh_num}
+	</update>
+
+	<delete id="deletePjHeadInfo" parameterType="Pjh">
+		delete from pjhead_info	
+		where pjh_num = #{pjh_num}
+	</delete>
+
+</mapper>

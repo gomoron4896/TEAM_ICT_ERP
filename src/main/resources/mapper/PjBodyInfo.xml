@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="SQL.PJBODYINFO">
+	
+	<select id="selectPjBodyInfoList" resultType="Pjh" parameterType="Pjh">
+		select * from pjbody_info
+	</select>
+	
+	<select id="selectPjBodyInfo" resultType="Pjh" parameterType="Pjh">
+		select * from pjbody_info
+		<where>
+			<if test="pjh_num!=null">pjh_num like '%' || #{pjh_num} || '%'</if>
+		</where>
+	</select>
+
+	<insert id="insertPjBodyInfo" parameterType="Pjh">
+		insert into
+		pjbody_info(pjb_num, pjh_num, pjb_level, pjb_title, pjb_text)
+		values(seq_pjb_num.nextval,#{pjh_num},#{pjb_level},#{pjb_title},#{pjb_text})
+	</insert>
+
+	<update id="updatePjBodyInfo" parameterType="Pjh">
+		update pjbody_info
+		<set>
+			<if test="pjb_level!=null">pjb_level = #{pjb_level},</if>
+			<if test="pjb_title!=null">pjb_title = #{pjb_title},</if>
+			<if test="pjb_text!=null">pjb_text = #{pjb_text},</if>
+		</set>
+		where pjh_num = #{pjh_num}
+	</update>
+
+	<delete id="deletePjBodyInfo" parameterType="Pjh">
+		delete from pjbody_info	
+		where pjh_num = #{pjh_num}
+	</delete>
+
+</mapper>
