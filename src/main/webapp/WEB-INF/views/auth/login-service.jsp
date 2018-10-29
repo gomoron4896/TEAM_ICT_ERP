@@ -5,7 +5,27 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
 <head>
 	<script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	
+	<link rel="apple-touch-icon" href="apple-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="/sufee/css/normalize.css">
+    <link rel="stylesheet" href="/sufee/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/sufee/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/sufee/css/themify-icons.css">
+    <link rel="stylesheet" href="/sufee/css/flag-icon.min.css">
+    <link rel="stylesheet" href="/sufee/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-select.less">
+    <link rel="stylesheet" href="/sufee/scss/style.css">
+    
+   	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+   	
+   	<script src="/sufee/js/vendor/jquery-2.1.4.min.js"></script>
+    <script src="/sufee/js/popper.min.js"></script>
+    <script src="/sufee/js/plugins.js"></script>
+    <script src="/sufee/js/main.js"></script>
+
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script>
 </head>
 
 <style>

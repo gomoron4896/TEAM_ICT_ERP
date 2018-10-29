@@ -11,7 +11,7 @@
 	</page_setting>
 	<category_index>0</category_index>
 	<zoom>0.75</zoom>
-	<x>33</x>
+	<x>0</x>
 	<y>-9</y>
 	<default_color>
 		<r>128</r>
@@ -41,7 +41,7 @@
 		<suspend_validator>false</suspend_validator>
 		<export_setting>
 			<export_ddl_setting>
-				<output_path>C:\Users\swpark\Desktop\projectERD1.sql</output_path>
+				<output_path>projectERD.sql</output_path>
 				<encoding>UTF-8</encoding>
 				<line_feed>CR+LF</line_feed>
 				<is_open_after_saved>true</is_open_after_saved>
@@ -135,7 +135,7 @@
 			</connections>
 			<display>false</display>
 			<creation_date>2018-10-23 21:56:06</creation_date>
-			<updated_date>2018-10-28 23:40:25</updated_date>
+			<updated_date>2018-10-28 17:13:40</updated_date>
 			<model_property>
 				<name>프로젝트명</name>
 				<value></value>
@@ -942,50 +942,28 @@
 	<contents>
 		<table>
 			<id>0</id>
-			<height>178</height>
-			<width>264</width>
+			<height>152</height>
+			<width>282</width>
 				<font_name>맑은 고딕</font_name>
 				<font_size>9</font_size>
-			<x>744</x>
-			<y>-12</y>
+			<x>1072</x>
+			<y>345</y>
 			<color>
 				<r>128</r>
 				<g>128</g>
 				<b>192</b>
 			</color>
 			<connections>
-				<relation>
-					<id>0</id>
-					<source>4</source>
-					<target>0</target>
-						<source_xp>-1</source_xp>
-						<source_yp>-1</source_yp>
-						<target_xp>-1</target_xp>
-						<target_yp>-1</target_yp>
-						<color>
-							<r>0</r>
-							<g>0</g>
-							<b>0</b>
-						</color>
-					<child_cardinality>1..n</child_cardinality>
-					<parent_cardinality>1</parent_cardinality>
-					<reference_for_pk>true</reference_for_pk>
-					<name></name>
-					<on_delete_action>RESTRICT</on_delete_action>
-					<on_update_action>RESTRICT</on_update_action>
-					<referenced_column>null</referenced_column>
-					<referenced_complex_unique_key>null</referenced_complex_unique_key>
-				</relation>
 			</connections>
-			<physical_name>PJBODY_INFO</physical_name>
-			<logical_name>프로젝트 정보</logical_name>
+			<physical_name>CATEGORY_INFO</physical_name>
+			<logical_name>카테고리 정보</logical_name>
 			<description></description>
 			<constraint></constraint>
 			<primary_key_name></primary_key_name>
 			<option></option>
 			<columns>
 				<normal_column>
-					<word_id>22</word_id>
+					<word_id>3</word_id>
 					<id>0</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -1018,21 +996,20 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
+					<word_id>0</word_id>
 					<id>1</id>
-					<referenced_column>27</referenced_column>
-					<relation>0</relation>
-					<description>내용 구성할 프로젝트의 PK</description>
+					<description></description>
 					<unique_key_name></unique_key_name>
-					<logical_name>내용 구성할 프로젝트의 PK</logical_name>
+					<logical_name></logical_name>
 					<physical_name></physical_name>
-					<type>decimal</type>
+					<type>character(n)</type>
 					<constraint></constraint>
 					<default_value></default_value>
 					<auto_increment>false</auto_increment>
-					<foreign_key>true</foreign_key>
+					<foreign_key>false</foreign_key>
 					<not_null>true</not_null>
 					<primary_key>false</primary_key>
-					<unique_key>false</unique_key>
+					<unique_key>true</unique_key>
 					<character_set></character_set>
 					<collation></collation>
 					<sequence>
@@ -1052,20 +1029,20 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>21</word_id>
+					<word_id>2</word_id>
 					<id>2</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
 					<physical_name></physical_name>
-					<type>decimal</type>
+					<type>varchar(n)</type>
 					<constraint></constraint>
 					<default_value></default_value>
 					<auto_increment>false</auto_increment>
 					<foreign_key>false</foreign_key>
 					<not_null>true</not_null>
 					<primary_key>false</primary_key>
-					<unique_key>false</unique_key>
+					<unique_key>true</unique_key>
 					<character_set></character_set>
 					<collation></collation>
 					<sequence>
@@ -1085,51 +1062,18 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>24</word_id>
+					<word_id>1</word_id>
 					<id>3</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
 					<physical_name></physical_name>
-					<type>varchar(n)</type>
+					<type>character(n)</type>
 					<constraint></constraint>
 					<default_value></default_value>
 					<auto_increment>false</auto_increment>
 					<foreign_key>false</foreign_key>
-					<not_null>true</not_null>
-					<primary_key>false</primary_key>
-					<unique_key>false</unique_key>
-					<character_set></character_set>
-					<collation></collation>
-					<sequence>
-						<name></name>
-						<schema></schema>
-						<increment></increment>
-						<min_value></min_value>
-						<max_value></max_value>
-						<start></start>
-						<cache></cache>
-						<nocache>false</nocache>
-						<cycle>false</cycle>
-						<order>false</order>
-						<description></description>
-						<data_type></data_type>
-						<decimal_size>0</decimal_size>
-					</sequence>
-				</normal_column>
-				<normal_column>
-					<word_id>23</word_id>
-					<id>4</id>
-					<description></description>
-					<unique_key_name></unique_key_name>
-					<logical_name></logical_name>
-					<physical_name></physical_name>
-					<type>varchar(n)</type>
-					<constraint></constraint>
-					<default_value></default_value>
-					<auto_increment>false</auto_increment>
-					<foreign_key>false</foreign_key>
-					<not_null>true</not_null>
+					<not_null>false</not_null>
 					<primary_key>false</primary_key>
 					<unique_key>false</unique_key>
 					<character_set></character_set>
@@ -1174,7 +1118,7 @@
 			</color>
 			<connections>
 				<relation>
-					<id>1</id>
+					<id>0</id>
 					<source>4</source>
 					<target>1</target>
 						<source_xp>-1</source_xp>
@@ -1196,8 +1140,8 @@
 					<referenced_complex_unique_key>null</referenced_complex_unique_key>
 				</relation>
 				<relation>
-					<id>2</id>
-					<source>5</source>
+					<id>1</id>
+					<source>6</source>
 					<target>1</target>
 						<source_xp>-1</source_xp>
 						<source_yp>-1</source_yp>
@@ -1227,7 +1171,7 @@
 			<columns>
 				<normal_column>
 					<word_id>45</word_id>
-					<id>5</id>
+					<id>4</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -1259,9 +1203,9 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<id>6</id>
-					<referenced_column>40</referenced_column>
-					<relation>2</relation>
+					<id>5</id>
+					<referenced_column>47</referenced_column>
+					<relation>1</relation>
 					<description>작성회원 정보 PK</description>
 					<unique_key_name></unique_key_name>
 					<logical_name>작성회원 정보 PK</logical_name>
@@ -1293,9 +1237,9 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<id>7</id>
-					<referenced_column>27</referenced_column>
-					<relation>1</relation>
+					<id>6</id>
+					<referenced_column>26</referenced_column>
+					<relation>0</relation>
 					<description>해당 프로젝트 PK</description>
 					<unique_key_name></unique_key_name>
 					<logical_name>해당 프로젝트 PK</logical_name>
@@ -1328,7 +1272,7 @@
 				</normal_column>
 				<normal_column>
 					<word_id>43</word_id>
-					<id>8</id>
+					<id>7</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -1361,7 +1305,7 @@
 				</normal_column>
 				<normal_column>
 					<word_id>44</word_id>
-					<id>9</id>
+					<id>8</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -1394,7 +1338,7 @@
 				</normal_column>
 				<normal_column>
 					<word_id>47</word_id>
-					<id>10</id>
+					<id>9</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -1427,7 +1371,7 @@
 				</normal_column>
 				<normal_column>
 					<word_id>46</word_id>
-					<id>11</id>
+					<id>10</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -1482,8 +1426,8 @@
 			</color>
 			<connections>
 				<relation>
-					<id>3</id>
-					<source>4</source>
+					<id>2</id>
+					<source>6</source>
 					<target>2</target>
 						<source_xp>-1</source_xp>
 						<source_yp>-1</source_yp>
@@ -1504,8 +1448,8 @@
 					<referenced_complex_unique_key>null</referenced_complex_unique_key>
 				</relation>
 				<relation>
-					<id>4</id>
-					<source>5</source>
+					<id>3</id>
+					<source>4</source>
 					<target>2</target>
 						<source_xp>-1</source_xp>
 						<source_yp>-1</source_yp>
@@ -1535,7 +1479,7 @@
 			<columns>
 				<normal_column>
 					<word_id>15</word_id>
-					<id>12</id>
+					<id>11</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -1567,8 +1511,8 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<id>13</id>
-					<referenced_column>27</referenced_column>
+					<id>12</id>
+					<referenced_column>26</referenced_column>
 					<relation>3</relation>
 					<description>프로젝트 헤더 PK</description>
 					<unique_key_name></unique_key_name>
@@ -1601,9 +1545,9 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<id>14</id>
-					<referenced_column>40</referenced_column>
-					<relation>4</relation>
+					<id>13</id>
+					<referenced_column>47</referenced_column>
+					<relation>2</relation>
 					<description>댓글 작성회원 정보 PK</description>
 					<unique_key_name></unique_key_name>
 					<logical_name>댓글 작성회원 정보 PK</logical_name>
@@ -1636,7 +1580,7 @@
 				</normal_column>
 				<normal_column>
 					<word_id>14</word_id>
-					<id>15</id>
+					<id>14</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -1669,7 +1613,7 @@
 				</normal_column>
 				<normal_column>
 					<word_id>20</word_id>
-					<id>16</id>
+					<id>15</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -1702,7 +1646,7 @@
 				</normal_column>
 				<normal_column>
 					<word_id>19</word_id>
-					<id>17</id>
+					<id>16</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -1735,7 +1679,7 @@
 				</normal_column>
 				<normal_column>
 					<word_id>17</word_id>
-					<id>18</id>
+					<id>17</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -1768,7 +1712,7 @@
 				</normal_column>
 				<normal_column>
 					<word_id>18</word_id>
-					<id>19</id>
+					<id>18</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -1801,7 +1745,7 @@
 				</normal_column>
 				<normal_column>
 					<word_id>16</word_id>
-					<id>20</id>
+					<id>19</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -1856,8 +1800,30 @@
 			</color>
 			<connections>
 				<relation>
+					<id>4</id>
+					<source>5</source>
+					<target>3</target>
+						<source_xp>-1</source_xp>
+						<source_yp>-1</source_yp>
+						<target_xp>-1</target_xp>
+						<target_yp>-1</target_yp>
+						<color>
+							<r>0</r>
+							<g>0</g>
+							<b>0</b>
+						</color>
+					<child_cardinality>1..n</child_cardinality>
+					<parent_cardinality>1</parent_cardinality>
+					<reference_for_pk>true</reference_for_pk>
+					<name></name>
+					<on_delete_action>RESTRICT</on_delete_action>
+					<on_update_action>RESTRICT</on_update_action>
+					<referenced_column>null</referenced_column>
+					<referenced_complex_unique_key>null</referenced_complex_unique_key>
+				</relation>
+				<relation>
 					<id>5</id>
-					<source>7</source>
+					<source>6</source>
 					<target>3</target>
 						<source_xp>-1</source_xp>
 						<source_yp>-1</source_yp>
@@ -1899,28 +1865,6 @@
 					<referenced_column>null</referenced_column>
 					<referenced_complex_unique_key>null</referenced_complex_unique_key>
 				</relation>
-				<relation>
-					<id>7</id>
-					<source>5</source>
-					<target>3</target>
-						<source_xp>-1</source_xp>
-						<source_yp>-1</source_yp>
-						<target_xp>-1</target_xp>
-						<target_yp>-1</target_yp>
-						<color>
-							<r>0</r>
-							<g>0</g>
-							<b>0</b>
-						</color>
-					<child_cardinality>1..n</child_cardinality>
-					<parent_cardinality>1</parent_cardinality>
-					<reference_for_pk>true</reference_for_pk>
-					<name></name>
-					<on_delete_action>RESTRICT</on_delete_action>
-					<on_update_action>RESTRICT</on_update_action>
-					<referenced_column>null</referenced_column>
-					<referenced_complex_unique_key>null</referenced_complex_unique_key>
-				</relation>
 			</connections>
 			<physical_name>CONTRACT_INFO</physical_name>
 			<logical_name>구직신청 댓글</logical_name>
@@ -1931,7 +1875,7 @@
 			<columns>
 				<normal_column>
 					<word_id>5</word_id>
-					<id>21</id>
+					<id>20</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -1963,42 +1907,8 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<id>22</id>
-					<referenced_column>40</referenced_column>
-					<relation>7</relation>
-					<description></description>
-					<unique_key_name></unique_key_name>
-					<logical_name></logical_name>
-					<physical_name></physical_name>
-					<type>decimal</type>
-					<constraint></constraint>
-					<default_value></default_value>
-					<auto_increment>false</auto_increment>
-					<foreign_key>true</foreign_key>
-					<not_null>true</not_null>
-					<primary_key>false</primary_key>
-					<unique_key>false</unique_key>
-					<character_set></character_set>
-					<collation></collation>
-					<sequence>
-						<name></name>
-						<schema></schema>
-						<increment></increment>
-						<min_value></min_value>
-						<max_value></max_value>
-						<start></start>
-						<cache></cache>
-						<nocache>false</nocache>
-						<cycle>false</cycle>
-						<order>false</order>
-						<description></description>
-						<data_type></data_type>
-						<decimal_size>0</decimal_size>
-					</sequence>
-				</normal_column>
-				<normal_column>
-					<id>23</id>
-					<referenced_column>51</referenced_column>
+					<id>21</id>
+					<referenced_column>47</referenced_column>
 					<relation>5</relation>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -2031,8 +1941,42 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<id>24</id>
-					<referenced_column>27</referenced_column>
+					<id>22</id>
+					<referenced_column>39</referenced_column>
+					<relation>4</relation>
+					<description></description>
+					<unique_key_name></unique_key_name>
+					<logical_name></logical_name>
+					<physical_name></physical_name>
+					<type>decimal</type>
+					<constraint></constraint>
+					<default_value></default_value>
+					<auto_increment>false</auto_increment>
+					<foreign_key>true</foreign_key>
+					<not_null>true</not_null>
+					<primary_key>false</primary_key>
+					<unique_key>false</unique_key>
+					<character_set></character_set>
+					<collation></collation>
+					<sequence>
+						<name></name>
+						<schema></schema>
+						<increment></increment>
+						<min_value></min_value>
+						<max_value></max_value>
+						<start></start>
+						<cache></cache>
+						<nocache>false</nocache>
+						<cycle>false</cycle>
+						<order>false</order>
+						<description></description>
+						<data_type></data_type>
+						<decimal_size>0</decimal_size>
+					</sequence>
+				</normal_column>
+				<normal_column>
+					<id>23</id>
+					<referenced_column>26</referenced_column>
 					<relation>6</relation>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -2066,7 +2010,7 @@
 				</normal_column>
 				<normal_column>
 					<word_id>4</word_id>
-					<id>25</id>
+					<id>24</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -2099,7 +2043,7 @@
 				</normal_column>
 				<normal_column>
 					<word_id>6</word_id>
-					<id>26</id>
+					<id>25</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -2154,30 +2098,8 @@
 			</color>
 			<connections>
 				<relation>
-					<id>8</id>
+					<id>7</id>
 					<source>6</source>
-					<target>4</target>
-						<source_xp>-1</source_xp>
-						<source_yp>-1</source_yp>
-						<target_xp>-1</target_xp>
-						<target_yp>-1</target_yp>
-						<color>
-							<r>0</r>
-							<g>0</g>
-							<b>0</b>
-						</color>
-					<child_cardinality>1..n</child_cardinality>
-					<parent_cardinality>1</parent_cardinality>
-					<reference_for_pk>false</reference_for_pk>
-					<name></name>
-					<on_delete_action>RESTRICT</on_delete_action>
-					<on_update_action>RESTRICT</on_update_action>
-					<referenced_column>48</referenced_column>
-					<referenced_complex_unique_key>null</referenced_complex_unique_key>
-				</relation>
-				<relation>
-					<id>9</id>
-					<source>5</source>
 					<target>4</target>
 						<source_xp>-1</source_xp>
 						<source_yp>-1</source_yp>
@@ -2197,9 +2119,31 @@
 					<referenced_column>null</referenced_column>
 					<referenced_complex_unique_key>null</referenced_complex_unique_key>
 				</relation>
+				<relation>
+					<id>8</id>
+					<source>0</source>
+					<target>4</target>
+						<source_xp>-1</source_xp>
+						<source_yp>-1</source_yp>
+						<target_xp>-1</target_xp>
+						<target_yp>-1</target_yp>
+						<color>
+							<r>0</r>
+							<g>0</g>
+							<b>0</b>
+						</color>
+					<child_cardinality>1..n</child_cardinality>
+					<parent_cardinality>1</parent_cardinality>
+					<reference_for_pk>false</reference_for_pk>
+					<name></name>
+					<on_delete_action>RESTRICT</on_delete_action>
+					<on_update_action>RESTRICT</on_update_action>
+					<referenced_column>1</referenced_column>
+					<referenced_complex_unique_key>null</referenced_complex_unique_key>
+				</relation>
 			</connections>
 			<physical_name>PJHEAD_INFO</physical_name>
-			<logical_name>프로젝트 정보</logical_name>
+			<logical_name>프로젝트 헤드 정보</logical_name>
 			<description></description>
 			<constraint></constraint>
 			<primary_key_name></primary_key_name>
@@ -2207,7 +2151,7 @@
 			<columns>
 				<normal_column>
 					<word_id>33</word_id>
-					<id>27</id>
+					<id>26</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -2239,9 +2183,9 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<id>28</id>
-					<referenced_column>40</referenced_column>
-					<relation>9</relation>
+					<id>27</id>
+					<referenced_column>47</referenced_column>
+					<relation>7</relation>
 					<description>사용자 정보 외래키</description>
 					<unique_key_name></unique_key_name>
 					<logical_name>사용자 정보 외래키</logical_name>
@@ -2273,8 +2217,8 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<id>29</id>
-					<referenced_column>48</referenced_column>
+					<id>28</id>
+					<referenced_column>1</referenced_column>
 					<relation>8</relation>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -2308,7 +2252,7 @@
 				</normal_column>
 				<normal_column>
 					<word_id>29</word_id>
-					<id>30</id>
+					<id>29</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -2341,7 +2285,7 @@
 				</normal_column>
 				<normal_column>
 					<word_id>31</word_id>
-					<id>31</id>
+					<id>30</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -2374,7 +2318,7 @@
 				</normal_column>
 				<normal_column>
 					<word_id>28</word_id>
-					<id>32</id>
+					<id>31</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -2407,7 +2351,7 @@
 				</normal_column>
 				<normal_column>
 					<word_id>34</word_id>
-					<id>33</id>
+					<id>32</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -2440,7 +2384,7 @@
 				</normal_column>
 				<normal_column>
 					<word_id>26</word_id>
-					<id>34</id>
+					<id>33</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -2473,7 +2417,7 @@
 				</normal_column>
 				<normal_column>
 					<word_id>27</word_id>
-					<id>35</id>
+					<id>34</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -2506,7 +2450,7 @@
 				</normal_column>
 				<normal_column>
 					<word_id>32</word_id>
-					<id>36</id>
+					<id>35</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -2539,7 +2483,7 @@
 				</normal_column>
 				<normal_column>
 					<word_id>25</word_id>
-					<id>37</id>
+					<id>36</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -2572,7 +2516,7 @@
 				</normal_column>
 				<normal_column>
 					<word_id>30</word_id>
-					<id>38</id>
+					<id>37</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -2605,7 +2549,7 @@
 				</normal_column>
 				<normal_column>
 					<word_id>35</word_id>
-					<id>39</id>
+					<id>38</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -2647,29 +2591,51 @@
 		</table>
 		<table>
 			<id>5</id>
-			<height>200</height>
-			<width>261</width>
+			<height>256</height>
+			<width>273</width>
 				<font_name>맑은 고딕</font_name>
 				<font_size>9</font_size>
-			<x>395</x>
-			<y>300</y>
+			<x>60</x>
+			<y>444</y>
 			<color>
 				<r>128</r>
 				<g>128</g>
 				<b>192</b>
 			</color>
 			<connections>
+				<relation>
+					<id>9</id>
+					<source>6</source>
+					<target>5</target>
+						<source_xp>-1</source_xp>
+						<source_yp>-1</source_yp>
+						<target_xp>-1</target_xp>
+						<target_yp>-1</target_yp>
+						<color>
+							<r>0</r>
+							<g>0</g>
+							<b>0</b>
+						</color>
+					<child_cardinality>1..n</child_cardinality>
+					<parent_cardinality>1</parent_cardinality>
+					<reference_for_pk>true</reference_for_pk>
+					<name></name>
+					<on_delete_action>RESTRICT</on_delete_action>
+					<on_update_action>RESTRICT</on_update_action>
+					<referenced_column>null</referenced_column>
+					<referenced_complex_unique_key>null</referenced_complex_unique_key>
+				</relation>
 			</connections>
-			<physical_name>USER_INFO</physical_name>
-			<logical_name>회원정보</logical_name>
+			<physical_name>CREER_INFO</physical_name>
+			<logical_name>구직자 정보</logical_name>
 			<description></description>
 			<constraint></constraint>
 			<primary_key_name></primary_key_name>
 			<option></option>
 			<columns>
 				<normal_column>
-					<word_id>41</word_id>
-					<id>40</id>
+					<word_id>13</word_id>
+					<id>39</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -2701,7 +2667,41 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>36</word_id>
+					<id>40</id>
+					<referenced_column>47</referenced_column>
+					<relation>9</relation>
+					<description></description>
+					<unique_key_name></unique_key_name>
+					<logical_name></logical_name>
+					<physical_name></physical_name>
+					<type>decimal</type>
+					<constraint></constraint>
+					<default_value></default_value>
+					<auto_increment>false</auto_increment>
+					<foreign_key>true</foreign_key>
+					<not_null>true</not_null>
+					<primary_key>false</primary_key>
+					<unique_key>false</unique_key>
+					<character_set></character_set>
+					<collation></collation>
+					<sequence>
+						<name></name>
+						<schema></schema>
+						<increment></increment>
+						<min_value></min_value>
+						<max_value></max_value>
+						<start></start>
+						<cache></cache>
+						<nocache>false</nocache>
+						<cycle>false</cycle>
+						<order>false</order>
+						<description></description>
+						<data_type></data_type>
+						<decimal_size>0</decimal_size>
+					</sequence>
+				</normal_column>
+				<normal_column>
+					<word_id>12</word_id>
 					<id>41</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -2714,7 +2714,7 @@
 					<foreign_key>false</foreign_key>
 					<not_null>true</not_null>
 					<primary_key>false</primary_key>
-					<unique_key>true</unique_key>
+					<unique_key>false</unique_key>
 					<character_set></character_set>
 					<collation></collation>
 					<sequence>
@@ -2734,20 +2734,20 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>37</word_id>
+					<word_id>8</word_id>
 					<id>42</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
 					<physical_name></physical_name>
-					<type>decimal</type>
+					<type>year(2)</type>
 					<constraint></constraint>
 					<default_value></default_value>
 					<auto_increment>false</auto_increment>
 					<foreign_key>false</foreign_key>
 					<not_null>true</not_null>
 					<primary_key>false</primary_key>
-					<unique_key>true</unique_key>
+					<unique_key>false</unique_key>
 					<character_set></character_set>
 					<collation></collation>
 					<sequence>
@@ -2767,7 +2767,7 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>40</word_id>
+					<word_id>7</word_id>
 					<id>43</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -2800,8 +2800,270 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>38</word_id>
+					<word_id>11</word_id>
 					<id>44</id>
+					<description></description>
+					<unique_key_name></unique_key_name>
+					<logical_name></logical_name>
+					<physical_name></physical_name>
+					<type>varchar(n)</type>
+					<constraint></constraint>
+					<default_value></default_value>
+					<auto_increment>false</auto_increment>
+					<foreign_key>false</foreign_key>
+					<not_null>true</not_null>
+					<primary_key>false</primary_key>
+					<unique_key>false</unique_key>
+					<character_set></character_set>
+					<collation></collation>
+					<sequence>
+						<name></name>
+						<schema></schema>
+						<increment></increment>
+						<min_value></min_value>
+						<max_value></max_value>
+						<start></start>
+						<cache></cache>
+						<nocache>false</nocache>
+						<cycle>false</cycle>
+						<order>false</order>
+						<description></description>
+						<data_type></data_type>
+						<decimal_size>0</decimal_size>
+					</sequence>
+				</normal_column>
+				<normal_column>
+					<word_id>10</word_id>
+					<id>45</id>
+					<description></description>
+					<unique_key_name></unique_key_name>
+					<logical_name></logical_name>
+					<physical_name></physical_name>
+					<type>varchar(n)</type>
+					<constraint></constraint>
+					<default_value></default_value>
+					<auto_increment>false</auto_increment>
+					<foreign_key>false</foreign_key>
+					<not_null>true</not_null>
+					<primary_key>false</primary_key>
+					<unique_key>false</unique_key>
+					<character_set></character_set>
+					<collation></collation>
+					<sequence>
+						<name></name>
+						<schema></schema>
+						<increment></increment>
+						<min_value></min_value>
+						<max_value></max_value>
+						<start></start>
+						<cache></cache>
+						<nocache>false</nocache>
+						<cycle>false</cycle>
+						<order>false</order>
+						<description></description>
+						<data_type></data_type>
+						<decimal_size>0</decimal_size>
+					</sequence>
+				</normal_column>
+				<normal_column>
+					<word_id>9</word_id>
+					<id>46</id>
+					<description></description>
+					<unique_key_name></unique_key_name>
+					<logical_name></logical_name>
+					<physical_name></physical_name>
+					<type>varchar(n)</type>
+					<constraint></constraint>
+					<default_value></default_value>
+					<auto_increment>false</auto_increment>
+					<foreign_key>false</foreign_key>
+					<not_null>true</not_null>
+					<primary_key>false</primary_key>
+					<unique_key>false</unique_key>
+					<character_set></character_set>
+					<collation></collation>
+					<sequence>
+						<name></name>
+						<schema></schema>
+						<increment></increment>
+						<min_value></min_value>
+						<max_value></max_value>
+						<start></start>
+						<cache></cache>
+						<nocache>false</nocache>
+						<cycle>false</cycle>
+						<order>false</order>
+						<description></description>
+						<data_type></data_type>
+						<decimal_size>0</decimal_size>
+					</sequence>
+				</normal_column>
+			</columns>
+			<indexes>
+			</indexes>
+			<complex_unique_key_list>
+			</complex_unique_key_list>
+			<table_properties>
+				<schema></schema>
+			</table_properties>
+		</table>
+		<table>
+			<id>6</id>
+			<height>200</height>
+			<width>261</width>
+				<font_name>맑은 고딕</font_name>
+				<font_size>9</font_size>
+			<x>395</x>
+			<y>300</y>
+			<color>
+				<r>128</r>
+				<g>128</g>
+				<b>192</b>
+			</color>
+			<connections>
+			</connections>
+			<physical_name>USER_INFO</physical_name>
+			<logical_name>회원정보</logical_name>
+			<description></description>
+			<constraint></constraint>
+			<primary_key_name></primary_key_name>
+			<option></option>
+			<columns>
+				<normal_column>
+					<word_id>41</word_id>
+					<id>47</id>
+					<description></description>
+					<unique_key_name></unique_key_name>
+					<logical_name></logical_name>
+					<physical_name></physical_name>
+					<type>decimal</type>
+					<constraint></constraint>
+					<default_value></default_value>
+					<auto_increment>true</auto_increment>
+					<foreign_key>false</foreign_key>
+					<not_null>true</not_null>
+					<primary_key>true</primary_key>
+					<unique_key>true</unique_key>
+					<character_set></character_set>
+					<collation></collation>
+					<sequence>
+						<name></name>
+						<schema></schema>
+						<increment></increment>
+						<min_value></min_value>
+						<max_value></max_value>
+						<start></start>
+						<cache></cache>
+						<nocache>false</nocache>
+						<cycle>false</cycle>
+						<order>false</order>
+						<description></description>
+						<data_type></data_type>
+						<decimal_size>0</decimal_size>
+					</sequence>
+				</normal_column>
+				<normal_column>
+					<word_id>36</word_id>
+					<id>48</id>
+					<description></description>
+					<unique_key_name></unique_key_name>
+					<logical_name></logical_name>
+					<physical_name></physical_name>
+					<type>varchar(n)</type>
+					<constraint></constraint>
+					<default_value></default_value>
+					<auto_increment>false</auto_increment>
+					<foreign_key>false</foreign_key>
+					<not_null>true</not_null>
+					<primary_key>false</primary_key>
+					<unique_key>true</unique_key>
+					<character_set></character_set>
+					<collation></collation>
+					<sequence>
+						<name></name>
+						<schema></schema>
+						<increment></increment>
+						<min_value></min_value>
+						<max_value></max_value>
+						<start></start>
+						<cache></cache>
+						<nocache>false</nocache>
+						<cycle>false</cycle>
+						<order>false</order>
+						<description></description>
+						<data_type></data_type>
+						<decimal_size>0</decimal_size>
+					</sequence>
+				</normal_column>
+				<normal_column>
+					<word_id>37</word_id>
+					<id>49</id>
+					<description></description>
+					<unique_key_name></unique_key_name>
+					<logical_name></logical_name>
+					<physical_name></physical_name>
+					<type>decimal</type>
+					<constraint></constraint>
+					<default_value></default_value>
+					<auto_increment>false</auto_increment>
+					<foreign_key>false</foreign_key>
+					<not_null>true</not_null>
+					<primary_key>false</primary_key>
+					<unique_key>true</unique_key>
+					<character_set></character_set>
+					<collation></collation>
+					<sequence>
+						<name></name>
+						<schema></schema>
+						<increment></increment>
+						<min_value></min_value>
+						<max_value></max_value>
+						<start></start>
+						<cache></cache>
+						<nocache>false</nocache>
+						<cycle>false</cycle>
+						<order>false</order>
+						<description></description>
+						<data_type></data_type>
+						<decimal_size>0</decimal_size>
+					</sequence>
+				</normal_column>
+				<normal_column>
+					<word_id>40</word_id>
+					<id>50</id>
+					<description></description>
+					<unique_key_name></unique_key_name>
+					<logical_name></logical_name>
+					<physical_name></physical_name>
+					<type>varchar(n)</type>
+					<constraint></constraint>
+					<default_value></default_value>
+					<auto_increment>false</auto_increment>
+					<foreign_key>false</foreign_key>
+					<not_null>true</not_null>
+					<primary_key>false</primary_key>
+					<unique_key>false</unique_key>
+					<character_set></character_set>
+					<collation></collation>
+					<sequence>
+						<name></name>
+						<schema></schema>
+						<increment></increment>
+						<min_value></min_value>
+						<max_value></max_value>
+						<start></start>
+						<cache></cache>
+						<nocache>false</nocache>
+						<cycle>false</cycle>
+						<order>false</order>
+						<description></description>
+						<data_type></data_type>
+						<decimal_size>0</decimal_size>
+					</sequence>
+				</normal_column>
+				<normal_column>
+					<word_id>38</word_id>
+					<id>51</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -2834,7 +3096,7 @@
 				</normal_column>
 				<normal_column>
 					<word_id>39</word_id>
-					<id>45</id>
+					<id>52</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -2867,7 +3129,7 @@
 				</normal_column>
 				<normal_column>
 					<word_id>42</word_id>
-					<id>46</id>
+					<id>53</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -2908,176 +3170,13 @@
 			</table_properties>
 		</table>
 		<table>
-			<id>6</id>
-			<height>152</height>
-			<width>282</width>
-				<font_name>맑은 고딕</font_name>
-				<font_size>9</font_size>
-			<x>1072</x>
-			<y>345</y>
-			<color>
-				<r>128</r>
-				<g>128</g>
-				<b>192</b>
-			</color>
-			<connections>
-			</connections>
-			<physical_name>CATEGORY_INFO</physical_name>
-			<logical_name>카테고리 정보</logical_name>
-			<description></description>
-			<constraint></constraint>
-			<primary_key_name></primary_key_name>
-			<option></option>
-			<columns>
-				<normal_column>
-					<word_id>3</word_id>
-					<id>47</id>
-					<description></description>
-					<unique_key_name></unique_key_name>
-					<logical_name></logical_name>
-					<physical_name></physical_name>
-					<type>decimal</type>
-					<constraint></constraint>
-					<default_value></default_value>
-					<auto_increment>true</auto_increment>
-					<foreign_key>false</foreign_key>
-					<not_null>true</not_null>
-					<primary_key>true</primary_key>
-					<unique_key>true</unique_key>
-					<character_set></character_set>
-					<collation></collation>
-					<sequence>
-						<name></name>
-						<schema></schema>
-						<increment></increment>
-						<min_value></min_value>
-						<max_value></max_value>
-						<start></start>
-						<cache></cache>
-						<nocache>false</nocache>
-						<cycle>false</cycle>
-						<order>false</order>
-						<description></description>
-						<data_type></data_type>
-						<decimal_size>0</decimal_size>
-					</sequence>
-				</normal_column>
-				<normal_column>
-					<word_id>0</word_id>
-					<id>48</id>
-					<description></description>
-					<unique_key_name></unique_key_name>
-					<logical_name></logical_name>
-					<physical_name></physical_name>
-					<type>character(n)</type>
-					<constraint></constraint>
-					<default_value></default_value>
-					<auto_increment>false</auto_increment>
-					<foreign_key>false</foreign_key>
-					<not_null>true</not_null>
-					<primary_key>false</primary_key>
-					<unique_key>true</unique_key>
-					<character_set></character_set>
-					<collation></collation>
-					<sequence>
-						<name></name>
-						<schema></schema>
-						<increment></increment>
-						<min_value></min_value>
-						<max_value></max_value>
-						<start></start>
-						<cache></cache>
-						<nocache>false</nocache>
-						<cycle>false</cycle>
-						<order>false</order>
-						<description></description>
-						<data_type></data_type>
-						<decimal_size>0</decimal_size>
-					</sequence>
-				</normal_column>
-				<normal_column>
-					<word_id>2</word_id>
-					<id>49</id>
-					<description></description>
-					<unique_key_name></unique_key_name>
-					<logical_name></logical_name>
-					<physical_name></physical_name>
-					<type>varchar(n)</type>
-					<constraint></constraint>
-					<default_value></default_value>
-					<auto_increment>false</auto_increment>
-					<foreign_key>false</foreign_key>
-					<not_null>true</not_null>
-					<primary_key>false</primary_key>
-					<unique_key>true</unique_key>
-					<character_set></character_set>
-					<collation></collation>
-					<sequence>
-						<name></name>
-						<schema></schema>
-						<increment></increment>
-						<min_value></min_value>
-						<max_value></max_value>
-						<start></start>
-						<cache></cache>
-						<nocache>false</nocache>
-						<cycle>false</cycle>
-						<order>false</order>
-						<description></description>
-						<data_type></data_type>
-						<decimal_size>0</decimal_size>
-					</sequence>
-				</normal_column>
-				<normal_column>
-					<word_id>1</word_id>
-					<id>50</id>
-					<description></description>
-					<unique_key_name></unique_key_name>
-					<logical_name></logical_name>
-					<physical_name></physical_name>
-					<type>character(n)</type>
-					<constraint></constraint>
-					<default_value></default_value>
-					<auto_increment>false</auto_increment>
-					<foreign_key>false</foreign_key>
-					<not_null>false</not_null>
-					<primary_key>false</primary_key>
-					<unique_key>false</unique_key>
-					<character_set></character_set>
-					<collation></collation>
-					<sequence>
-						<name></name>
-						<schema></schema>
-						<increment></increment>
-						<min_value></min_value>
-						<max_value></max_value>
-						<start></start>
-						<cache></cache>
-						<nocache>false</nocache>
-						<cycle>false</cycle>
-						<order>false</order>
-						<description></description>
-						<data_type></data_type>
-						<decimal_size>0</decimal_size>
-					</sequence>
-				</normal_column>
-			</columns>
-			<indexes>
-			</indexes>
-			<complex_unique_key_list>
-			</complex_unique_key_list>
-			<table_properties>
-				<schema></schema>
-			</table_properties>
-		</table>
-		<table>
 			<id>7</id>
-			<height>256</height>
-			<width>273</width>
+			<height>178</height>
+			<width>264</width>
 				<font_name>맑은 고딕</font_name>
 				<font_size>9</font_size>
-			<x>60</x>
-			<y>444</y>
+			<x>744</x>
+			<y>-12</y>
 			<color>
 				<r>128</r>
 				<g>128</g>
@@ -3086,7 +3185,7 @@
 			<connections>
 				<relation>
 					<id>10</id>
-					<source>5</source>
+					<source>4</source>
 					<target>7</target>
 						<source_xp>-1</source_xp>
 						<source_yp>-1</source_yp>
@@ -3107,16 +3206,16 @@
 					<referenced_complex_unique_key>null</referenced_complex_unique_key>
 				</relation>
 			</connections>
-			<physical_name>CREER_INFO</physical_name>
-			<logical_name>구직자 정보</logical_name>
+			<physical_name>PJBODY_INFO</physical_name>
+			<logical_name>프로젝트 바디 정보</logical_name>
 			<description></description>
 			<constraint></constraint>
 			<primary_key_name></primary_key_name>
 			<option></option>
 			<columns>
 				<normal_column>
-					<word_id>13</word_id>
-					<id>51</id>
+					<word_id>22</word_id>
+					<id>54</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -3148,12 +3247,12 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<id>52</id>
-					<referenced_column>40</referenced_column>
+					<id>55</id>
+					<referenced_column>26</referenced_column>
 					<relation>10</relation>
-					<description></description>
+					<description>내용 구성할 프로젝트의 PK</description>
 					<unique_key_name></unique_key_name>
-					<logical_name></logical_name>
+					<logical_name>내용 구성할 프로젝트의 PK</logical_name>
 					<physical_name></physical_name>
 					<type>decimal</type>
 					<constraint></constraint>
@@ -3182,112 +3281,13 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>12</word_id>
-					<id>53</id>
-					<description></description>
-					<unique_key_name></unique_key_name>
-					<logical_name></logical_name>
-					<physical_name></physical_name>
-					<type>varchar(n)</type>
-					<constraint></constraint>
-					<default_value></default_value>
-					<auto_increment>false</auto_increment>
-					<foreign_key>false</foreign_key>
-					<not_null>true</not_null>
-					<primary_key>false</primary_key>
-					<unique_key>false</unique_key>
-					<character_set></character_set>
-					<collation></collation>
-					<sequence>
-						<name></name>
-						<schema></schema>
-						<increment></increment>
-						<min_value></min_value>
-						<max_value></max_value>
-						<start></start>
-						<cache></cache>
-						<nocache>false</nocache>
-						<cycle>false</cycle>
-						<order>false</order>
-						<description></description>
-						<data_type></data_type>
-						<decimal_size>0</decimal_size>
-					</sequence>
-				</normal_column>
-				<normal_column>
-					<word_id>8</word_id>
-					<id>54</id>
-					<description></description>
-					<unique_key_name></unique_key_name>
-					<logical_name></logical_name>
-					<physical_name></physical_name>
-					<type>year(2)</type>
-					<constraint></constraint>
-					<default_value></default_value>
-					<auto_increment>false</auto_increment>
-					<foreign_key>false</foreign_key>
-					<not_null>true</not_null>
-					<primary_key>false</primary_key>
-					<unique_key>false</unique_key>
-					<character_set></character_set>
-					<collation></collation>
-					<sequence>
-						<name></name>
-						<schema></schema>
-						<increment></increment>
-						<min_value></min_value>
-						<max_value></max_value>
-						<start></start>
-						<cache></cache>
-						<nocache>false</nocache>
-						<cycle>false</cycle>
-						<order>false</order>
-						<description></description>
-						<data_type></data_type>
-						<decimal_size>0</decimal_size>
-					</sequence>
-				</normal_column>
-				<normal_column>
-					<word_id>7</word_id>
-					<id>55</id>
-					<description></description>
-					<unique_key_name></unique_key_name>
-					<logical_name></logical_name>
-					<physical_name></physical_name>
-					<type>varchar(n)</type>
-					<constraint></constraint>
-					<default_value></default_value>
-					<auto_increment>false</auto_increment>
-					<foreign_key>false</foreign_key>
-					<not_null>true</not_null>
-					<primary_key>false</primary_key>
-					<unique_key>false</unique_key>
-					<character_set></character_set>
-					<collation></collation>
-					<sequence>
-						<name></name>
-						<schema></schema>
-						<increment></increment>
-						<min_value></min_value>
-						<max_value></max_value>
-						<start></start>
-						<cache></cache>
-						<nocache>false</nocache>
-						<cycle>false</cycle>
-						<order>false</order>
-						<description></description>
-						<data_type></data_type>
-						<decimal_size>0</decimal_size>
-					</sequence>
-				</normal_column>
-				<normal_column>
-					<word_id>11</word_id>
+					<word_id>21</word_id>
 					<id>56</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
 					<physical_name></physical_name>
-					<type>varchar(n)</type>
+					<type>decimal</type>
 					<constraint></constraint>
 					<default_value></default_value>
 					<auto_increment>false</auto_increment>
@@ -3314,7 +3314,7 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>10</word_id>
+					<word_id>24</word_id>
 					<id>57</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -3347,7 +3347,7 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>9</word_id>
+					<word_id>23</word_id>
 					<id>58</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -3392,6 +3392,1293 @@
 	<column_groups>
 	</column_groups>
 	<test_data_list>
+			<test_data>
+				<name>테스트데이터 단 한개</name>
+				<export_order>0</export_order>
+				<table_test_data>
+					<table_id>7</table_id>
+					<direct_test_data>
+						<data>
+							<column_data>
+								<column_id>54</column_id>
+								<value>99990</value>
+							</column_data>
+							<column_data>
+								<column_id>55</column_id>
+								<value>99999</value>
+							</column_data>
+							<column_data>
+								<column_id>56</column_id>
+								<value>1</value>
+							</column_data>
+							<column_data>
+								<column_id>57</column_id>
+								<value>null</value>
+							</column_data>
+							<column_data>
+								<column_id>58</column_id>
+								<value>null</value>
+							</column_data>
+						</data>
+						<data>
+							<column_data>
+								<column_id>54</column_id>
+								<value>99991</value>
+							</column_data>
+							<column_data>
+								<column_id>55</column_id>
+								<value>99999</value>
+							</column_data>
+							<column_data>
+								<column_id>56</column_id>
+								<value>2</value>
+							</column_data>
+							<column_data>
+								<column_id>57</column_id>
+								<value>요약 #1 타이틀</value>
+							</column_data>
+							<column_data>
+								<column_id>58</column_id>
+								<value>요약 #1 내용</value>
+							</column_data>
+						</data>
+						<data>
+							<column_data>
+								<column_id>54</column_id>
+								<value>99992</value>
+							</column_data>
+							<column_data>
+								<column_id>55</column_id>
+								<value>99999</value>
+							</column_data>
+							<column_data>
+								<column_id>56</column_id>
+								<value>3</value>
+							</column_data>
+							<column_data>
+								<column_id>57</column_id>
+								<value>요약 #2 타이틀</value>
+							</column_data>
+							<column_data>
+								<column_id>58</column_id>
+								<value>요약 #2 내용</value>
+							</column_data>
+						</data>
+						<data>
+							<column_data>
+								<column_id>54</column_id>
+								<value>99993</value>
+							</column_data>
+							<column_data>
+								<column_id>55</column_id>
+								<value>99999</value>
+							</column_data>
+							<column_data>
+								<column_id>56</column_id>
+								<value>4</value>
+							</column_data>
+							<column_data>
+								<column_id>57</column_id>
+								<value>요약 #3 타이틀</value>
+							</column_data>
+							<column_data>
+								<column_id>58</column_id>
+								<value>요약 #3 내용</value>
+							</column_data>
+						</data>
+					</direct_test_data>
+					<repeat_test_data>
+						<test_data_num>0</test_data_num>
+						<data_def_list>
+							<data_def>
+								<column_id>54</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>55</column_id>
+								<type>foreign.key</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>56</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>57</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>레벨에 따른 타이틀 제목_%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>레벨에 따른 타이틀 제목_1</select>
+								<select>레벨에 따른 타이틀 제목_2</select>
+								<select>레벨에 따른 타이틀 제목_3</select>
+								<select>레벨에 따른 타이틀 제목_4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>58</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>요약내용_%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>요약내용_1</select>
+								<select>요약내용_2</select>
+								<select>요약내용_3</select>
+								<select>요약내용_4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+						</data_def_list>
+					</repeat_test_data>
+				</table_test_data>
+				<table_test_data>
+					<table_id>0</table_id>
+					<direct_test_data>
+						<data>
+							<column_data>
+								<column_id>0</column_id>
+								<value>99999</value>
+							</column_data>
+							<column_data>
+								<column_id>1</column_id>
+								<value>TESTCD</value>
+							</column_data>
+							<column_data>
+								<column_id>2</column_id>
+								<value>테스트 코드</value>
+							</column_data>
+							<column_data>
+								<column_id>3</column_id>
+								<value>테스트용 코드</value>
+							</column_data>
+						</data>
+					</direct_test_data>
+					<repeat_test_data>
+						<test_data_num>0</test_data_num>
+						<data_def_list>
+							<data_def>
+								<column_id>0</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>1</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>카테고_%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>카테고_1</select>
+								<select>카테고_2</select>
+								<select>카테고_3</select>
+								<select>카테고_4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>2</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>카테고리 종류_%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>카테고리 종류_1</select>
+								<select>카테고리 종류_2</select>
+								<select>카테고리 종류_3</select>
+								<select>카테고리 종류_4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>3</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>카테고리 설명_%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>카테고리 설명_1</select>
+								<select>카테고리 설명_2</select>
+								<select>카테고리 설명_3</select>
+								<select>카테고리 설명_4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+						</data_def_list>
+					</repeat_test_data>
+				</table_test_data>
+				<table_test_data>
+					<table_id>1</table_id>
+					<direct_test_data>
+						<data>
+							<column_data>
+								<column_id>4</column_id>
+								<value>99999</value>
+							</column_data>
+							<column_data>
+								<column_id>5</column_id>
+								<value>99999</value>
+							</column_data>
+							<column_data>
+								<column_id>6</column_id>
+								<value>99999</value>
+							</column_data>
+							<column_data>
+								<column_id>7</column_id>
+								<value>2018-01-02</value>
+							</column_data>
+							<column_data>
+								<column_id>8</column_id>
+								<value>null</value>
+							</column_data>
+							<column_data>
+								<column_id>9</column_id>
+								<value>업데이트 테스트 제목</value>
+							</column_data>
+							<column_data>
+								<column_id>10</column_id>
+								<value>업데이트 테스트 본문</value>
+							</column_data>
+						</data>
+					</direct_test_data>
+					<repeat_test_data>
+						<test_data_num>0</test_data_num>
+						<data_def_list>
+							<data_def>
+								<column_id>4</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>5</column_id>
+								<type>foreign.key</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>6</column_id>
+								<type>foreign.key</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>7</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>2000-01-% 12:00:00.000</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>2000-01-01 12:00:00.000</select>
+								<select>2000-01-02 12:00:00.000</select>
+								<select>2000-01-03 12:00:00.000</select>
+								<select>2000-01-04 12:00:00.000</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>8</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>업데이트 요약 이미지_%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>업데이트 요약 이미지_1</select>
+								<select>업데이트 요약 이미지_2</select>
+								<select>업데이트 요약 이미지_3</select>
+								<select>업데이트 요약 이미지_4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>9</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>업데이트 제목_%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>업데이트 제목_1</select>
+								<select>업데이트 제목_2</select>
+								<select>업데이트 제목_3</select>
+								<select>업데이트 제목_4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>10</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>업데이트 본문_%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>업데이트 본문_1</select>
+								<select>업데이트 본문_2</select>
+								<select>업데이트 본문_3</select>
+								<select>업데이트 본문_4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+						</data_def_list>
+					</repeat_test_data>
+				</table_test_data>
+				<table_test_data>
+					<table_id>2</table_id>
+					<direct_test_data>
+						<data>
+							<column_data>
+								<column_id>11</column_id>
+								<value>99999</value>
+							</column_data>
+							<column_data>
+								<column_id>12</column_id>
+								<value>99999</value>
+							</column_data>
+							<column_data>
+								<column_id>13</column_id>
+								<value>99999</value>
+							</column_data>
+							<column_data>
+								<column_id>14</column_id>
+								<value>2018-01-02</value>
+							</column_data>
+							<column_data>
+								<column_id>15</column_id>
+								<value>테스트 댓글 제목</value>
+							</column_data>
+							<column_data>
+								<column_id>16</column_id>
+								<value>테스트 댓글 본문</value>
+							</column_data>
+							<column_data>
+								<column_id>17</column_id>
+								<value>5</value>
+							</column_data>
+							<column_data>
+								<column_id>18</column_id>
+								<value>5</value>
+							</column_data>
+							<column_data>
+								<column_id>19</column_id>
+								<value>5</value>
+							</column_data>
+						</data>
+					</direct_test_data>
+					<repeat_test_data>
+						<test_data_num>0</test_data_num>
+						<data_def_list>
+							<data_def>
+								<column_id>11</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>12</column_id>
+								<type>foreign.key</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>13</column_id>
+								<type>foreign.key</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>14</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>2000-01-% 12:00:00.000</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>2000-01-01 12:00:00.000</select>
+								<select>2000-01-02 12:00:00.000</select>
+								<select>2000-01-03 12:00:00.000</select>
+								<select>2000-01-04 12:00:00.000</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>15</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>댓글 제목_%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>댓글 제목_1</select>
+								<select>댓글 제목_2</select>
+								<select>댓글 제목_3</select>
+								<select>댓글 제목_4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>16</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>댓글 본문_%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>댓글 본문_1</select>
+								<select>댓글 본문_2</select>
+								<select>댓글 본문_3</select>
+								<select>댓글 본문_4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>17</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>18</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>19</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+						</data_def_list>
+					</repeat_test_data>
+				</table_test_data>
+				<table_test_data>
+					<table_id>3</table_id>
+					<direct_test_data>
+						<data>
+							<column_data>
+								<column_id>20</column_id>
+								<value>99999</value>
+							</column_data>
+							<column_data>
+								<column_id>21</column_id>
+								<value>99999</value>
+							</column_data>
+							<column_data>
+								<column_id>22</column_id>
+								<value>99999</value>
+							</column_data>
+							<column_data>
+								<column_id>23</column_id>
+								<value>99999</value>
+							</column_data>
+							<column_data>
+								<column_id>24</column_id>
+								<value>2018-01-02 00:00:00</value>
+							</column_data>
+							<column_data>
+								<column_id>25</column_id>
+								<value>구직 신청 댓글 본문</value>
+							</column_data>
+						</data>
+					</direct_test_data>
+					<repeat_test_data>
+						<test_data_num>0</test_data_num>
+						<data_def_list>
+							<data_def>
+								<column_id>20</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>21</column_id>
+								<type>foreign.key</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>22</column_id>
+								<type>foreign.key</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>23</column_id>
+								<type>foreign.key</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>24</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>2000-01-% 12:00:00.000</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>2000-01-01 12:00:00.000</select>
+								<select>2000-01-02 12:00:00.000</select>
+								<select>2000-01-03 12:00:00.000</select>
+								<select>2000-01-04 12:00:00.000</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>25</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>구직신청 댓글 본문_%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>구직신청 댓글 본문_1</select>
+								<select>구직신청 댓글 본문_2</select>
+								<select>구직신청 댓글 본문_3</select>
+								<select>구직신청 댓글 본문_4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+						</data_def_list>
+					</repeat_test_data>
+				</table_test_data>
+				<table_test_data>
+					<table_id>4</table_id>
+					<direct_test_data>
+						<data>
+							<column_data>
+								<column_id>26</column_id>
+								<value>99999</value>
+							</column_data>
+							<column_data>
+								<column_id>27</column_id>
+								<value>99999</value>
+							</column_data>
+							<column_data>
+								<column_id>28</column_id>
+								<value>TESTCD</value>
+							</column_data>
+							<column_data>
+								<column_id>29</column_id>
+								<value>테스트용 프로젝트의 캐치프레이즈</value>
+							</column_data>
+							<column_data>
+								<column_id>30</column_id>
+								<value>테스트용 프로젝트</value>
+							</column_data>
+							<column_data>
+								<column_id>31</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>32</column_id>
+								<value>2018-12-01 00:00:00</value>
+							</column_data>
+							<column_data>
+								<column_id>33</column_id>
+								<value>2018-12-01 00:00:002018-12-31 00:00:00</value>
+							</column_data>
+							<column_data>
+								<column_id>34</column_id>
+								<value>99999</value>
+							</column_data>
+							<column_data>
+								<column_id>35</column_id>
+								<value>0</value>
+							</column_data>
+							<column_data>
+								<column_id>36</column_id>
+								<value>5</value>
+							</column_data>
+							<column_data>
+								<column_id>37</column_id>
+								<value>99999</value>
+							</column_data>
+							<column_data>
+								<column_id>38</column_id>
+								<value>1</value>
+							</column_data>
+						</data>
+					</direct_test_data>
+					<repeat_test_data>
+						<test_data_num>0</test_data_num>
+						<data_def_list>
+							<data_def>
+								<column_id>26</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>27</column_id>
+								<type>foreign.key</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>28</column_id>
+								<type>foreign.key</type>
+								<repeat_num>1</repeat_num>
+								<template>카테고_%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>카테고_1</select>
+								<select>카테고_2</select>
+								<select>카테고_3</select>
+								<select>카테고_4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>29</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>프로젝트 캐치프레이즈_%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>프로젝트 캐치프레이즈_1</select>
+								<select>프로젝트 캐치프레이즈_2</select>
+								<select>프로젝트 캐치프레이즈_3</select>
+								<select>프로젝트 캐치프레이즈_4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>30</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>프로젝트 이름_%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>프로젝트 이름_1</select>
+								<select>프로젝트 이름_2</select>
+								<select>프로젝트 이름_3</select>
+								<select>프로젝트 이름_4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>31</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>프로젝트 이미지 경로_%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>프로젝트 이미지 경로_1</select>
+								<select>프로젝트 이미지 경로_2</select>
+								<select>프로젝트 이미지 경로_3</select>
+								<select>프로젝트 이미지 경로_4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>32</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>2000-01-% 12:00:00.000</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>2000-01-01 12:00:00.000</select>
+								<select>2000-01-02 12:00:00.000</select>
+								<select>2000-01-03 12:00:00.000</select>
+								<select>2000-01-04 12:00:00.000</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>33</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>2000-01-% 12:00:00.000</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>2000-01-01 12:00:00.000</select>
+								<select>2000-01-02 12:00:00.000</select>
+								<select>2000-01-03 12:00:00.000</select>
+								<select>2000-01-04 12:00:00.000</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>34</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>35</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>36</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>37</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>38</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+						</data_def_list>
+					</repeat_test_data>
+				</table_test_data>
+				<table_test_data>
+					<table_id>5</table_id>
+					<direct_test_data>
+						<data>
+							<column_data>
+								<column_id>39</column_id>
+								<value>99999</value>
+							</column_data>
+							<column_data>
+								<column_id>40</column_id>
+								<value>99999</value>
+							</column_data>
+							<column_data>
+								<column_id>41</column_id>
+								<value>김기섭</value>
+							</column_data>
+							<column_data>
+								<column_id>42</column_id>
+								<value>25</value>
+							</column_data>
+							<column_data>
+								<column_id>43</column_id>
+								<value>서울시 도봉구</value>
+							</column_data>
+							<column_data>
+								<column_id>44</column_id>
+								<value>웹 개발자</value>
+							</column_data>
+							<column_data>
+								<column_id>45</column_id>
+								<value>무경력 신입</value>
+							</column_data>
+							<column_data>
+								<column_id>46</column_id>
+								<value>실력있는 웹 개발자가 되고 싶습니다.</value>
+							</column_data>
+						</data>
+					</direct_test_data>
+					<repeat_test_data>
+						<test_data_num>0</test_data_num>
+						<data_def_list>
+							<data_def>
+								<column_id>39</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>40</column_id>
+								<type>foreign.key</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>41</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>구직자 이름_%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>구직자 이름_1</select>
+								<select>구직자 이름_2</select>
+								<select>구직자 이름_3</select>
+								<select>구직자 이름_4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>42</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>43</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>거주지 주소 간단히_%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>거주지 주소 간단히_1</select>
+								<select>거주지 주소 간단히_2</select>
+								<select>거주지 주소 간단히_3</select>
+								<select>거주지 주소 간단히_4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>44</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>직업 직군_%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>직업 직군_1</select>
+								<select>직업 직군_2</select>
+								<select>직업 직군_3</select>
+								<select>직업 직군_4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>45</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>경험 분야_%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>경험 분야_1</select>
+								<select>경험 분야_2</select>
+								<select>경험 분야_3</select>
+								<select>경험 분야_4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>46</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>커리어 본문_%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>커리어 본문_1</select>
+								<select>커리어 본문_2</select>
+								<select>커리어 본문_3</select>
+								<select>커리어 본문_4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+						</data_def_list>
+					</repeat_test_data>
+				</table_test_data>
+				<table_test_data>
+					<table_id>6</table_id>
+					<direct_test_data>
+						<data>
+							<column_data>
+								<column_id>47</column_id>
+								<value>99999</value>
+							</column_data>
+							<column_data>
+								<column_id>48</column_id>
+								<value>gomoron4896@gmail.comgomoron4896@gmail.com</value>
+							</column_data>
+							<column_data>
+								<column_id>49</column_id>
+								<value>6505883865058838</value>
+							</column_data>
+							<column_data>
+								<column_id>50</column_id>
+								<value>김기섭</value>
+							</column_data>
+							<column_data>
+								<column_id>51</column_id>
+								<value></value>
+							</column_data>
+							<column_data>
+								<column_id>52</column_id>
+								<value>1</value>
+							</column_data>
+							<column_data>
+								<column_id>53</column_id>
+								<value>100000</value>
+							</column_data>
+						</data>
+					</direct_test_data>
+					<repeat_test_data>
+						<test_data_num>0</test_data_num>
+						<data_def_list>
+							<data_def>
+								<column_id>47</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>48</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>naver email_%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>naver email_1</select>
+								<select>naver email_2</select>
+								<select>naver email_3</select>
+								<select>naver email_4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>49</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>50</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>naver name_%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>naver name_1</select>
+								<select>naver name_2</select>
+								<select>naver name_3</select>
+								<select>naver name_4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>51</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>naver image_%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>naver image_1</select>
+								<select>naver image_2</select>
+								<select>naver image_3</select>
+								<select>naver image_4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>52</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+							<data_def>
+								<column_id>53</column_id>
+								<type>format</type>
+								<repeat_num>1</repeat_num>
+								<template>%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>1</select>
+								<select>2</select>
+								<select>3</select>
+								<select>4</select>
+								<modified_values>
+								</modified_values>
+							</data_def>
+						</data_def_list>
+					</repeat_test_data>
+				</table_test_data>
+			</test_data>
 	</test_data_list>
 	<sequence_set>
 		<sequence>
