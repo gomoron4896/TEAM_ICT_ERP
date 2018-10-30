@@ -7,18 +7,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.ict.erp.service.CreerInfoService;
-import com.ict.erp.vo.CtgoryInfo;
+import com.ict.erp.service.ContractInfoService;
+import com.ict.erp.vo.ContractInfo;
 
 @Controller
-public class CreerInfoController {
-
+public class ContractInfoController {
+	
 	@Autowired
-	private CreerInfoService cris;
+	private ContractInfoService ctis;
 
-	@RequestMapping(value = "/creer", method = RequestMethod.POST)
-	public @ResponseBody Integer putCreer(@RequestBody CtgoryInfo ci) {
+	@RequestMapping(value = "/contract", method = RequestMethod.POST)
+	public @ResponseBody Integer putContract(@RequestBody ContractInfo cti) {
 		return null;
 	}
 }
-

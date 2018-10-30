@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="SQL.UPDATEIFNO">
+	
+	<select id="selectUpdateInfoList" resultType="Upi" parameterType="Upi">
+		select * from update_info
+	</select>
+	
+	<select id="selectUpdateInfo" resultType="Upi" parameterType="Upi">
+		select * from update_info
+		<where>
+			<if test="up_num!=null">up_num = #{up_num}</if>
+		</where>
+	</select>
+
+	<insert id="insertUpdateInfoList" parameterType="Upi">
+		insert into
+		update_info(up_num, ui_num, pjh_num, up_credat, up_img, up_title, up_text)
+		values(seq_up_num.nextval,#{ui_num},#{pjh_num},#{up_credat},#{up_img},#{up_title},#{up_text})
+	</insert>
+
+	<update id="updateUpdateInfoList" parameterType="Upi">
+		update update_info
+		<set>
+			<if test="up_credat!=null">up_credat = #{up_credat},</if>
+			<if test="up_img!=null">up_img = #{up_img},</if>
+			<if test="up_title!=null">up_title = #{up_title},</if>
+			<if test="up_text!=null">up_text = #{up_text},</if>
+		</set>
+		where up_num = #{up_num}
+	</update>
+
+	<delete id="deleteUpdateInfo" parameterType="Upi">
+		delete from update_info
+		where up_num = #{up_num}
+	</delete>
+
+</mapper>

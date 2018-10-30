@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="SQL.CRITICIFNO">
+	
+	<select id="selectCriticInfoList" resultType="Crt" parameterType="Crt">
+		select * from critic_info
+	</select>
+	
+	<select id="selectCriticInfo" resultType="Crt" parameterType="Crt">
+		select * from critic_info
+		<where>
+			<if test="crr_name!=null">pjh_num = #{pjh_num}</if>
+		</where>
+	</select>
+
+	<insert id="insertCriticInfoList" parameterType="Crt">
+		insert into
+		critic_info(crt_num, pjh_num, ui_num, crt_credat, crt_title, crt_text, crt_profitscore, crt_originscore)
+		values(seq_crt_num.nextval,#{pjh_num},#{ui_num},#{crt_credat},#{crt_title},#{crt_text},#{crt_profitscore},#{crt_stablescore},#{crt_originscore})
+	</insert>
+
+	<update id="updateCriticInfoList" parameterType="Crt">
+		update critic_info
+		<set>
+			<if test="crt_credat!=null">crt_credat = #{crt_credat},</if>
+			<if test="crt_title!=null">crt_title = #{crt_title},</if>
+			<if test="crt_profitscore!=null">crt_profitscore = #{crt_profitscore},</if>
+			<if test="crt_stablescore!=null">crt_stablescore = #{crt_stablescore},</if>
+			<if test="crt_originscore!=null">crt_originscore = #{crt_originscore},</if>
+		</set>
+		where crt_num = #{crt_num}
+	</update>
+
+	<delete id="deleteCriticInfo" parameterType="Crt">
+		delete from critic_info
+		where crt_num = #{crt_num}
+	</delete>
+
+</mapper>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="SQL.CONTRACTINFO">
+	
+	<select id="selectContractInfoList" resultType="Cti" parameterType="Cti">
+		select * from contract_info
+	</select>
+	
+	<select id="selectContractInfo" resultType="Cti" parameterType="Cti">
+		select * from contract_info
+		<where>
+			<if test="pjh_num!=null">pjh_num = #{pjh_num}</if>
+		</where>
+	</select>
+
+	<insert id="insertContractInfoList" parameterType="Cti">
+		insert into
+		contract_info(cont_num, ui_num, crr_num, pjh_num, cont_credat, cont_text)
+		values(seq_cont_num.nextval,#{crr_num},#{pjh_num},#{cont_credat},#{cont_text})
+	</insert>
+
+	<update id="updateContractInfoList" parameterType="Cti">
+		update contract_info
+		<set>
+			<if test="cont_credat!=null">cont_credat = #{cont_credat},</if>
+			<if test="cont_text!=null">cont_text = #{cont_text},</if>
+		</set>
+		where cont_num = #{cont_num}
+	</update>
+
+	<delete id="deleteContractInfo" parameterType="Cti">
+		delete from contract_info
+		where pjh_num = #{pjh_num}
+	</delete>
+
+</mapper>

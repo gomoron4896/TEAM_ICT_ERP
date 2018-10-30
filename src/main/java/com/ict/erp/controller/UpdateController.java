@@ -1,24 +1,20 @@
 package com.ict.erp.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.ict.erp.service.CreerInfoService;
-import com.ict.erp.vo.CtgoryInfo;
+import com.ict.erp.service.UpdateInfoService;
+import com.ict.erp.vo.UpdateInfo;
 
-@Controller
-public class CreerInfoController {
-
+public class UpdateController {
 	@Autowired
-	private CreerInfoService cris;
+	private UpdateInfoService upis;
 
-	@RequestMapping(value = "/creer", method = RequestMethod.POST)
-	public @ResponseBody Integer putCreer(@RequestBody CtgoryInfo ci) {
+	@RequestMapping(value = "/updatepj", method = RequestMethod.POST)
+	public @ResponseBody Integer putUpdatePj(@RequestBody UpdateInfo upi) {
 		return null;
 	}
 }
-

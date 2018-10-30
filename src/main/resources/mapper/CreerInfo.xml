@@ -17,7 +17,7 @@
 
 	<insert id="insertCreerInfoList" parameterType="Cri">
 		insert into
-		ctgory_info(crr_num, ui_num, crr_name, crr_age, crr_addr, crr_job, crr_exp, crr_desc)
+		creer_info(crr_num, ui_num, crr_name, crr_age, crr_addr, crr_job, crr_exp, crr_desc)
 		values(seq_crr_num.nextval,#{ui_num},#{crr_name},#{crr_age},#{crr_addr},#{crr_job},#{crr_exp},#{crr_desc})
 	</insert>
 
