@@ -16,8 +16,8 @@ public class CreerInfoController {
 	@Autowired
 	private CreerInfoService cris;
 
-	@RequestMapping(value = "/category", method = RequestMethod.POST)
-	public @ResponseBody Integer putCtgory(@RequestBody CtgoryInfo ci) {
+	@RequestMapping(value = "/creer", method = RequestMethod.POST)
+	public @ResponseBody Integer putCreer(@RequestBody CtgoryInfo ci) {
 		return null;
 	}
 }
