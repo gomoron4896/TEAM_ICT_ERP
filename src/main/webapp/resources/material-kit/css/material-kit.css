@@ -4190,11 +4190,11 @@ tbody.collapse.show {
   font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap;
-
   background: url(/mtk/img/logo.png) no-repeat left 100%;
-  top: 10px;
+  background-size: contain;
+  top: 5px;
   width: 220px;
-  height: 43px;
+  height: 50px;
 }
 
 .navbar-brand:hover,
@@ -14058,6 +14058,7 @@ textarea {
   font-size: 1.125rem;
   line-height: 30px;
   padding: 0.625rem 0;
+
 }
 
 .navbar.bg-primary {
@@ -14734,7 +14735,7 @@ small,
 .footer-big h4,
 .media .media-heading {
   font-weight: 700;
-  font-family: "Roboto Slab", "Times New Roman", serif;
+  font-family: "Roboto", "Times New Roman", serif;
 }
 
 .title,
@@ -17515,6 +17516,7 @@ footer .pull-center {
   .navbar .navbar-translate {
     width: 100%;
     position: relative;
+    padding: 10px 0 10px 0;
     display: flex;
     -ms-flex-pack: justify !important;
     justify-content: space-between !important;
