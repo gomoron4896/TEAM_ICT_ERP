@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.ict.erp.dao.CreerInfoDAO;
 import com.ict.erp.service.CreerInfoService;
 import com.ict.erp.vo.CreerInfo;
+import com.ict.erp.vo.UserInfo;
 
 @Service
 public class CreerInfoServiceImpl implements CreerInfoService{
@@ -38,5 +39,10 @@ public class CreerInfoServiceImpl implements CreerInfoService{
 	@Override
 	public int removeCreerInfo(CreerInfo cri) {
 		return cridao.deleteCreerInfo(cri);
+	}
+
+	@Override
+	public List<CreerInfo> getCreerUserInfoList(CreerInfo cri, UserInfo ui) {
+		return cridao.selectCreerUserInfoList(cri, ui);
 	}
 }

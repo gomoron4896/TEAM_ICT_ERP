@@ -19,6 +19,7 @@ public class PjHeadInfo {
 	private Integer pjh_criticsum;
 	private Integer pjh_lovit;
 	private Integer pjh_status;
+	
 	public Integer getPjh_num() {
 		return pjh_num;
 	}
