@@ -11,4 +11,7 @@
 
 <%=session.getAttribute("login") %>
 </body>
+<script>
+
+</script>
 </html>

@@ -2,13 +2,16 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
 <mapper namespace="SQL.CREERINFO">
-	
-	<select id="selectCreerInfoList" resultType="Cri" parameterType="Cri">
+
+	<select id="selectCreerInfoList" resultType="Cri"
+		parameterType="Cri">
 		select * from creer_info
 	</select>
-	
-	<select id="selectCreerInfo" resultType="Cri" parameterType="Cri">
+
+	<select id="selectCreerInfo" resultType="Cri"
+		parameterType="Cri">
 		select * from creer_info
 		<where>
 			<if test="crr_name!=null">crr_name like '%' || #{crr_name} || '%'</if>
@@ -17,7 +20,8 @@
 
 	<insert id="insertCreerInfoList" parameterType="Cri">
 		insert into
-		creer_info(crr_num, ui_num, crr_name, crr_age, crr_addr, crr_job, crr_exp, crr_desc)
+		creer_info(crr_num, ui_num, crr_name, crr_age, crr_addr, crr_job,
+		crr_exp, crr_desc)
 		values(seq_crr_num.nextval,#{ui_num},#{crr_name},#{crr_age},#{crr_addr},#{crr_job},#{crr_exp},#{crr_desc})
 	</insert>
 
@@ -35,8 +39,32 @@
 	</update>
 
 	<delete id="deleteCreerInfo" parameterType="Cri">
-		delete from creer_info
+		delete from
+		creer_info
 		where ui_num = #{ui_num}
 	</delete>
+	<resultMap type="com.ict.erp.vo.UserInfo" id="ui">
+		<result column="ui_num" property="ui_num" />
+		<result column="ui_name" property="ui_name" />
+		<result column="ui_email" property="ui_email" />
+		<result column="ui_img" property="ui_img" />
+	</resultMap>
+
+	<resultMap type="com.ict.erp.vo.CreerInfo" id="CreerInfo">
+		<result column="ui_num" property="ui_num" />
+		<result column="crr_age" property="crr_age" />
+		<result column="crr_addr" property="crr_addr" />	
+		<result column="crr_job" property="crr_job" />
+		<result column="crr_exp" property="crr_exp" />
+		<result column="crr_desc" property="crr_desc" />
+		<collection property="ui" resultMap="ui" />
+	</resultMap>
+
+	<select id="selectUserCreerInfoList" parameterType="Cri" resultMap="CreerInfo">
+		select ui.ui_num, ui.ui_name, ui.ui_email, ui.ui_img, ci.crr_age, 
+		ci.crr_addr, ci.crr_job, ci.crr_exp, ci.crr_desc from user_info ui, creer_info ci 
+		where ui.ui_num = ci.ui_num
+		<!-- select ui.ui_num from user_info ui -->
+	</select>
 
 </mapper>

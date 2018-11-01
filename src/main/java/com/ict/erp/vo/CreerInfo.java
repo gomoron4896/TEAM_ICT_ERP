@@ -13,6 +13,14 @@ public class CreerInfo {
 	private String crr_job;
 	private String crr_exp;
 	private String crr_desc;
+	private UserInfo ui;
+
+	public UserInfo getUi() {
+		return ui;
+	}
+	public void setUi(UserInfo ui) {
+		this.ui = ui;
+	}
 	public Integer getCrr_num() {
 		return crr_num;
 	}
