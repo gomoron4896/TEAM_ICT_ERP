@@ -1,5 +1,10 @@
 package com.ict.erp.vo;
 
+import org.apache.ibatis.type.Alias;
+import org.springframework.stereotype.Component;
+
+@Component
+@Alias("Pjb")
 public class PjBodyInfo {
 	private Integer pjb_num;
 	private Integer pjh_num;

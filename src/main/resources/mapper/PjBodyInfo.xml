@@ -4,24 +4,27 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="SQL.PJBODYINFO">
 	
-	<select id="selectPjBodyInfoList" resultType="Pjh" parameterType="Pjh">
+	<select id="selectPjBodyInfoList" resultType="Pjb" parameterType="Pjb">
 		select * from pjbody_info
+		<where>
+			<if test="pjh_num!=null">pjh_num like '%' || #{pjh_num} || '%'</if>
+		</where>
 	</select>
 	
-	<select id="selectPjBodyInfo" resultType="Pjh" parameterType="Pjh">
+	<select id="selectPjBodyInfo" resultType="Pjb" parameterType="Pjb">
 		select * from pjbody_info
 		<where>
 			<if test="pjh_num!=null">pjh_num like '%' || #{pjh_num} || '%'</if>
 		</where>
 	</select>
 
-	<insert id="insertPjBodyInfo" parameterType="Pjh">
+	<insert id="insertPjBodyInfo" parameterType="Pjb">
 		insert into
 		pjbody_info(pjb_num, pjh_num, pjb_level, pjb_title, pjb_text)
 		values(seq_pjb_num.nextval,#{pjh_num},#{pjb_level},#{pjb_title},#{pjb_text})
 	</insert>
 
-	<update id="updatePjBodyInfo" parameterType="Pjh">
+	<update id="updatePjBodyInfo" parameterType="Pjb">
 		update pjbody_info
 		<set>
 			<if test="pjb_level!=null">pjb_level = #{pjb_level},</if>
@@ -31,7 +34,7 @@
 		where pjh_num = #{pjh_num}
 	</update>
 
-	<delete id="deletePjBodyInfo" parameterType="Pjh">
+	<delete id="deletePjBodyInfo" parameterType="Pjb">
 		delete from pjbody_info	
 		where pjh_num = #{pjh_num}
 	</delete>
