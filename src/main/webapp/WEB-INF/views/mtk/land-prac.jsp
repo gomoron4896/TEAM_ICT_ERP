@@ -92,8 +92,14 @@
         	<div class="col-xs-3 col-sm-4 ml-auto mr-auto">
         		<div class="custom-content">
         			<div class="content-image" style="background-image: url(/mtk/img/bg.jpg);"></div>
-        			<div>
-        				나는 div
+        			<div class="content-header">
+        				<h5>큰제목</h5>
+        				<p>작은제목</p>
+        			</div>
+        			<div class="content-status">
+        				<div class="stat lovit"><span>난 스팬</span></div>
+        				<div class="stat critic"><span>난 스팬</span></div>
+        				<div class="stat contract"><span>난 스팬</span></div>
         			</div>
         		</div>
         	</div>

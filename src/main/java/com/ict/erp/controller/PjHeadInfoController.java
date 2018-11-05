@@ -18,7 +18,7 @@ public class PjHeadInfoController {
 	private PjHeadInfoService phis;
 
 	@RequestMapping(value = "/pjhead", method = RequestMethod.POST)
-	public @ResponseBody List<PjHeadInfo> putUser2(@RequestBody PjHeadInfo phi) {
+	public @ResponseBody List<PjHeadInfo> putUser2(@RequestBody(required=false) PjHeadInfo phi) {
 		return phis.getPjHeadInfoList(phi);
 	}
 }
