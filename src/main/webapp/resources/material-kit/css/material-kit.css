@@ -6142,16 +6142,17 @@ button.close {
   background-color: #ffffff;
 }
 
+/* this is carousel*/
 .carousel-caption {
   position: absolute;
-  right: 15%;
-  bottom: 20px;
+  /* right: 15%; */
+  bottom: 70%;
   left: 15%;
   z-index: 10;
   padding-top: 20px;
   padding-bottom: 20px;
   color: #ffffff;
-  text-align: center;
+  text-align: left;
 }
 
 .align-baseline {
@@ -17911,5 +17912,26 @@ footer .pull-center {
     max-height: 215px;
   }
 }
+
+.custom-row {
+  padding: 0 10px 0 10px;
+}
+
+.custom-row > div {
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.custom-content {
+  text-align: left;
+}
+
+.custom-content .content-image {
+  width: 240px;
+  height: 180px;
+  background-size: contain;
+}
+
 
 /*# sourceMappingURL=kit-free.css.map */

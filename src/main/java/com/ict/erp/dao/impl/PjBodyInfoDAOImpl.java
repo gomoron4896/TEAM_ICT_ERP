@@ -22,9 +22,9 @@ public class PjBodyInfoDAOImpl implements PjBodyInfoDAO{
 
 	@Override
 	public PjBodyInfo selectPjBodyInfo(PjBodyInfo pbi) {
-		return ss.selectOne("SQL.PJBODYINFO.selectPjBodyInfo", pbi);
+		return ss.selectOne("SQL.PJBODYINFO.selectPjBody", pbi);
 	}
-
+	
 	@Override
 	public int insertPjBodyInfo(PjBodyInfo pbi) {
 		return ss.insert("SQL.PJBODYINFO.insertPjBodyInfo", pbi);
