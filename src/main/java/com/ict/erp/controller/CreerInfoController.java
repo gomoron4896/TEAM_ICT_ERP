@@ -32,7 +32,5 @@ public class CreerInfoController {
 		
 		return cris.getCreerUserInfoList(null, null);
 	}
-	
-	
 }
 

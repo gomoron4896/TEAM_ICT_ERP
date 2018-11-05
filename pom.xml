@@ -253,10 +253,6 @@
 	</dependencies>
 	<build>
 		<finalName>ict</finalName>
-<<<<<<< HEAD
-	</build>
-=======
 	</build>
 
->>>>>>> branch 'master' of https://github.com/gomoron4896/ict1-erp1.git
 </project>
