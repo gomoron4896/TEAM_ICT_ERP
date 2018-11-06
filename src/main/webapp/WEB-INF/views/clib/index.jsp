@@ -55,129 +55,30 @@
         </div><!-- .nav-bar -->
     </header><!-- .site-header -->
 
-    <div class="swiper-container hero-slider">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide hero-content-wrap">
-                <img src="/clib/images/hero.jpg" alt="">
+    <div class="swiper-slide hero-content-wrap"> <!-- 메인 타이틀 -->
+        <img src="/clib/images/hero.jpg" alt="">
+        <div class="hero-content-overlay position-absolute w-100 h-100">
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div class="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-start">
+                        <header class="entry-header">
+                            <h1>project nest</h1>
+                            <h4>멋진 아이디어가 커나가는 공간</h4>
+                        </header><!-- .entry-header -->
 
-                <div class="hero-content-overlay position-absolute w-100 h-100">
-                    <div class="container h-100">
-                        <div class="row h-100">
-                            <div class="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-start">
-                                <header class="entry-header">
-                                    <h1>Donate</h1>
-                                    <h4>4 a better world</h4>
-                                </header><!-- .entry-header -->
+                        <div class="entry-content mt-4">
+                            <p>당신의 아이디어를 다른 사람들과 공유하세요</p>
+                        </div><!-- .entry-content -->
 
-                                <div class="entry-content mt-4">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestibulum mauris quis aliquam. Integer accumsan sodales odio, id tempus ullamcorper</p>
-                                </div><!-- .entry-content -->
-
-                                <footer class="entry-footer d-flex flex-wrap align-items-center mt-5">
-                                    <a href="#" class="btn gradient-bg mr-2">Donate Now</a>
-                                    <a href="#" class="btn orange-border">Read More</a>
-                                </footer><!-- .entry-footer -->
-                            </div><!-- .col -->
-                        </div><!-- .row -->
-                    </div><!-- .container -->
-                </div><!-- .hero-content-overlay -->
-            </div><!-- .hero-content-wrap -->
-
-            <div class="swiper-slide hero-content-wrap">
-                <img src="/clib/images/hero.jpg" alt="">
-
-                <div class="hero-content-overlay position-absolute w-100 h-100">
-                    <div class="container h-100">
-                        <div class="row h-100">
-                            <div class="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-start">
-                                <header class="entry-header">
-                                    <h1>Donate</h1>
-                                    <h4>4 a better world</h4>
-                                </header><!-- .entry-header -->
-
-                                <div class="entry-content mt-4">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestibulum mauris quis aliquam. Integer accumsan sodales odio, id tempus ullamcorper</p>
-                                </div><!-- .entry-content -->
-
-                                <footer class="entry-footer d-flex flex-wrap align-items-center mt-5">
-                                    <a href="#" class="btn gradient-bg mr-2">Donate Now</a>
-                                    <a href="#" class="btn orange-border">Read More</a>
-                                </footer><!-- .entry-footer -->
-                            </div><!-- .col -->
-                        </div><!-- .row -->
-                    </div><!-- .container -->
-                </div><!-- .hero-content-overlay -->
-            </div><!-- .hero-content-wrap -->
-
-            <div class="swiper-slide hero-content-wrap">
-                <img src="/clib/images/hero.jpg" alt="">
-
-                <div class="hero-content-overlay position-absolute w-100 h-100">
-                    <div class="container h-100">
-                        <div class="row h-100">
-                            <div class="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-start">
-                                <header class="entry-header">
-                                    <h1>Donate</h1>
-                                    <h4>4 a better world</h4>
-                                </header><!-- .entry-header -->
-
-                                <div class="entry-content mt-4">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestibulum mauris quis aliquam. Integer accumsan sodales odio, id tempus ullamcorper</p>
-                                </div><!-- .entry-content -->
-
-                                <footer class="entry-footer d-flex flex-wrap align-items-center mt-5">
-                                    <a href="#" class="btn gradient-bg mr-2">Donate Now</a>
-                                    <a href="#" class="btn orange-border">Read More</a>
-                                </footer><!-- .entry-footer -->
-                            </div><!-- .col -->
-                        </div><!-- .row -->
-                    </div><!-- .container -->
-                </div><!-- .hero-content-overlay -->
-            </div><!-- .hero-content-wrap -->
-            
-            <div class="swiper-slide hero-content-wrap">
-                <img src="/clib/images/hero.jpg" alt="">
-
-                <div class="hero-content-overlay position-absolute w-100 h-100">
-                    <div class="container h-100">
-                        <div class="row h-100">
-                            <div class="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-start">
-                                <header class="entry-header">
-                                    <h1>Donate</h1>
-                                    <h4>4 a better world</h4>
-                                </header><!-- .entry-header -->
-
-                                <div class="entry-content mt-4">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestibulum mauris quis aliquam. Integer accumsan sodales odio, id tempus ullamcorper</p>
-                                </div><!-- .entry-content -->
-
-                                <footer class="entry-footer d-flex flex-wrap align-items-center mt-5">
-                                    <a href="#" class="btn gradient-bg mr-2">Donate Now</a>
-                                    <a href="#" class="btn orange-border">Read More</a>
-                                </footer><!-- .entry-footer -->
-                            </div><!-- .col -->
-                        </div><!-- .row -->
-                    </div><!-- .container -->
-                </div><!-- .hero-content-overlay -->
-            </div><!-- .hero-content-wrap -->
-            
-        </div><!-- .swiper-wrapper -->
-
-        <div class="pagination-wrap position-absolute w-100">
-            <div class="container">
-                <div class="swiper-pagination"></div>
+                        <footer class="entry-footer d-flex flex-wrap align-items-center mt-5">
+                            <a href="#" class="btn gradient-bg mr-2">내 아이디어 제안하기</a>
+                            <a href="#" class="btn orange-border">다른 아이디어 평가하기</a>
+                        </footer><!-- .entry-footer -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
             </div><!-- .container -->
-        </div><!-- .pagination-wrap -->
-
-        <!-- Add Arrows -->
-        <div class="swiper-button-next flex justify-content-center align-items-center">
-            <span><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1171 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z"/></svg></span>
-        </div>
-
-        <div class="swiper-button-prev flex justify-content-center align-items-center">
-            <span><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1203 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg></span>
-        </div>
-    </div><!-- .hero-slider -->
+        </div><!-- .hero-content-overlay -->
+	</div><!-- .hero-content-wrap -->
 
     <div class="home-page-icon-boxes">
         <div class="container">
@@ -190,11 +91,11 @@
                         </figure>
 
                         <header class="entry-header">
-                            <h3 class="entry-title">Become a Volunteer</h3>
+                            <h3 class="entry-title">함께 만드는 아이디어</h3>
                         </header>
 
                         <div class="entry-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris quis aliquam. </p>
+                            <p>다른 이의 아이디어에 의견을 남기고 함께 발전시켜 보세요.</p>
                         </div>
                     </div>
                 </div>
@@ -207,11 +108,11 @@
                         </figure>
 
                         <header class="entry-header">
-                            <h3 class="entry-title">Dance & Music</h3>
+                            <h3 class="entry-title">LOVE IT? LOVIT!</h3>
                         </header>
 
                         <div class="entry-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris quis aliquam. </p>
+                            <p>마음에 드는 아이디어를 발견했다면? LOVIT으로 아이디어에 호감을 표현하세요! </p>
                         </div>
                     </div>
                 </div>
@@ -599,19 +500,25 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         </div><!-- .footer-bar -->
     </footer><!-- .site-footer -->
    
-    <script type='text/javascript' src='/clib/js/jquery.js'></script>
-    <script type='text/javascript' src='/clib/js/jquery.collapsible.min.js'></script>
-    <!-- <script type='text/javascript' src='/clib/js/swiper.min.js'></script> -->
+   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   	
+   	<script type='text/javascript' src='/clib/js/jquery.collapsible.min.js'></script>
     <script type='text/javascript' src='/clib/js/jquery.countdown.min.js'></script>
     <script type='text/javascript' src='/clib/js/circle-progress.min.js'></script>
     <script type='text/javascript' src='/clib/js/jquery.countTo.min.js'></script>
     <script type='text/javascript' src='/clib/js/jquery.barfiller.js'></script>
-  
-
+	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.js"></script>
+	
 	
     <script type='text/javascript' src='/clib/js/custom-custom.js'></script>
     <script type='text/javascript' src='/clib/js/swiperfiller.js'></script>
-
+    
+	<script type="text/javascript">
+	
+		
+	
+	</script>
+	
 </body>
 </html>
