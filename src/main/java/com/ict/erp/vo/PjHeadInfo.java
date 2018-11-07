@@ -19,15 +19,7 @@ public class PjHeadInfo {
 	private Integer pjh_criticsum;
 	private Integer pjh_lovit;
 	private Integer pjh_status;
-	private PjBodyInfo pjb;
-	
 
-	public PjBodyInfo getPjb() {
-		return pjb;
-	}
-	public void setPjb(PjBodyInfo pjb) {
-		this.pjb = pjb;
-	}
 	public Integer getPjh_num() {
 		return pjh_num;
 	}

@@ -45,13 +45,4 @@
 		where pjh_num = #{pjh_num}
 	</delete>
 
-
-	<select id="selectPjInfo" parameterType="Pjh"
-		resultMap="PjHeadInfo">
-		select ui.ui_num, ui.ui_name, ui.ui_email, ui.ui_img, ci.crr_age,
-		ci.crr_addr, ci.crr_job, ci.crr_exp, ci.crr_desc from user_info ui,
-		creer_info ci
-		where ui.ui_num = ci.ui_num
-		<!-- select ui.ui_num from user_info ui -->
-	</select>
 </mapper>

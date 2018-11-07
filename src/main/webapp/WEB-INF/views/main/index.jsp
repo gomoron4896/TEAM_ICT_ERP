@@ -22,8 +22,6 @@
     <![endif]-->
   </head>
   <body>
-
-    
       <nav class="navbar navbar-default probootstrap-navbar">
         <div class="container">
           <div class="navbar-header">

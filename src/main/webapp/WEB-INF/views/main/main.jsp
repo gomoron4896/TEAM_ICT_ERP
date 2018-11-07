@@ -10,8 +10,16 @@
 나는 메인 페이지
 
 <%=session.getAttribute("login") %>
+<p><img alt="" src="/img/사디오 마네.jpg" style="height:120px; width:120px" /></p>
+
+<p>안녕반갑다</p>
+
+<p><strong>헬로할루</strong></p>
+
+<h1><strong>나는나는나나나나나나나나난ㅇ</strong></h1>
+
+<p><strong>ㅁㅈㅂㅈㄷㅂㅈㅇㄴㅁㅇㄴㅁ</strong></p>
 </body>
 <script>
-
 </script>
 </html>

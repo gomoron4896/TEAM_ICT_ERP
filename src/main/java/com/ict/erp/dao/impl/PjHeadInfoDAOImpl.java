@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import com.ict.erp.dao.PjHeadInfoDAO;
 import com.ict.erp.vo.PjHeadInfo;
 
-@Repository("PjHeadInfo")
+@Repository("PjHeadInfoDAO")
 public class PjHeadInfoDAOImpl implements PjHeadInfoDAO{
 
 	@Autowired
