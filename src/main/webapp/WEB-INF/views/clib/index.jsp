@@ -154,7 +154,7 @@
                         <div class="swiper-wrapper">
                         
                             
-                             <div class="swiper-slide">
+                             <div class="swiper-slide" data-sfnum="1">
                                 <div class="cause-wrap">
                                     <figure class="m-0">
                                         <img src="/clib/images/e.jpg" alt="">
@@ -197,7 +197,7 @@
                             </div><!-- .swiper-slide -->
                             
                             
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" data-sfnum="2">
                                 <div class="cause-wrap">
                                     <figure class="m-0">
                                         <img src="/clib/images/e.jpg" alt="">
@@ -239,7 +239,7 @@
                                 </div><!-- .cause-wrap -->
                             </div><!-- .swiper-slide -->
                             
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" data-sfnum="3">
                                 <div class="cause-wrap">
                                     <figure class="m-0">
                                         <img src="/clib/images/e.jpg" alt="">

@@ -5,14 +5,19 @@ $.ajax({
 	contentType: "application/json",
 	success:function(res) {
 		console.log(res);
-		addItem();
+		addItem(res);
 	}
 });
 
-function addItem() {
-	var causes = document.querySelectorAll('.our-causes swiper-slider');
+function addItem(res) {
+	var causes = document.querySelectorAll('.our-causes .swiper-slide[data-sfnum]');
 	for(var num in causes) {
-		
+		console.log(causes[num].querySelector('img').getAttribute('src'));
+		causes[num].querySelector('img').setAttribute('src', res[num].pjh_img);
+		causes[num].querySelector('.cause-content-wrap a').innerHTML = res[num].pjh_name;
+		causes[num].querySelector('.entry-content p').innerHTML = res[num].pjh_intro;
+		causes[num].querySelector('.fund-raised-total p').innerHTML = res[num].pjh_lovit;
+		causes[num].querySelector('.fund-raised-goal p').innerHTML = res[num].pjh_criticsum;
 	}
 	
 }
@@ -27,7 +32,8 @@ $(.swiper-slide img).attr('src')
 -PJH_NAME
 $(.swiper-slide .entry-header a).html
 
--
+-PJH_INTRO
+$(.)
 
 */
 
