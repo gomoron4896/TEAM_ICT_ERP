@@ -143,7 +143,7 @@
             <div class="row"><!-- 상단 제목 -->
                 <div class="coL-12">
                     <div class="section-heading">
-                        <h2 class="entry-title">Our Causes</h2>
+                        <h2 class="entry-title">테스트 </h2>
                     </div><!-- .section-heading -->
                 </div><!-- .col -->
             </div><!-- .row -->
@@ -184,11 +184,11 @@
 
                                             <div class="fund-raised-details d-flex flex-wrap justify-content-between align-items-center">
                                                 <div class="fund-raised-total mt-4">
-                                                    LOVIT: <p class="item_lovit">123</p>
+                                                    LOVIT: <p class="item_lovit"></p>
                                                 </div><!-- .fund-raised-total -->
 
                                                 <div class="fund-raised-goal mt-4">
-													평점: <p class="item_critic">123</p>
+													평점: <p class="item_critic"></p>
                                                 </div><!-- .fund-raised-goal -->
                                             </div><!-- .fund-raised-details -->
                                         </div><!-- .fund-raised -->
