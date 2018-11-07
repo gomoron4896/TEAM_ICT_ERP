@@ -1,5 +1,3 @@
-var causes = document.querySelectorAll('.our-causes swiper-slider');
-
 $.ajax({
 	type:'post',
 	url:'/pjhead',
@@ -12,7 +10,10 @@ $.ajax({
 });
 
 function addItem() {
-	mySwiper.init();
+	var causes = document.querySelectorAll('.our-causes swiper-slider');
+	for(var num in causes) {
+		
+	}
 	
 }
 
