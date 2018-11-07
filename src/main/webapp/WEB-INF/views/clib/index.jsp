@@ -95,7 +95,7 @@
                         </header>
 
                         <div class="entry-content">
-                            <p>다른 이의 아이디어에 의견을 남기고 함께 발전시켜 보세요.</p>
+                            <p>다른 이의 아이디어에 의견과 평점을 남기고 함께 발전시켜 보세요.</p>
                         </div>
                     </div>
                 </div>
@@ -112,7 +112,7 @@
                         </header>
 
                         <div class="entry-content">
-                            <p>마음에 드는 아이디어를 발견했다면? LOVIT으로 아이디어에 호감을 표현하세요! </p>
+                            <p>마음에 드는 아이디어를 발견했다면? LOVIT!으로 간편하게 아이디어에 호감을 표현하세요! </p>
                         </div>
                     </div>
                 </div>
@@ -125,11 +125,11 @@
                         </figure>
 
                         <header class="entry-header">
-                            <h3 class="entry-title">Online Conference</h3>
+                            <h3 class="entry-title">팀에 참여하세요</h3>
                         </header>
 
                         <div class="entry-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris quis aliquam. </p>
+                            <p>팀원을 모집하는 아이디어가 있나요? </p>
                         </div>
                     </div>
                 </div>
@@ -160,17 +160,17 @@
                                         <img src="/clib/images/e.jpg" alt="">
 
                                         <div class="figure-overlay d-flex justify-content-center align-items-center position-absolute w-100 h-100">
-                                            <a href="#" class="btn gradient-bg mr-2">Donate Now</a>
+                                            <a href="#" class="btn gradient-bg mr-2">상세보기</a>
                                         </div><!-- .figure-overlay -->
                                     </figure>
 
                                     <div class="cause-content-wrap">
                                         <header class="entry-header d-flex flex-wrap align-items-center">
-                                            <h3 class="entry-title w-100 m-0"><a href="#">Education for all</a></h3>
+                                            <h3 class="entry-title w-100 m-0"><a href="#"><!-- PJH_INTRO --></a></h3>
                                         </header><!-- .entry-header -->
 
                                         <div class="entry-content">
-                                            <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</p>
+                                            <p class="m-0"><!-- PJH_NAME --></p>
                                         </div><!-- .entry-content -->
 
                                         <div class="fund-raised w-100">
@@ -179,16 +179,16 @@
                                                     <span class="tip"></span>
                                                 </div><!-- .tipWrap -->
 
-                                                <span class="fill" data-percentage="70"></span>
+                                                <span class="fill" data-percentage="20"><!--  --></span>
                                             </div><!-- .fund-raised-bar -->
 
                                             <div class="fund-raised-details d-flex flex-wrap justify-content-between align-items-center">
                                                 <div class="fund-raised-total mt-4">
-                                                    Raised: $56 880
+                                                    LOVIT: <p class="item_lovit">123</p>
                                                 </div><!-- .fund-raised-total -->
 
                                                 <div class="fund-raised-goal mt-4">
-                                                    Goal: $70 000
+													평점: <p class="item_critic">123</p>
                                                 </div><!-- .fund-raised-goal -->
                                             </div><!-- .fund-raised-details -->
                                         </div><!-- .fund-raised -->
@@ -200,20 +200,20 @@
                             <div class="swiper-slide">
                                 <div class="cause-wrap">
                                     <figure class="m-0">
-                                        <img src="/clib/images/3.jpg" alt="">
+                                        <img src="/clib/images/e.jpg" alt="">
 
                                         <div class="figure-overlay d-flex justify-content-center align-items-center position-absolute w-100 h-100">
-                                            <a href="#" class="btn gradient-bg mr-2">Donate Now</a>
+                                            <a href="#" class="btn gradient-bg mr-2">상세보기</a>
                                         </div><!-- .figure-overlay -->
                                     </figure>
 
                                     <div class="cause-content-wrap">
                                         <header class="entry-header d-flex flex-wrap align-items-center">
-                                            <h3 class="entry-title w-100 m-0"><a href="#">Education for all</a></h3>
+                                            <h3 class="entry-title w-100 m-0"><a href="#"><!-- PJH_INTRO --></a></h3>
                                         </header><!-- .entry-header -->
 
                                         <div class="entry-content">
-                                            <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</p>
+                                            <p class="m-0"><!-- PJH_NAME --></p>
                                         </div><!-- .entry-content -->
 
                                         <div class="fund-raised w-100">
@@ -222,59 +222,16 @@
                                                     <span class="tip"></span>
                                                 </div><!-- .tipWrap -->
 
-                                                <span class="fill" data-percentage="70"></span>
+                                                <span class="fill" data-percentage="20"><!--  --></span>
                                             </div><!-- .fund-raised-bar -->
 
                                             <div class="fund-raised-details d-flex flex-wrap justify-content-between align-items-center">
                                                 <div class="fund-raised-total mt-4">
-                                                    Raised: $56 880
+                                                    LOVIT: <p class="item_lovit">123</p>
                                                 </div><!-- .fund-raised-total -->
 
                                                 <div class="fund-raised-goal mt-4">
-                                                    Goal: $70 000
-                                                </div><!-- .fund-raised-goal -->
-                                            </div><!-- .fund-raised-details -->
-                                        </div><!-- .fund-raised -->
-                                    </div><!-- .cause-content-wrap -->
-                                </div><!-- .cause-wrap -->
-                            </div><!-- .swiper-slide -->
-                            
-                            
-                            <div class="swiper-slide">
-                                <div class="cause-wrap">
-                                    <figure class="m-0">
-                                        <img src="/clib/images/d.jpg" alt="">
-
-                                        <div class="figure-overlay d-flex justify-content-center align-items-center position-absolute w-100 h-100">
-                                            <a href="#" class="btn gradient-bg mr-2">Donate Now</a>
-                                        </div><!-- .figure-overlay -->
-                                    </figure>
-
-                                    <div class="cause-content-wrap">
-                                        <header class="entry-header d-flex flex-wrap align-items-center">
-                                            <h3 class="entry-title w-100 m-0"><a href="#">Education for all</a></h3>
-                                        </header><!-- .entry-header -->
-
-                                        <div class="entry-content">
-                                            <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</p>
-                                        </div><!-- .entry-content -->
-
-                                        <div class="fund-raised w-100">
-                                            <div class="fund-raised-bar-2 barfiller">
-                                                <div class="tipWrap">
-                                                    <span class="tip"></span>
-                                                </div><!-- .tipWrap -->
-
-                                                <span class="fill" data-percentage="70"></span>
-                                            </div><!-- .fund-raised-bar -->
-
-                                            <div class="fund-raised-details d-flex flex-wrap justify-content-between align-items-center">
-                                                <div class="fund-raised-total mt-4">
-                                                    Raised: $56 880
-                                                </div><!-- .fund-raised-total -->
-
-                                                <div class="fund-raised-goal mt-4">
-                                                    Goal: $70 000
+													평점: <p class="item_critic">123</p>
                                                 </div><!-- .fund-raised-goal -->
                                             </div><!-- .fund-raised-details -->
                                         </div><!-- .fund-raised -->
@@ -285,20 +242,20 @@
                             <div class="swiper-slide">
                                 <div class="cause-wrap">
                                     <figure class="m-0">
-                                        <img src="/clib/images/3.jpg" alt="">
+                                        <img src="/clib/images/e.jpg" alt="">
 
                                         <div class="figure-overlay d-flex justify-content-center align-items-center position-absolute w-100 h-100">
-                                            <a href="#" class="btn gradient-bg mr-2">Donate Now</a>
+                                            <a href="#" class="btn gradient-bg mr-2">상세보기</a>
                                         </div><!-- .figure-overlay -->
                                     </figure>
 
                                     <div class="cause-content-wrap">
                                         <header class="entry-header d-flex flex-wrap align-items-center">
-                                            <h3 class="entry-title w-100 m-0"><a href="#">Education for all</a></h3>
+                                            <h3 class="entry-title w-100 m-0"><a href="#"><!-- PJH_INTRO --></a></h3>
                                         </header><!-- .entry-header -->
 
                                         <div class="entry-content">
-                                            <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</p>
+                                            <p class="m-0"><!-- PJH_NAME --></p>
                                         </div><!-- .entry-content -->
 
                                         <div class="fund-raised w-100">
@@ -307,23 +264,22 @@
                                                     <span class="tip"></span>
                                                 </div><!-- .tipWrap -->
 
-                                                <span class="fill" data-percentage="70"></span>
+                                                <span class="fill" data-percentage="20"><!--  --></span>
                                             </div><!-- .fund-raised-bar -->
 
                                             <div class="fund-raised-details d-flex flex-wrap justify-content-between align-items-center">
                                                 <div class="fund-raised-total mt-4">
-                                                    Raised: $56 880
+                                                    LOVIT: <p class="item_lovit">123</p>
                                                 </div><!-- .fund-raised-total -->
 
                                                 <div class="fund-raised-goal mt-4">
-                                                    Goal: $70 000
+													평점: <p class="item_critic">123</p>
                                                 </div><!-- .fund-raised-goal -->
                                             </div><!-- .fund-raised-details -->
                                         </div><!-- .fund-raised -->
                                     </div><!-- .cause-content-wrap -->
                                 </div><!-- .cause-wrap -->
                             </div><!-- .swiper-slide -->
-                            
                             
                             
                         </div><!-- .swiper-wrapper -->
