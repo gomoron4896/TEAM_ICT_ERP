@@ -67,6 +67,12 @@
 	<!-- .swiper-slide -->
 
 
+<!-- 
+$('.figure img').atrr('src') = 프로젝트 이미지 경로
+$('
+
+ -->
+
 
 
 </body>
