@@ -21,6 +21,7 @@
 	<resources mapping="/fl/**" location="/resources/freelancer/"/>
 	<resources mapping="/dn/**" location="/resources/donate/"/>
 	<resources mapping="/mtk/**" location="/resources/material-kit/"/>
+	<resources mapping="/clib/**" location="/resources/clib/"/>
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
