@@ -17,8 +17,12 @@ public class PjHeadInfoController {
 	@Autowired
 	private PjHeadInfoService phis;
 
-	@RequestMapping(value = "/pjhead", method = RequestMethod.POST)
-	public @ResponseBody List<PjHeadInfo> putUser2(@RequestBody(required=false) PjHeadInfo phi) {
+	@RequestMapping(value = "/pjhead", method = RequestMethod.GET)
+	public @ResponseBody List<PjHeadInfo> selectUser(@RequestBody(required=false) PjHeadInfo phi) {
 		return phis.getPjHeadInfoList(phi);
+	}
+	@RequestMapping(value = "/pjhead/date", method = RequestMethod.GET)
+	public @ResponseBody List<Integer> getLeftDat(@RequestBody(required=false) PjHeadInfo phi) {
+		return phis.getLeftDatInfo(phi);
 	}
 }

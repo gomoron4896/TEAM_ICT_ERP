@@ -40,4 +40,9 @@ public class PjHeadInfoDAOImpl implements PjHeadInfoDAO{
 		return ss.delete("SQL.PJHEADINFO.deletePjHeadInfo", phi);
 	}
 
+	@Override
+	public List<Integer> selectLeftDatInfo(PjHeadInfo phi) {
+		return ss.selectList("SQL.PJHEADINFO.selectLeftDatInfo", phi);
+	}
+
 }

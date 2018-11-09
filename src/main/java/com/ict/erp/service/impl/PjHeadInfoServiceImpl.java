@@ -40,4 +40,9 @@ public class PjHeadInfoServiceImpl implements PjHeadInfoService{
 		return phdao.deletePjHeadInfo(phi);
 	}
 
+	@Override
+	public List<Integer> getLeftDatInfo(PjHeadInfo phi) {
+		return phdao.selectLeftDatInfo(phi);
+	}
+
 }

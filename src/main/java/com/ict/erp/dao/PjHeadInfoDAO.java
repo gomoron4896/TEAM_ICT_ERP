@@ -10,4 +10,5 @@ public interface PjHeadInfoDAO {
 	public int insertPjHeadInfo(PjHeadInfo phi);
 	public int updatePjHeadInfo(PjHeadInfo phi);
 	public int deletePjHeadInfo(PjHeadInfo phi);
+	public List<Integer> selectLeftDatInfo(PjHeadInfo phi);
 }

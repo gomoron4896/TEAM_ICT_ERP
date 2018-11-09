@@ -10,4 +10,5 @@ public interface PjHeadInfoService {
 	public int putPjHeadInfo(PjHeadInfo phi);
 	public int setPjHeadInfo(PjHeadInfo phi);
 	public int removePjHeadInfo(PjHeadInfo phi);
+	public List<Integer> getLeftDatInfo(PjHeadInfo phi);
 }

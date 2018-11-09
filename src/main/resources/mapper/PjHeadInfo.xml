@@ -44,5 +44,12 @@
 		pjhead_info
 		where pjh_num = #{pjh_num}
 	</delete>
-
+	
+	<select id="selectLeftDatInfo" resultType="Pjh"
+		parameterType="Pjh">
+		select pjh.*, to_char(trunc(sysdate - pjh.pjh_enddat)) as rdate from pjhead_info pjh;
+		<where>
+			<if test="pjh_num!=null">pjh_num like '%' || #{pjh_num} || '%'</if>
+		</where>
+	</select>
 </mapper>
