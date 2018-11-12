@@ -37,7 +37,10 @@ public class HomeController {
 	}*/
 	@RequestMapping(value = "/admin", method = RequestMethod.GET)
 	public String admin() {
-		System.out.println("어드민 여기접근함");
+		return "main/admin";
+	}
+	@RequestMapping(value = "/user", method = RequestMethod.GET)
+	public String user() {
 		return "main/main";
 	}
 	

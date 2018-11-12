@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <body>
@@ -40,10 +42,21 @@
                                 <li><a href="/clib/portfolio.html">Gallery</a></li>
                                 <li><a href="/clib/news.html">News</a></li>
                                 <li><a href="/clib/contact.html">Contact</a></li>
+                                <li>
+                               		 <sec:authorize access="isAnonymous()">
+                                		<a href="${CONTEXT}/url/auth:login-service-test">로그인</a>
+                               		 </sec:authorize>
+                               		  <sec:authorize access="isAuthenticated()">
+                                		<a href="${CONTEXT}/url/main:main">로그아웃</a>
+                                		
+                               		 </sec:authorize>
+                              
+                                </li>
+                                
                             </ul>
                         </nav><!-- .site-navigation -->
 
-                        <div class="hamburger-menu d-lg-none">
+                        <div class="hamburger-menu d-lg-none">	
                             <span></span>
                             <span></span>
                             <span></span>
