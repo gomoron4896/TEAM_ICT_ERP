@@ -1,5 +1,5 @@
 $.ajax({
-	type:'post',
+	type:'get',
 	url:'/pjhead',
 	dataType:'json',
 	contentType: "application/json",
@@ -10,14 +10,18 @@ $.ajax({
 });
 
 function addItem(res) {
-	var causes = document.querySelectorAll('.our-causes .swiper-slide[data-sfnum]');
+	var causes = document.querySelectorAll('[data-cause="wrapper"]');
 	for(var num in causes) {
-		console.log(causes[num].querySelector('img').getAttribute('src'));
-		causes[num].querySelector('img').setAttribute('src', res[num].pjh_img);
-		causes[num].querySelector('.cause-content-wrap a').innerHTML = res[num].pjh_name;
-		causes[num].querySelector('.entry-content p').innerHTML = res[num].pjh_intro;
-		causes[num].querySelector('.fund-raised-total p').innerHTML = res[num].pjh_lovit;
-		causes[num].querySelector('.fund-raised-goal p').innerHTML = res[num].pjh_criticsum;
+		var moneybar = Math.floor(res[num].pjh_nowmoney*100/res[num].pjh_goalmoney) + '%'
+		causes[num].querySelector('[data-cause="cause-img"]').setAttribute('src' , res[num].pjh_img);
+		causes[num].querySelector('[data-cause="cause-name"]').innerHTML = res[num].pjh_name;
+		causes[num].querySelector('[data-cause="cause-intro"]').innerHTML = res[num].pjh_intro;
+		causes[num].querySelector('[data-cause="cause-nowmoney"]').innerHTML = res[num].pjh_nowmoney + '$';
+		causes[num].querySelector('[data-cause="cause-moneybar"]').setAttribute('style' , 
+			causes[num].querySelector('[data-cause="cause-moneybar"]').getAttribute('style') + ';width:' + moneybar + ';');
+		causes[num].querySelector('[data-cause="cause-rdat"]').innerHTML = res[num].pjh_startdat;
+		causes[num].querySelector('[data-cause="cause-lovit"]').innerHTML = res[num].pjh_lovit;
+		causes[num].querySelector('[data-cause="cause-critic"]').innerHTML = res[num].pjh_criticsum;
 	}
 	
 }
