@@ -150,24 +150,24 @@
         </div><!-- .container -->
     </div><!-- .home-page-icon-boxes -->
 
-    <div class="our-causes">
+    <div class="our-causes"><!-- @@@ SWIPER 영역 @@@ -->
         <div class="container">
         
             <div class="row"><!-- 상단 제목 -->
                 <div class="coL-12">
                     <div class="section-heading">
-                        <h2 class="entry-title">테스트 </h2>
+                        <h2 class="entry-title">Our Causes</h2>
                     </div><!-- .section-heading -->
                 </div><!-- .col -->
             </div><!-- .row -->
 
             <div class="row">
                 <div class="col-12">
-                    <div class="swiper-container causes-slider">
+                    <div class="swiper-container causes-slider-3">
                         <div class="swiper-wrapper">
                         
                             
-                             <div class="swiper-slide" data-sfnum="1">
+                             <div class="swiper-slide">
                                 <div class="cause-wrap">
                                     <figure class="m-0">
                                         <img src="/clib/images/e.jpg" alt="">
@@ -179,11 +179,11 @@
 
                                     <div class="cause-content-wrap">
                                         <header class="entry-header d-flex flex-wrap align-items-center">
-                                            <h3 class="entry-title w-100 m-0"><a href="#"><!-- PJH_INTRO --></a></h3>
+                                            <h3 class="entry-title w-100 m-0"><a href="#" data-filling="pjh_intro"><!-- PJH_INTRO --></a></h3>
                                         </header><!-- .entry-header -->
 
                                         <div class="entry-content">
-                                            <p class="m-0"><!-- PJH_NAME --></p>
+                                            <p class="m-0" data-filling="pjh_name"><!-- PJH_NAME --></p>
                                         </div><!-- .entry-content -->
 
                                         <div class="fund-raised w-100">
@@ -197,11 +197,11 @@
 
                                             <div class="fund-raised-details d-flex flex-wrap justify-content-between align-items-center">
                                                 <div class="fund-raised-total mt-4">
-                                                    LOVIT: <p class="item_lovit"></p>
+                                                    LOVIT: <p data-filling="pjh_lovit"></p>
                                                 </div><!-- .fund-raised-total -->
 
                                                 <div class="fund-raised-goal mt-4">
-													평점: <p class="item_critic"></p>
+													평점: <p data-filling="pjh_criticsum"></p>
                                                 </div><!-- .fund-raised-goal -->
                                             </div><!-- .fund-raised-details -->
                                         </div><!-- .fund-raised -->
@@ -210,7 +210,7 @@
                             </div><!-- .swiper-slide -->
                             
                             
-                            <div class="swiper-slide" data-sfnum="2">
+                            <div class="swiper-slide">
                                 <div class="cause-wrap">
                                     <figure class="m-0">
                                         <img src="/clib/images/e.jpg" alt="">
@@ -252,7 +252,135 @@
                                 </div><!-- .cause-wrap -->
                             </div><!-- .swiper-slide -->
                             
-                            <div class="swiper-slide" data-sfnum="3">
+                            <div class="swiper-slide">
+                                <div class="cause-wrap">
+                                    <figure class="m-0">
+                                        <img src="/clib/images/e.jpg" id="cause-img">
+
+                                        <div class="figure-overlay d-flex justify-content-center align-items-center position-absolute w-100 h-100">
+                                            <a href="#" class="btn gradient-bg mr-2" id="cause-link">상세보기</a>
+                                        </div><!-- .figure-overlay -->
+                                    </figure>
+                                    <div class="cause-content-wrap">
+                                        <header class="entry-header d-flex flex-wrap align-items-center">
+                                            <h3 class="entry-title w-100 m-0"><a href="#" id="cause-name">나는 테스트 프로젝트 이름입니다<!-- PJH_NAME --></a></h3>
+                                        </header><!-- .entry-header -->
+                                        <div class="entry-content">
+                                            <p class="m-0" id="cause-intro">나는 테스트 프로젝트 인트로 나는 테스트 프로젝트 인트로 나는 테스트 프로젝트 인트로<!-- PJH_INTRO --></p>
+                                        </div><!-- .entry-content -->
+                                        <div class="fund-raised w-100">
+                                        	<div class="fund-raised-details">
+	                                            <span>PRE-FUND</span>
+	                                            <h6 id="cause-rdat">100,000$</h6>
+	                                            <div class="progress">
+								                    <div class="progress-bar" role="progressbar" id="cause-" aria-valuenow="0"
+								                    aria-valuemin="0" aria-valuemax="0" style="background-color:#01abaf">
+								                    </div>
+								                </div>
+								            </div>
+                                            <div class="fund-raised-details d-flex flex-wrap justify-content-between align-items-center">
+                                                <div class="fund-raised-rdat mt-4">
+													<span>남은 기간 </span>
+													<h6 id="cause-rdat">123</h6> 
+                                                </div><!-- .fund-raised-rdat -->
+                                                
+                                                <div class="fund-raised-total mt-4">
+                                                    <span>LOVIT</span>
+                                                    <h6 id="cause-lovit">123</h6>
+                                                </div><!-- .fund-raised-total -->
+
+                                                <div class="fund-raised-goal mt-4">
+                                                	<span>평점</span>
+													<h6 id="cause-critic">123</h6>
+                                                </div><!-- .fund-raised-goal -->
+                                            </div><!-- .fund-raised-details -->
+                                        </div><!-- .fund-raised -->
+                                    </div><!-- .cause-content-wrap -->
+                                </div><!-- .cause-wrap -->
+                            </div><!-- .swiper-slide -->
+                            
+                            
+                        </div><!-- .swiper-wrapper -->
+
+                    </div><!-- .swiper-container -->
+
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next flex justify-content-center align-items-center">
+                        <span><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1171 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z"/></svg></span>
+                    </div>
+
+                    <div class="swiper-button-prev flex justify-content-center align-items-center">
+                        <span><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1203 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg></span>
+                    </div>
+                </div><!-- .col -->
+            </div><!-- .row -->
+            
+            
+        </div><!-- .container -->
+    </div><!-- .our-causes -->
+    
+    
+    <div class="our-causes"><!-- @@@ SWIPER 영역 @@@ -->
+        <div class="container">
+        
+            <div class="row"><!-- 상단 제목 -->
+                <div class="coL-12">
+                    <div class="section-heading">
+                        <h2 class="entry-title">Our Causes</h2>
+                    </div><!-- .section-heading -->
+                </div><!-- .col -->
+            </div><!-- .row -->
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="swiper-container causes-slider">
+                        <div class="swiper-wrapper">
+                        
+                            
+                             <div class="swiper-slide">
+                                <div class="cause-wrap">
+                                    <figure class="m-0">
+                                        <img src="/clib/images/e.jpg" alt="">
+
+                                        <div class="figure-overlay d-flex justify-content-center align-items-center position-absolute w-100 h-100">
+                                            <a href="#" class="btn gradient-bg mr-2">상세보기</a>
+                                        </div><!-- .figure-overlay -->
+                                    </figure>
+
+                                    <div class="cause-content-wrap">
+                                        <header class="entry-header d-flex flex-wrap align-items-center">
+                                            <h3 class="entry-title w-100 m-0"><a href="#" data-filling="pjh_intro"><!-- PJH_INTRO --></a></h3>
+                                        </header><!-- .entry-header -->
+
+                                        <div class="entry-content">
+                                            <p class="m-0" data-filling="pjh_name"><!-- PJH_NAME --></p>
+                                        </div><!-- .entry-content -->
+
+                                        <div class="fund-raised w-100">
+                                            <div class="fund-raised-bar-2 barfiller">
+                                                <div class="tipWrap">
+                                                    <span class="tip"></span>
+                                                </div><!-- .tipWrap -->
+
+                                                <span class="fill" data-percentage="20"><!--  --></span>
+                                            </div><!-- .fund-raised-bar -->
+
+                                            <div class="fund-raised-details d-flex flex-wrap justify-content-between align-items-center">
+                                                <div class="fund-raised-total mt-4">
+                                                    LOVIT: <p data-filling="pjh_lovit"></p>
+                                                </div><!-- .fund-raised-total -->
+
+                                                <div class="fund-raised-goal mt-4">
+													평점: <p data-filling="pjh_criticsum"></p>
+                                                </div><!-- .fund-raised-goal -->
+                                            </div><!-- .fund-raised-details -->
+                                        </div><!-- .fund-raised -->
+                                    </div><!-- .cause-content-wrap -->
+                                </div><!-- .cause-wrap -->
+                            </div><!-- .swiper-slide -->
+                            
+                            
+                            <div class="swiper-slide">
                                 <div class="cause-wrap">
                                     <figure class="m-0">
                                         <img src="/clib/images/e.jpg" alt="">
@@ -269,6 +397,91 @@
 
                                         <div class="entry-content">
                                             <p class="m-0"><!-- PJH_NAME --></p>
+                                        </div><!-- .entry-content -->
+
+                                        <div class="fund-raised w-100">
+                                            <div class="fund-raised-bar-2 barfiller">
+                                                <div class="tipWrap">
+                                                    <span class="tip"></span>
+                                                </div><!-- .tipWrap -->
+
+                                                <span class="fill" data-percentage="20"><!--  --></span>
+                                            </div><!-- .fund-raised-bar -->
+
+                                            <div class="fund-raised-details d-flex flex-wrap justify-content-between align-items-center">
+                                                <div class="fund-raised-total mt-4">
+                                                    LOVIT: <p class="item_lovit">123</p>
+                                                </div><!-- .fund-raised-total -->
+
+                                                <div class="fund-raised-goal mt-4">
+													평점: <p class="item_critic">123</p>
+                                                </div><!-- .fund-raised-goal -->
+                                            </div><!-- .fund-raised-details -->
+                                        </div><!-- .fund-raised -->
+                                    </div><!-- .cause-content-wrap -->
+                                </div><!-- .cause-wrap -->
+                            </div><!-- .swiper-slide -->
+                            
+                            <div class="swiper-slide">
+                                <div class="cause-wrap">
+                                    <figure class="m-0">
+                                        <img src="/clib/images/e.jpg" alt="">
+
+                                        <div class="figure-overlay d-flex justify-content-center align-items-center position-absolute w-100 h-100">
+                                            <a href="#" class="btn gradient-bg mr-2">상세보기</a>
+                                        </div><!-- .figure-overlay -->
+                                    </figure>
+
+                                    <div class="cause-content-wrap">
+                                        <header class="entry-header d-flex flex-wrap align-items-center">
+                                            <h3 class="entry-title w-100 m-0"><a href="#"><!-- PJH_INTRO --></a></h3>
+                                        </header><!-- .entry-header -->
+
+                                        <div class="entry-content">
+                                            <p class="m-0"><!-- PJH_NAME --></p>
+                                        </div><!-- .entry-content -->
+
+                                        <div class="fund-raised w-100">
+                                            <div class="fund-raised-bar-2 barfiller">
+                                                <div class="tipWrap">
+                                                    <span class="tip"></span>
+                                                </div><!-- .tipWrap -->
+
+                                                <span class="fill" data-percentage="20"><!--  --></span>
+                                            </div><!-- .fund-raised-bar -->
+
+                                            <div class="fund-raised-details d-flex flex-wrap justify-content-between align-items-center">
+                                                <div class="fund-raised-total mt-4">
+                                                    LOVIT: <p class="item_lovit">123</p>
+                                                </div><!-- .fund-raised-total -->
+
+                                                <div class="fund-raised-goal mt-4">
+													평점: <p class="item_critic">123</p>
+                                                </div><!-- .fund-raised-goal -->
+                                            </div><!-- .fund-raised-details -->
+                                        </div><!-- .fund-raised -->
+                                    </div><!-- .cause-content-wrap -->
+                                </div><!-- .cause-wrap -->
+                            </div><!-- .swiper-slide -->
+                            
+                            
+                            <div class="swiper-slide">
+                                <div class="cause-wrap">
+                                    <figure class="m-0">
+                                        <img src="/clib/images/e.jpg" alt="">
+
+                                        <div class="figure-overlay d-flex justify-content-center align-items-center position-absolute w-100 h-100">
+                                            <a href="#" class="btn gradient-bg mr-2">상세보기</a>
+                                        </div><!-- .figure-overlay -->
+                                    </figure>
+
+                                    <div class="cause-content-wrap">
+                                        <header class="entry-header d-flex flex-wrap align-items-center">
+                                            <h3 class="entry-title w-100 m-0"><a href="#">나는 테스트 프로젝트 이름입니다<!-- PJH_NAME --></a></h3>
+                                        </header><!-- .entry-header -->
+
+                                        <div class="entry-content">
+                                            <p class="m-0">나는 테스트 프로젝트 인트로 나는 테스트 프로젝트 인트로 나는 테스트 프로젝트 인트로<!-- PJH_INTRO --></p>
                                         </div><!-- .entry-content -->
 
                                         <div class="fund-raised w-100">
