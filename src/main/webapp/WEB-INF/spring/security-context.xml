@@ -4,31 +4,33 @@
 	xmlns:beans="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd ">
-	<http pattern="/img/**" security="none" />
-	<http pattern="/ckeditor/**" security="none" />
+	<http pattern="/rcs/*" security="none" />
+	<!-- <http pattern="/ckeditor/**" security="none" />
 	<http pattern="/sufee/**" security="none" />
 	<http pattern="/fl/**" security="none" />
 	<http pattern="/dn/**" security="none" />
 	<http pattern="/mtk/**" security="none" />
-	<http pattern="/clib/**" security="none" />
-	<http auto-config="true">
-		<intercept-url pattern="/" access="permitAll" />
-		<intercept-url pattern="/url/main:main" access="hasRole('ROLE_USER')" />
-		<intercept-url pattern="/admin" access="hasRole('ROLE_ADMIN')" />
-	</http>
+	<http pattern="/clib/**" security="none" /> -->
+	
+	<http auto-config="true" use-expressions="true">
+		<intercept-url pattern="/*" access="permitAll" />
+		<intercept-url pattern="/url/main:main"
+			access="hasRole('ROLE_USER')" />
+		<intercept-url pattern="/url/main:admin"
+			access="hasRole('ROLE_ADMIN')" />	
+		<intercept-url pattern="/url/main:authenticated" access="isAuthenticated()" />
+        <intercept-url pattern="/url/main:anonymous" access="isAnonymous()" />
+	
+		<logout invalidate-session="true" logout-url="/url/clib:index" logout-success-url="/url/clib:index" />
 
+	</http>
+	
 	<authentication-manager>
 		<authentication-provider>
-			<user-service>
-				<user name="guest" password="guest" authorities="ROLE_USER" />
-				<user name="admin" password="admin" authorities="ROLE_ADMIN" />
-			</user-service>
-			<jdbc-user-service data-source-ref="dataSource"
-				users-by-username-query="SELECT ui_email AS userName, ui_id as password, enabled 
-					FROM user_info WHERE ui_email=?"
-					authorities-by-username-query="SELECT ui_email AS userName, authority 
-						FROM user_info WHERE ui_email=?" />
-		</authentication-provider>	
+			<jdbc-user-service data-source-ref="hikariDataSource"
+				users-by-username-query="select ui_email as username ,ui_id as password, 1 as enabled from user_info where ui_email=?"
+				authorities-by-username-query="select ui_email as username, ui_roll as roll from user_info where ui_email =?  " />
+		</authentication-provider>
 	</authentication-manager>
 </beans:beans>
 	

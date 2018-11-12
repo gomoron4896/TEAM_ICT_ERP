@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 <!DOCTYPE html>
 <html>
 <!-- <head>
@@ -92,7 +93,8 @@
 									ui_id:ui_id,
 									ui_email:ui_email,
 									ui_img:ui_img,
-									ui_name:ui_name
+									ui_name:ui_name,
+									/* _csrf:${_csrf.token} */
 								};
 							data = JSON.stringify(data)
 							var url = "/login";
@@ -104,7 +106,7 @@
 							}
 							xhr.send(data);                                                                                      
 
-							 window.location.replace("http://localhost/url/main:main");
+							 window.location.replace("http://localhost/url/clib:index");
 							
 							/*window.location.replace("http://" + window.location.hostname + ( (location.port==""||location.port==undefined)?"":":" + location.port) + "/sample/main.html"); */
 						} else {

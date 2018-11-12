@@ -12,7 +12,7 @@ public class UserInfo {
 	private String ui_name;
 	private String ui_email;
 	private String ui_img;
-	private Integer ui_level;
+	private String ui_roll;
 	private Integer ui_prefund;
 	public Integer getUi_num() {
 		return ui_num;
@@ -44,11 +44,11 @@ public class UserInfo {
 	public void setUi_img(String ui_img) {
 		this.ui_img = ui_img;
 	}
-	public Integer getUi_level() {
-		return ui_level;
+	public String getUi_roll() {
+		return ui_roll;
 	}
-	public void setUi_level(Integer ui_level) {
-		this.ui_level = ui_level;
+	public void setUi_roll(String ui_roll) {
+		this.ui_roll = ui_roll;
 	}
 	public Integer getUi_prefund() {
 		return ui_prefund;
@@ -59,9 +59,9 @@ public class UserInfo {
 	@Override
 	public String toString() {
 		return "UserInfo [ui_num=" + ui_num + ", ui_id=" + ui_id + ", ui_name=" + ui_name + ", ui_email=" + ui_email
-				+ ", ui_img=" + ui_img + ", ui_level=" + ui_level + ", ui_prefund=" + ui_prefund + "]";
+				+ ", ui_img=" + ui_img + ", ui_roll=" + ui_roll + ", ui_prefund=" + ui_prefund + "]";
 	}
-	public UserInfo(Integer ui_num, Integer ui_id, String ui_name, String ui_email, String ui_img, Integer ui_level,
+	public UserInfo(Integer ui_num, Integer ui_id, String ui_name, String ui_email, String ui_img, String ui_roll,
 			Integer ui_prefund) {
 		super();
 		this.ui_num = ui_num;
@@ -69,11 +69,9 @@ public class UserInfo {
 		this.ui_name = ui_name;
 		this.ui_email = ui_email;
 		this.ui_img = ui_img;
-		this.ui_level = ui_level;
+		this.ui_roll = ui_roll;
 		this.ui_prefund = ui_prefund;
 	}
-	
 	public UserInfo() {}
-	
 }
 
