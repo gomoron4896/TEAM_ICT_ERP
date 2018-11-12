@@ -23,7 +23,12 @@
 				<user name="guest" password="guest" authorities="ROLE_USER" />
 				<user name="admin" password="admin" authorities="ROLE_ADMIN" />
 			</user-service>
-		</authentication-provider>
+			<jdbc-user-service data-source-ref="dataSource"
+				users-by-username-query="SELECT ui_email AS userName, ui_id as password, enabled 
+					FROM user_info WHERE ui_email=?"
+					authorities-by-username-query="SELECT ui_email AS userName, authority 
+						FROM user_info WHERE ui_email=?" />
+		</authentication-provider>	
 	</authentication-manager>
 </beans:beans>
 	

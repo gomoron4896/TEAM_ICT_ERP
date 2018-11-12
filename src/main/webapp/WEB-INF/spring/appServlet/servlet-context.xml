@@ -20,16 +20,26 @@
 		/> -->
 	<resources mapping="/js/**" location="/resources/js/" />
 	<resources mapping="/img/**" location="/resources/img/" />
-	<resources mapping="/ckeditor/**" location="/resources/ckeditor/" />
+	<resources mapping="/ckeditor/**"
+		location="/resources/ckeditor/" />
 	<resources mapping="/sufee/**" location="/resources/sufee/" />
 	<resources mapping="/fl/**" location="/resources/freelancer/" />
 	<resources mapping="/dn/**" location="/resources/donate/" />
-	<resources mapping="/mtk/**" location="/resources/material-kit/" />
+	<resources mapping="/mtk/**"
+		location="/resources/material-kit/" />
 	<resources mapping="/clib/**" location="/resources/clib/" />
-
+	<beans:bean id="dataSource"
+		class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
+		<beans:property name="driverClass"
+			value="oracle.jdbc.driver.OracleDriver" />
+		<beans:property name="url"
+			value="jdbc:oracle:thin:@localhost:1521:xe" />
+		<beans:property name="username" value="ictu" />
+		<beans:property name="password" value="12345678" />
+	</beans:bean>
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
 		in the /WEB-INF/views directory -->
-	<beans:bean 
+	<beans:bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
@@ -38,6 +48,7 @@
 	<beans:bean id="multipartResolver"
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
 
-	<context:component-scan base-package="com.ict.erp" />
+	<context:component-scan
+		base-package="com.ict.erp" />
 
 </beans:beans>
