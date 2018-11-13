@@ -44,8 +44,10 @@
         <img src="/clib/images/hero.jpg" alt="">
         <div class="hero-content-overlay position-absolute w-100 h-100">
             <div class="container h-100">
-                <div class="row h-100">
-                    <div class="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-start">
+                <div class="row h-100 pjhead">
+                
+                    <div class="col-12 col-lg-5 d-flex flex-column justify-content-center align-items-start"
+                    style="float: left">
                         <header class="entry-header">
                             <h1>project nest</h1>
                             <h4>멋진 아이디어가 커나가는 공간</h4>
@@ -60,6 +62,24 @@
                             <a href="#" class="btn orange-border">다른 아이디어 평가하기</a>
                         </footer><!-- .entry-footer -->
                     </div><!-- .col -->
+                    
+                    <div class="col-12 col-lg-5 d-flex flex-column justify-content-center align-items-start"
+                    style="float: right">
+                        <header class="entry-header">
+                            <h1>project nest</h1>
+                            <h4>멋진 아이디어가 커나가는 공간</h4>
+                        </header><!-- .entry-header -->
+
+                        <div class="entry-content mt-4">
+                            <p>당신의 아이디어를 다른 사람들과 공유하세요</p>
+                        </div><!-- .entry-content -->
+
+                        <footer class="entry-footer d-flex flex-wrap align-items-center mt-5">
+                            <a href="#" class="btn gradient-bg mr-2">내 아이디어 제안하기</a>
+                            <a href="#" class="btn orange-border">다른 아이디어 평가하기</a>
+                        </footer><!-- .entry-footer -->
+                    </div><!-- .col -->
+                    
                 </div><!-- .row -->
             </div><!-- .container -->
         </div><!-- .hero-content-overlay -->
