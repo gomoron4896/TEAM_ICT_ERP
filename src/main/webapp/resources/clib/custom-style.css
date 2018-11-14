@@ -807,7 +807,7 @@ ul.tabs-nav .tab-nav.active {
 --------------------------------*/
 
 .home-page-icon-boxes {
-    padding: 96px 0;
+    padding: 50px 0 25px 0;
 }
 
 /*
@@ -2219,4 +2219,18 @@ ul.tabs-nav .tab-nav.active {
     color: #7b7b7b;
     background: #131212;
     text-align: center;
+}
+
+
+/*
+# Custom-Custom
+--------------------------------*/
+
+.nav-bar {
+    position: fixed;
+    list-style: none;
+    z-index: 99999;
+    width: 100%;
+    background-color: #ffffff;
+    list-style: none;
 }

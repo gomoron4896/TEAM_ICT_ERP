@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Alias("hpb")
 public class HeadPlusBody {
+	
 	@Autowired
 	private PjHeadInfo pjh;
 	
