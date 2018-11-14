@@ -10,7 +10,8 @@
 		security="none" /> <http pattern="/mtk/**" security="none" /> <http pattern="/clib/**" 
 		security="none" /> -->
 
-	<http auto-config="true" use-expressions="true" once-per-request="false">
+	<http auto-config="true" use-expressions="true"
+		once-per-request="false">
 		<intercept-url pattern="/*" access="permitAll" />
 		<!-- <intercept-url pattern="/url/main:admin" access="hasRole('ROLE_ADMIN')" 
 			/> <intercept-url pattern="/url/main:index" access="hasRole('ROLE_USER')" 
@@ -18,17 +19,24 @@
 			/> <intercept-url pattern="/url/main:anonymous" access="isAnonymous()" /> -->
 
 		<form-login login-page="/url/auth:login-cb-test"
-			default-target-url="/url/main:index"
-			username-parameter="ui_email" password-parameter="ui_id"
+			default-target-url="/url/main:index" username-parameter="ui_email"
+			password-parameter="ui_id"
+
 			authentication-success-handler-ref="signinSuccessHandler"
 			authentication-failure-handler-ref="signinFailureHandler" />
-			
+
 		<logout logout-url="/logout"
-			logout-success-url="/url/main:logout" invalidate-session="true" delete-cookies="JSESSIONID" />
-		<session-management invalid-session-url="/login">
-			<concurrency-control max-sessions="1" error-if-maximum-exceeded="false" /> 
+			success-handler-ref="logoutSuccessHandler" invalidate-session="true"
+			delete-cookies="JSESSIONID" />
+		<session-management
+			invalid-session-url="/url/clib:index">
+			<concurrency-control max-sessions="1"
+				error-if-maximum-exceeded="false" />
 		</session-management>
-	</http> 
+	
+	</http>
+	<beans:bean id="logoutSuccessHandler"
+		class="com.ict.erp.security.LogoutSuccessHandler" />
 	<beans:bean id="signinSuccessHandler"
 		class="com.ict.erp.security.LoginSuccessHandler" />
 	<beans:bean id="signinFailureHandler"
@@ -36,15 +44,10 @@
 
 	<authentication-manager>
 		<authentication-provider>
-			<!--  <user-service>
-				<user name="phw4320@naver.com" password="56583957"
-					authorities="ROLE_ADMIN" />
-			</user-service> -->
-
-			<jdbc-user-service data-source-ref="hikariDataSource"
+			<jdbc-user-service
+				data-source-ref="hikariDataSource"
 				users-by-username-query="select ui_email as username ,ui_id as password, 1 as enabled from user_info where ui_email=?"
 				authorities-by-username-query="select ui_email as username, ui_roll as authority from user_info where ui_email=?  " />
-			
 		</authentication-provider>
 	</authentication-manager>
 </beans:beans>

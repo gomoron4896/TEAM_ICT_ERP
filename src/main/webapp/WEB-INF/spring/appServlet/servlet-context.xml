@@ -18,7 +18,12 @@
 		up static resources in the ${webappRoot}/resources directory -->
 	<!-- <beans:bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" 
 		/> -->
+<<<<<<< HEAD
 	<resources mapping="/resources/**" location="/resources/" />
+=======
+	<resources mapping="/.well-known/**" location="/resources/.well-known/" />
+	<resources mapping="/rcs/**" location="/resources/" />
+>>>>>>> branch 'master' of https://github.com/gomoron4896/ict1-erp1.git
 	<resources mapping="/js/**" location="/resources/js/" />
 	<resources mapping="/img/**" location="/resources/img/" />
 	<resources mapping="/ckeditor/**" location="/resources/ckeditor/" />

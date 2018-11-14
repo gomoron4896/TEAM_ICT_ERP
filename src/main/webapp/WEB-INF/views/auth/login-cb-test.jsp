@@ -39,8 +39,8 @@
 
 <body>
 
-	callback 처리중입니다. 이 페이지에서는 callback을 처리하고 바로 main으로 redirect하기때문에 이 메시지가
-	보이면 안됩니다.
+	<!-- callback 처리중입니다. 이 페이지에서는 callback을 처리하고 바로 main으로 redirect하기때문에 이 메시지가
+	보이면 안됩니다. -->
 
 	<!-- (1) LoginWithNaverId Javscript SDK -->
 	<script type="text/javascript"
@@ -100,6 +100,10 @@
 						},
 						success : function(res) {
 							alert(res);
+<<<<<<< HEAD
+=======
+							alert("로그인 처리");
+>>>>>>> branch 'master' of https://github.com/gomoron4896/ict1-erp1.git
 							window.location.replace("http://localhost/url/clib:index");
 						},
 						error : function(err) {

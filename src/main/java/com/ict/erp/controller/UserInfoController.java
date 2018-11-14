@@ -24,8 +24,13 @@ public class UserInfoController {
 		return uis.putUserInfo(ui);
 	}
 
+<<<<<<< HEAD
 	@RequestMapping(value = "/login.do", method = RequestMethod.POST)
 	public String loginUser(HttpSession session, @ModelAttribute UserInfo ui) {
+=======
+/*	@RequestMapping(value = "/login.do", method = RequestMethod.POST)
+	public String loginUser(HttpSession session, @RequestBody UserInfo ui) {
+>>>>>>> branch 'master' of https://github.com/gomoron4896/ict1-erp1.git
 		UserInfo user = uis.getUserInfo(ui);
 		if (user == null) {
 			uis.putUserInfo(ui);
@@ -36,10 +41,17 @@ public class UserInfoController {
 		}
 		session.setAttribute("login", user);
 		System.out.println("로그인 컨트롤러");
+<<<<<<< HEAD
 		return "main/index";
 	}
 
 	/*@RequestMapping(value = "/logout", method = RequestMethod.GET)
+=======
+		return "login";
+	}
+	
+	@RequestMapping(value = "/logout.do", method = RequestMethod.POST)
+>>>>>>> branch 'master' of https://github.com/gomoron4896/ict1-erp1.git
 	public String logoutUser(HttpSession session, @RequestBody UserInfo ui) {
 		session.invalidate();
 		return "clib/index";

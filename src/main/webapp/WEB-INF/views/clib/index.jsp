@@ -1,9 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
-
 <!DOCTYPE html>
 <html lang="en">
 <body>
+<<<<<<< HEAD
     <header class="site-header">
         <div class="top-header-bar">
             <div class="container">
@@ -82,6 +81,8 @@ function Logout() {
         </div><!-- .nav-bar -->
     </header><!-- .site-header -->
 
+=======
+>>>>>>> branch 'master' of https://github.com/gomoron4896/ict1-erp1.git
     <div class="swiper-slide hero-content-wrap"> <!-- 메인 타이틀 -->
         <img src="/clib/images/hero.jpg" alt="">
         <div class="hero-content-overlay position-absolute w-100 h-100">
@@ -1014,8 +1015,30 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
             </div><!-- .container -->
         </div><!-- .footer-bar -->
     </footer><!-- .site-footer -->
+    
+    <script type="text/javascript">
+	    // Cause Slider
+	    var causesSlider = new Swiper('.causes-slider-3', {
+	        slidesPerView: 3,
+	        spaceBetween: 30,
+	        navigation: {
+	            nextEl: '.swiper-button-next',
+	            prevEl: '.swiper-button-prev'
+	        },
+	        breakpoints: {
+	            1200: {
+	                slidesPerView: 2,
+	                spaceBetween: 30,
+	            },
+	            768: {
+	                slidesPerView: 1,
+	                spaceBetween: 0,
+	            }
+	        }
+	    });
+    </script>
    
-   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!--    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
    	
    	<script type='text/javascript' src='/clib/js/jquery.collapsible.min.js'></script>
     <script type='text/javascript' src='/clib/js/jquery.countdown.min.js'></script>
@@ -1027,13 +1050,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	
 	
     <script type='text/javascript' src='/clib/js/custom-custom.js'></script>
-    <script type='text/javascript' src='/clib/js/swiperfiller.js'></script>
-    
-	<script type="text/javascript">
-	
-		
-	
-	</script>
+    <script type='text/javascript' src='/clib/js/swiperfiller.js'></script> -->
 	
 </body>
 </html>
