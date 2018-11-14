@@ -2226,11 +2226,13 @@ ul.tabs-nav .tab-nav.active {
 # Custom-Custom
 --------------------------------*/
 
-.nav-bar {
+/* .nav-bar {
     position: fixed;
     list-style: none;
     z-index: 99999;
     width: 100%;
     background-color: #ffffff;
     list-style: none;
-}
+} */
+
+
