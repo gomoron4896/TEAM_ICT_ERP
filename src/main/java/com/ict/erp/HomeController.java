@@ -43,5 +43,8 @@ public class HomeController {
 	public String user() {
 		return "main/main";
 	}
-	
+	@RequestMapping(value = "/fail", method = RequestMethod.GET)
+	public String failLogin() {
+		return "main/fail";
+	}
 }

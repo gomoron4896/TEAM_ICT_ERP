@@ -1,5 +1,7 @@
 package com.ict.erp.security;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.HashMap;
@@ -10,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.savedrequest.HttpSessionRequestCache;
 import org.springframework.security.web.savedrequest.RequestCache;
@@ -28,8 +31,10 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
 		ObjectMapper om = new ObjectMapper();
 
 		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("success", true);
-		map.put("returnUrl", getReturnUrl(request, response));
+
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	     String name = auth.getName(); //get logged in username
+	     map.put("로그인 아이디", name);
 		System.out.println("로그인 성공");
 		// {"success" : true, "returnUrl" : "..."}
 		String jsonString = om.writeValueAsString(map);

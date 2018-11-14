@@ -23,7 +23,7 @@ public class UserInfoController {
 		return uis.putUserInfo(ui);
 	}
 
-	/*@RequestMapping(value = "/login", method = RequestMethod.POST)
+/*	@RequestMapping(value = "/login.do", method = RequestMethod.POST)
 	public String loginUser(HttpSession session, @RequestBody UserInfo ui) {
 		UserInfo user = uis.getUserInfo(ui);
 		if (user == null) {
@@ -35,12 +35,12 @@ public class UserInfoController {
 		}
 		session.setAttribute("login", user);
 		System.out.println("로그인 컨트롤러");
-		return "main/index";
-	}*/
-
-	@RequestMapping(value = "/logout", method = RequestMethod.GET)
+		return "login";
+	}
+	
+	@RequestMapping(value = "/logout.do", method = RequestMethod.POST)
 	public String logoutUser(HttpSession session, @RequestBody UserInfo ui) {
 		session.invalidate();
 		return "clib/index";
-	}
+	}*/
 }
