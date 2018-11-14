@@ -4,6 +4,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -23,8 +24,8 @@ public class UserInfoController {
 		return uis.putUserInfo(ui);
 	}
 
-	/*@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String loginUser(HttpSession session, @RequestBody UserInfo ui) {
+	@RequestMapping(value = "/login.do", method = RequestMethod.POST)
+	public String loginUser(HttpSession session, @ModelAttribute UserInfo ui) {
 		UserInfo user = uis.getUserInfo(ui);
 		if (user == null) {
 			uis.putUserInfo(ui);
@@ -36,11 +37,11 @@ public class UserInfoController {
 		session.setAttribute("login", user);
 		System.out.println("로그인 컨트롤러");
 		return "main/index";
-	}*/
+	}
 
-	@RequestMapping(value = "/logout", method = RequestMethod.GET)
+	/*@RequestMapping(value = "/logout", method = RequestMethod.GET)
 	public String logoutUser(HttpSession session, @RequestBody UserInfo ui) {
 		session.invalidate();
 		return "clib/index";
-	}
+	}*/
 }

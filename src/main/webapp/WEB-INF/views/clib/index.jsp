@@ -45,11 +45,31 @@
                               	</sec:authorize>
                               	<sec:authorize access="isAuthenticated()">
                               		<li><a href="/clib/news.html">마이 페이지</a></li>
-                               		<li><a href="${CONTEXT}/url/main:main">로그아웃</a></li>
+                               		<li><a href="" onclick="Logout()" > 로그아웃</a>
+</li>
                                	</sec:authorize> 
                             </ul>
                         </nav><!-- .site-navigation -->
-
+<script>
+function Logout() {
+	var xhr = new XMLHttpRequest();
+	$.ajax({
+		url : '/logout',
+		type : 'POST',
+		beforeSend : function(xhr) {
+			xhr.setRequestHeader("${_csrf.headerName}",
+					"${_csrf.token}");
+		},
+		success : function(res) {
+			alert(res);
+			window.location.replace("http://localhost/url/clib:index");
+		},
+		error : function(err) {
+			console.log(err);
+		}
+	});
+}
+</script>
                         <div class="hamburger-menu d-lg-none">	
                             <span></span>
                             <span></span>
