@@ -1,45 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
-
 <!DOCTYPE html>
 <html lang="en">
 <body>
-    <header class="site-header">
-        <div class="nav-bar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
-                        <div class="site-branding d-flex align-items-center">
-                           <a class="d-block" href="index.html" rel="home"><img class="d-block" src="/clib/images/logo.png" alt="logo"></a>
-                        </div><!-- .site-branding -->
-
-                        <nav class="site-navigation d-flex justify-content-end align-items-center">
-                            <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
-                                <li class="current-menu-item"><a href="index.html">홈</a></li>
-                                <li><a href="/clib/causes.html">모든 프로젝트</a></li>
-                                <li><a href="/clib/portfolio.html">카테고리</a></li>
-                              	<sec:authorize access="isAnonymous()">
-                               		<li><a href="${CONTEXT}/url/auth:login-service-test">로그인</a></li>
-                              	</sec:authorize>
-                              	<sec:authorize access="isAuthenticated()">
-                              		<li><a href="/clib/news.html">마이 페이지</a></li>
-                               		<li><a href="${CONTEXT}/url/main:main">로그아웃</a></li>
-                               	</sec:authorize> 
-                            </ul>
-                        </nav><!-- .site-navigation -->
-
-                        <div class="hamburger-menu d-lg-none">	
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div><!-- .hamburger-menu -->
-                    </div><!-- .col -->
-                </div><!-- .row -->
-            </div><!-- .container -->
-        </div><!-- .nav-bar -->
-    </header><!-- .site-header -->
-
     <div class="swiper-slide hero-content-wrap"> <!-- 메인 타이틀 -->
         <img src="/clib/images/hero.jpg" alt="">
         <div class="hero-content-overlay position-absolute w-100 h-100">
