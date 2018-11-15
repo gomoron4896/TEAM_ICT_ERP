@@ -84,14 +84,17 @@
 						naverLogin.reprompt();
 						return;
 					}
-					var xhr = new XMLHttpRequest();
+				
 					var data = {
 						ui_id : ui_id,
 						ui_email : ui_email,
 						ui_img : ui_img,
 						ui_name : ui_name,
 					};
-					$.ajax({
+					insertUser(ui_email,ui_id,ui_img,ui_name);
+					
+					var xhr = new XMLHttpRequest();
+					 $.ajax({
 						url : '/login',
 						type : 'POST',
 						beforeSend : function(xhr) {
@@ -99,8 +102,8 @@
 									"${_csrf.token}");
 						},
 						success : function(res) {
-							alert(res);
-							alert("로그인 처리");
+							//alert(res);
+							//alert("로그인 처리");
 							window.location.replace("http://localhost/url/clib:index");
 						},
 						error : function(err) {
@@ -108,7 +111,7 @@
 						},
 						data : data
 					});
-					console.log(data);
+					console.log(data); 
 					/* var data = new FormData();
 					formData.append('ui_email', 'ui_email');
 					formData.append('ui_id', 'ui_id'); */
@@ -141,71 +144,40 @@
 				}
 			});
 		});
-		/* function insertUser(ui_email,ui_id,ui_img,ui_name) {
-
-			 var xhr = new XMLHttpRequest();
-
+	    function insertUser(ui_email,ui_id,ui_img,ui_name) {
+			var xhr = new XMLHttpRequest();
 			var data = {
-
 					ui_id:ui_id,
-
 					ui_email:ui_email,
-
 					ui_img:ui_img,
-
 					ui_name:ui_name
-
 				};
-
 			data = JSON.stringify(data)
-
 			alert(data);
-
-			var url = "/login";
-
+			var url = "/logincheck";
 			var method = "POST";
-
-			xhr.open(method, url,false);
-
+			xhr.open(method, url);
 			xhr.setRequestHeader("Content-type", "application/json");
-
-		
-
+			xhr.setRequestHeader("${_csrf.headerName}","${_csrf.token}");
 			xhr.onreadystatechange = function() {
 
-		
-
 				if (xhr.readyState == 4) {
-
-					alert(xhr.responseText);
-
 					if (xhr.status == "200") {
-
-						
-
 						if (xhr.responseText == '1') {
-
-							alert("회원가입이 완료되었습니다.");
-
-							location.href = '/main:main';
-
+							alert("회원이 아니어서 회원으로 등록합니다.");
 						}
-
+						if (xhr.responseText == '0') {
+							alert("이미 등록된 회원입니다. 로그인 진행");
+						}
 					} else {
-
 						alert(xhr.status);
-
-						alert("추가 실패");
-
+						alert("등록 실패");
 					}
-
 				}
-
 			}
-
 			xhr.send(data);  
 
-		} */
+		} 
 	</script>
 </body>
 </html>

@@ -17,8 +17,8 @@
 
 	<insert id="insertUserInfo" parameterType="Ui">
 		insert into
-		user_info(ui_num, ui_email, ui_id, ui_name, ui_img, ui_level, ui_prefund)
-		values(seq_ui_num.nextval,#{ui_email},#{ui_id},#{ui_name},#{ui_img},1,1000000)
+		user_info(ui_num, ui_email, ui_id, ui_name, ui_img, ui_prefund, ui_roll)
+		values(seq_ui_num.nextval,#{ui_email},#{ui_id},#{ui_name},#{ui_img},1000000,'ROLE_USER')
 	</insert>
 
 	<update id="updateUserInfo" parameterType="Ui">
