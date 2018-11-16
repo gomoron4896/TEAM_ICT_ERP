@@ -58,6 +58,7 @@
 </div><!-- .swiper-slide -->
 
 <!-- 
+*index
 $('#cause-img').attr('src') = 프로젝트 이미지 경로
 $('#cause-name').html = 프로젝트 네임
 $('#cause-intro').html = 프로젝트 인트로
@@ -66,6 +67,9 @@ $('#cause-moneybar').attr('style') = 프로젝트 모인금액 프로세스바 (
 $('#cause-rdat') = 프로젝트 남은 기간 (pjh_enddat - sysdat)
 $('#cause-lovit') = 프로젝트 좋아요 수
 $('#cause-critic') = 프로젝트 평점 평균
+
+*single-causes
+
  -->
 
 
