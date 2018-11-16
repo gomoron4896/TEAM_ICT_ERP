@@ -11,7 +11,7 @@
         </div>
         <div class="form-group">
             <div class="col-lg-12" align="right">
-                <button type="button" onclick="test()" class="btn btn-default">저장</button>
+                <button type="button" onclick="saveText()" class="btn btn-default">저장</button>
             </div>
         </div>
     </div>
@@ -40,7 +40,34 @@
             }
         });
     });
-    function test() {
+    function saveText() {
     	console.log(CKEDITOR.instances.ckeditor.getData());
+    	/* var fileObject = new ActiveXObject("Scripting.FileSystemObject");
+    	var fWrite = fileObject.CreateTextFile("C:\\jsp_study\\workspace\\git\\ict1-erp1\\src\\main\\webapp\\resources\\text\\test.txt", true)
+    	fWrite.write(CKEDITOR.instances.ckeditor.getData());
+    	fWrite.close();
+    	alser("저장되었습니다."); */
+		var cont_text = CKEDITOR.instances.ckeditor.getData()
+    	var data ={
+    			cont_text:cont_text
+    	}
+		var xhr = new XMLHttpRequest();
+    	data = JSON.stringify(data);
+			$.ajax({
+			url : '/saveText',
+			type : 'POST',
+			contentType : 'application/json',
+			beforeSend : function(xhr) {
+				xhr.setRequestHeader("${_csrf.headerName}","${_csrf.token}");
+			},
+			success : function(res) {
+				alert("파일이 저장되었습니다.");
+			},
+				error : function(err) {
+				console.log(err);
+			},
+			data : data
+		});
+    	
     }
 </script>

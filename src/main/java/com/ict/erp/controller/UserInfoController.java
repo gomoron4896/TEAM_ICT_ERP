@@ -4,6 +4,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -23,24 +24,24 @@ public class UserInfoController {
 		return uis.putUserInfo(ui);
 	}
 
-/*	@RequestMapping(value = "/login.do", method = RequestMethod.POST)
-	public String loginUser(HttpSession session, @RequestBody UserInfo ui) {
+	@RequestMapping(value = "/logincheck", method = RequestMethod.POST)
+	public @ResponseBody Integer loginUser(HttpSession session, @RequestBody UserInfo ui) {
 		UserInfo user = uis.getUserInfo(ui);
+		System.out.println("로그인 체크 컨트롤러");
+		System.out.println(user);
 		if (user == null) {
-			uis.putUserInfo(ui);
-			user = uis.getUserInfo(ui);
+			System.out.println("인서트");
+			int a =  uis.putUserInfo(ui);
+			System.out.println("인서트 결과는? "+ a);
+			return a;
+		} else {
+			return 0;
 		}
-		if (session.getAttribute("login") != null) {
-			session.removeAttribute("login");
-		}
-		session.setAttribute("login", user);
-		System.out.println("로그인 컨트롤러");
-		return "login";
 	}
-	
+
 	@RequestMapping(value = "/logout.do", method = RequestMethod.POST)
 	public String logoutUser(HttpSession session, @RequestBody UserInfo ui) {
 		session.invalidate();
 		return "clib/index";
-	}*/
+	}
 }
