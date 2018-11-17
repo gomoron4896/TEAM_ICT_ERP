@@ -24,32 +24,28 @@ public class UserInfoController {
 		return uis.putUserInfo(ui);
 	}
 
-<<<<<<< HEAD
-	@RequestMapping(value = "/login.do", method = RequestMethod.POST)
-	public String loginUser(HttpSession session, @ModelAttribute UserInfo ui) {
-=======
-/*	@RequestMapping(value = "/login.do", method = RequestMethod.POST)
-	public String loginUser(HttpSession session, @RequestBody UserInfo ui) {
->>>>>>> branch 'master' of https://github.com/gomoron4896/ict1-erp1.git
+	@RequestMapping(value = "/logincheck", method = RequestMethod.POST)
+	public @ResponseBody Integer loginUser(HttpSession session, @RequestBody UserInfo ui) {
 		UserInfo user = uis.getUserInfo(ui);
+		System.out.println("로그인 체크 컨트롤러");
+		System.out.println(user);
 		if (user == null) {
-			uis.putUserInfo(ui);
-			user = uis.getUserInfo(ui);
+			System.out.println("인서트");
+			int a =  uis.putUserInfo(ui);
+			System.out.println("인서트 결과는? "+ a);
+			return a;
+		} else {
+			return 0;
 		}
-		if (session.getAttribute("login") != null) {
-			session.removeAttribute("login");
-		}
-		session.setAttribute("login", user);
-		System.out.println("로그인 컨트롤러");
-<<<<<<< HEAD
-		return "main/index";
 	}
 
 	/*@RequestMapping(value = "/logout", method = RequestMethod.GET)
 =======
 		return "login";
+=======
+>>>>>>> branch 'master' of https://github.com/gomoron4896/ict1-erp1.git
 	}
-	
+
 	@RequestMapping(value = "/logout.do", method = RequestMethod.POST)
 >>>>>>> branch 'master' of https://github.com/gomoron4896/ict1-erp1.git
 	public String logoutUser(HttpSession session, @RequestBody UserInfo ui) {

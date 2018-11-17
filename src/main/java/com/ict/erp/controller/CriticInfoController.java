@@ -18,6 +18,6 @@ public class CriticInfoController {
 
 	@RequestMapping(value = "/critic", method = RequestMethod.POST)
 	public @ResponseBody Integer putCritic(@RequestBody CriticInfo crt) {
-		return null;
+		return 1;
 	}
 }

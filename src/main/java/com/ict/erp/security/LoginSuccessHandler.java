@@ -1,7 +1,5 @@
 package com.ict.erp.security;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.HashMap;
