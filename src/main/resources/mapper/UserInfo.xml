@@ -11,7 +11,7 @@
 	<select id="selectUserInfo" resultType="Ui" parameterType="Ui">
 		select * from user_info
 		<where>
-			<if test="ui_id!=null">ui_id like '%' || #{ui_id} || '%'</if>
+			<if test="ui_email!=null">ui_email like '%' || #{ui_email} || '%'</if>
 		</where>
 	</select>
 
@@ -24,8 +24,9 @@
 	<update id="updateUserInfo" parameterType="Ui">
 		update user_info
 		<set>
-			<if test="liUser!=null">ui_name = #{ui_name},</if>
-			<if test="liname!=null">ui_img = #{ui_img},</if>
+			<if test="ui_name!=null">ui_name = #{ui_name},</if>
+			<if test="ui_img!=null">ui_img = #{ui_img},</if>
+			
 		</set>
 		where ui_id = #{ui_id}
 	</update>

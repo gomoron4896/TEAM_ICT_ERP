@@ -8,6 +8,7 @@ import java.util.Map;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -28,17 +29,18 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
 
 		ObjectMapper om = new ObjectMapper();
 
-		Map<String, Object> map = new HashMap<String, Object>();
+		Map<String, String> map = new HashMap<String, String>();
 
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 	     String name = auth.getName(); //get logged in username
-	     map.put("로그인 아이디", name);
+	     map.put("username", name);
 		System.out.println("로그인 성공");
 		// {"success" : true, "returnUrl" : "..."}
 		String jsonString = om.writeValueAsString(map);
 
 		OutputStream out = response.getOutputStream();
 		out.write(jsonString.getBytes());
+		System.out.println(jsonString.getBytes());
 	}
 
 	/**
@@ -57,5 +59,4 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
 		System.out.println("로그인 전 요청 URL :"+ savedRequest.getRedirectUrl());
 		return savedRequest.getRedirectUrl();
 	}
-
 }
