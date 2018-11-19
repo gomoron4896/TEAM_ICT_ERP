@@ -16,7 +16,7 @@
         </div>
     </div>
 </form>
- 
+ 	나의 페이지입니다. ${username} 님 환영합니다.
 <script>
     $(function(){
          

@@ -66,7 +66,7 @@
 								html += '사용자 이름 : <input type="text" name="ui_name" value="'+res.ui_name+'"><br>';
 								html += '사용자 돈 : <input type="text" name="ui_prefund" value="'+res.ui_prefund+'"><br>';
 								html += '사용자 권한 : <input type="text" name="ui_roll" value="'+res.ui_roll+'"><br>';
-								html += '사용자 이미지 : <img id="preView" src="'+res.ui_img+'"><br>';
+								html += '사용자 이미지 : <img id="preView" src="'+res.ui_img+'" width="300px"><br>';
 								html += '<input type="hidden" name="ui_img" value="'+res.ui_img+'"><br>';
 								html += '<input type="file" name="ui_up_img" onchange="imageURL(this)" value="'
 										+ res.ui_img + '"><br>';
@@ -121,8 +121,8 @@
 
 		            reader.onload = function(e) {
 		                $('#preView').attr('src', e.target.result)
-		                 .width(100)
-		                 .height(100);
+		                 .width(300)
+		                 .height(300);
 		            }
 
 		            reader.readAsDataURL(input.files[0]);

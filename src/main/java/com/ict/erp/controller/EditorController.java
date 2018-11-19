@@ -29,14 +29,14 @@ public class EditorController {
 	            String fileName = upload.getOriginalFilename();
 	            byte[] bytes = upload.getBytes();
 	            String uploadPath = "C:\\jsp_study\\workspace\\git\\ict1-erp1\\src\\main\\webapp\\resources\\img\\" + fileName;//저장경로
-	 
+	            
 	            out = new FileOutputStream(new File(uploadPath));
 	            out.write(bytes);
 	            String callback = request.getParameter("CKEditorFuncNum");
 	 
 	            printWriter = response.getWriter();
 	            String fileUrl = "/img/" + fileName;//url경로
-	 
+	            
 	            printWriter.println("<script type='text/javascript'>window.parent.CKEDITOR.tools.callFunction("
 	                    + callback
 	                    + ",'"
@@ -44,8 +44,10 @@ public class EditorController {
 	                    + "','이미지를 업로드 하였습니다.'"
 	                    + ")</script>");
 	            printWriter.flush();
-
-
+	            File oldFile = new File(fileUrl);
+	            if (oldFile.exists() == true) {
+	            	oldFile.delete();
+				}
 	        }catch(IOException e){
 	            e.printStackTrace();
 	        } finally {

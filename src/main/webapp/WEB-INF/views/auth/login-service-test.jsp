@@ -29,12 +29,20 @@
 
 <style>
 .social-button img {
-	width: 100% ;
-	padding: 0 10% 0 10%
+	width: 30px ;
+	padding: 0 10% 0 10%;
+}
+.layer{
+  position:absolute;
+  top:30%;
+  left:45%;
+  width:100px;
+  height:100px;
+  background:#f00;
+  margin:-50px 0 0 -50px;
 }
 </style>
-<body>
-<body class="bg-white">
+<!-- <body class="bg-white">
 
     <div class="sufee-login d-flex align-content-center flex-wrap">
         <div class="container">
@@ -55,7 +63,45 @@
         </div>
     </div>
 
-
+<body> -->
+<body style="background-image: url('../img/t8.png'); background-size: cover; background-position: top center;">
+<div class="layer">
+	<div class="card align-middle" style="width:20rem; border-radius:20px;">
+		<div class="card-title" style="margin-top:30px;" align="middle">
+			<!-- <h2 class="card-title text-center" style="color:#113366;">Log In</h2> -->
+			<a href="/url/clib:index">
+               <img class="align-content" src="/sufee/images/logo-m.png" alt="main page" width="250px" >
+            </a>
+		</div>
+		<div class="card-body">
+      <form class="form-signin" method="POST" onSubmit="logincall();return false">
+        <h5 class="form-signin-heading">로그인 정보를 입력하세요</h5>
+        <label for="inputEmail" class="sr-only">Your ID</label>
+        <input type="text" id="uid" class="form-control" placeholder="Your ID" required autofocus><BR>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="upw" class="form-control" placeholder="Password" required><br>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> 기억하기
+          </label>
+        </div>
+       <!--  <button id="btn-Yes" class="btn-lg btn-info btn-block" type="submit">Log In</button> -->
+        <div class="social-login-content">
+                          <div id="naverIdLogin"></div>
+                        </div>
+      </form>
+      
+		</div>
+	</div>
+</div>
+	<div class="modal">
+	</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+  </body>
 <!-- 네이버아디디로로그인 초기화 Script -->
 <script type="text/javascript">
 	var naverLogin = new naver.LoginWithNaverId(
@@ -63,7 +109,7 @@
 			clientId: "6YMliXHS8Jl1gfQMQp23",
 			callbackUrl: "http://localhost/url/auth:login-cb-test",
 			isPopup: false, /* 팝업을 통한 연동처리 여부 */
-			loginButton: {color: "green", type: 3, height: 80} /* 로그인 버튼의 타입을 지정 */
+			loginButton: {color: "green", type: 3, height : 60} /* 로그인 버튼의 타입을 지정 */
 		}
 	);
 	

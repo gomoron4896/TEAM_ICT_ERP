@@ -7,7 +7,8 @@
 	<http pattern="/resources/*" security="none" />
 	<http pattern="/js/*" security="none" />
 	<http pattern="/saveText" security="none" />
-
+	<http pattern="/test" security="none" />
+	<http pattern="/url/editor/*" security="none" />
 	<!-- <http pattern="/ckeditor/**" security="none" /> <http pattern="/sufee/**" 
 		security="none" /> <http pattern="/fl/**" security="none" /> <http pattern="/dn/**" 
 		security="none" /> <http pattern="/mtk/**" security="none" /> <http pattern="/clib/**" 

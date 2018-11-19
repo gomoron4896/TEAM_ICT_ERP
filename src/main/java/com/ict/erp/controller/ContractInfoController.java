@@ -30,11 +30,12 @@ public class ContractInfoController {
 	public @ResponseBody Integer putContract1(@RequestBody ContractInfo cti) throws IOException {
 		System.out.println(cti.getCont_text());
 		final String UUIDUserToken = UUID.randomUUID().toString();
-		File file = new File("C:/jsp_study/workspace/git/ict1-erp1/src/main/webapp/resources/text/"+UUIDUserToken+".txt");
+		File file = new File("C:/jsp_study/workspace/git/ict1-erp1/src/main/webapp/resources/text/"+UUIDUserToken+".html");
 		FileWriter fw = new FileWriter(file, true);
 		fw.write(cti.getCont_text());
 		fw.flush();
 		fw.close();
+		
 		return 1;
 	}
 }
