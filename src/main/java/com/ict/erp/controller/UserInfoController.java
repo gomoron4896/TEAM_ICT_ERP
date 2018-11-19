@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -29,7 +30,7 @@ public class UserInfoController {
 
 	@Autowired
 	private UserInfoService uis;
-	private static final String PATH = "C:\\jsp_study\\workspace\\git\\ict1-erp1\\src\\main\\webapp\\resources\\";
+	private static final String PATH = "C:\\jsp_study\\workspace\\git\\ict1-erp1\\src\\main\\webapp\\resources";
 
 	@RequestMapping(value = "/login1", method = RequestMethod.POST)
 	public @ResponseBody Integer putUser2(@RequestBody UserInfo ui) {
@@ -50,6 +51,7 @@ public class UserInfoController {
 			return 0;
 		}
 	}
+	public static String currentUserName() { Authentication authentication = SecurityContextHolder.getContext().getAuthentication(); User user = (User) authentication.getPrincipal(); return user.getUsername(); }
 
 	@RequestMapping(value = "/userCheck", method = RequestMethod.GET)
 	public @ResponseBody UserInfo getUser(HttpSession session, UserInfo ui) {
@@ -76,8 +78,8 @@ public class UserInfoController {
 
 		System.out.println(thumbFileName);
 		int point;
-		String str = "thumb_";
-		point = thumbFileName.lastIndexOf("_");
+		String str = "s_";
+		point = thumbFileName.lastIndexOf("/");
 		System.out.println(point);
 		if (point != -1) {
 			String front = thumbFileName.substring(0, point+1);
@@ -97,8 +99,8 @@ public class UserInfoController {
 		}
 
 		new File(PATH).mkdir();
-		String fName = "/img/" + uuid + "s_" + upFile.getOriginalFilename();
-		String thFName = "/img/" + uuid + "s_" + "thumb_" + upFile.getOriginalFilename();
+		String fName = "/img/" + uuid  + upFile.getOriginalFilename();
+		String thFName = "/img/" + "s_" +uuid + upFile.getOriginalFilename();
 		ui.setUi_img(fName);
 		upFile.transferTo(new File(PATH + fName));
 		makeThumbnail(fName, thFName, upFile);
@@ -116,7 +118,7 @@ public class UserInfoController {
 			BufferedImage thumbnailImg = new BufferedImage(width, height, BufferedImage.TYPE_3BYTE_BGR); // 썸네일 그리기
 			Graphics2D g = thumbnailImg.createGraphics();
 			g.drawImage(originalImg, 0, 0, width, height, null); // 파일생성
-			ImageIO.write(thumbnailImg, "jpg", thumbnailFileNm);
+			ImageIO.write(thumbnailImg,"png", thumbnailFileNm);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

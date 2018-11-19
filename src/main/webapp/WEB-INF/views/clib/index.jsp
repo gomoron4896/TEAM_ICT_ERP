@@ -19,7 +19,7 @@
                         </div><!-- .entry-content -->
 
                         <footer class="entry-footer d-flex flex-wrap align-items-center mt-5">
-                            <a href="#" class="btn gradient-bg mr-2">내 아이디어 제안하기</a>
+                            <a href="#" class="btn orange-border">내 아이디어 제안하기</a>
                             <a href="#" class="btn orange-border">다른 아이디어 평가하기</a>
                         </footer><!-- .entry-footer -->
                     </div><!-- .col -->

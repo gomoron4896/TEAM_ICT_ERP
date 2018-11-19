@@ -101,7 +101,7 @@
 				contentType : false,
 				processData : false,
 				type : 'POST',
-				beforeSend : function(xhr) {
+				beforeSend : function(xhr) {	
 					xhr.setRequestHeader("${_csrf.headerName}",
 							"${_csrf.token}");
 				},
@@ -116,9 +116,17 @@
 		};
 
 		 function imageURL(input) {
-		        if (input.files && input.files[0]) {
+			var filename = input.value;
+			var fileName = filename.slice(filename.indexOf(".") + 1).toLowerCase();
+			if(fileName != "jpg" && fileName != "png"){
+    			alert("이미지 파일은 (jpg, png) 형식만 등록 가능합니다.");
+    			input.value=null;
+    			return;
+            }
+			
+			if (input.files && input.files[0]) {
 		            var reader = new FileReader();
-
+		            
 		            reader.onload = function(e) {
 		                $('#preView').attr('src', e.target.result)
 		                 .width(300)

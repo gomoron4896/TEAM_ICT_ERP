@@ -64,7 +64,7 @@
     </div>
 
 <body> -->
-<body style="background-image: url('../img/t8.png'); background-size: cover; background-position: top center;">
+<body style="background-image: url('../img/t2.jpg'); background-size: cover; background-position: top center;">
 <div class="layer">
 	<div class="card align-middle" style="width:20rem; border-radius:20px;">
 		<div class="card-title" style="margin-top:30px;" align="middle">
