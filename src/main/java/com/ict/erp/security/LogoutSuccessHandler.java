@@ -22,5 +22,4 @@ public class LogoutSuccessHandler extends SimpleUrlLogoutSuccessHandler{
   setDefaultTargetUrl("/url/clib:index");
   super.onLogoutSuccess(request, response, authentication);
  }
-
 }

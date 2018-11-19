@@ -5,7 +5,9 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd ">
 	<http pattern="/resources/*" security="none" />
-	<http pattern="/*" security="none" />
+	<http pattern="/js/*" security="none" />
+	<http pattern="/saveText" security="none" />
+	
 	<!-- <http pattern="/ckeditor/**" security="none" /> <http pattern="/sufee/**" 
 		security="none" /> <http pattern="/fl/**" security="none" /> <http pattern="/dn/**" 
 		security="none" /> <http pattern="/mtk/**" security="none" /> <http pattern="/clib/**" 
@@ -13,7 +15,7 @@
 
 	<http auto-config="true" use-expressions="true"
 		once-per-request="false">
-		<!-- <intercept-url pattern="/*" access="permitAll" /> -->
+	 <intercept-url pattern="/*" access="permitAll" />
 		<!-- <intercept-url pattern="/url/main:admin" access="hasRole('ROLE_ADMIN')" 
 			/> <intercept-url pattern="/url/main:index" access="hasRole('ROLE_USER')" 
 			/> <intercept-url pattern="/url/main:authenticated" access="isAuthenticated()" 
@@ -46,7 +48,6 @@
 
 	<authentication-manager>
 		<authentication-provider>
-		
 			<jdbc-user-service
 				data-source-ref="hikariDataSource"
 				users-by-username-query="select ui_email as username ,ui_id as password, 1 as enabled from user_info where ui_email=?"

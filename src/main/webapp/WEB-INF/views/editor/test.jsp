@@ -57,9 +57,9 @@
 			url : '/saveText',
 			type : 'POST',
 			contentType : 'application/json',
-			beforeSend : function(xhr) {
+			/* beforeSend : function(xhr) {
 				xhr.setRequestHeader("${_csrf.headerName}","${_csrf.token}");
-			},
+			}, */
 			success : function(res) {
 				alert("파일이 저장되었습니다.");
 			},

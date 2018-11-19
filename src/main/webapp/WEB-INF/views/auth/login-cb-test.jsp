@@ -104,7 +104,7 @@
 						success : function(res) {
 							//alert(res);
 							//alert("로그인 처리");
-							window.location.replace("http://localhost/url/clib:index");
+							alret("로그인 성공");ㅣ
 						},
 						error : function(err) {
 							console.log(err);
@@ -168,6 +168,7 @@
 						}
 						if (xhr.responseText == '0') {
 							alert("이미 등록된 회원입니다. 로그인 진행");
+							window.location.replace("http://localhost/url/clib:index");
 						}
 					} else {
 						alert(xhr.status);
@@ -176,7 +177,6 @@
 				}
 			}
 			xhr.send(data);  
-
 		} 
 	</script>
 </body>
