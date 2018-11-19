@@ -99,12 +99,14 @@
 						type : 'POST',
 						beforeSend : function(xhr) {
 							xhr.setRequestHeader("${_csrf.headerName}",
-									"${_csrf.token}");
+							"${_csrf.token}");
 						},
 						success : function(res) {
-							//alert(res);
-							//alert("로그인 처리");
-							alret("로그인 성공");ㅣ
+							alert(res);
+							alert("로그인 처리");
+
+							window.location.replace("http://localhost/url/clib:index");
+
 						},
 						error : function(err) {
 							console.log(err);
@@ -120,7 +122,8 @@
 						var method = "POST";
 						xhr.open(method, url);
 						
-						xhr.onreadystatechange = function() {
+						xhr.onreadystatechang
+						e = function() {
 					
 							if (xhr.readyState == 4) {
 								alert(xhr.responseText);
@@ -160,7 +163,6 @@
 			xhr.setRequestHeader("Content-type", "application/json");
 			xhr.setRequestHeader("${_csrf.headerName}","${_csrf.token}");
 			xhr.onreadystatechange = function() {
-
 				if (xhr.readyState == 4) {
 					if (xhr.status == "200") {
 						if (xhr.responseText == '1') {

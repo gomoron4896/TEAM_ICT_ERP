@@ -7,7 +7,7 @@
 	<http pattern="/resources/*" security="none" />
 	<http pattern="/js/*" security="none" />
 	<http pattern="/saveText" security="none" />
-	
+
 	<!-- <http pattern="/ckeditor/**" security="none" /> <http pattern="/sufee/**" 
 		security="none" /> <http pattern="/fl/**" security="none" /> <http pattern="/dn/**" 
 		security="none" /> <http pattern="/mtk/**" security="none" /> <http pattern="/clib/**" 
@@ -37,7 +37,7 @@
 			<concurrency-control max-sessions="1"
 				error-if-maximum-exceeded="false" />
 		</session-management>
-
+	
 	</http>
 	<beans:bean id="logoutSuccessHandler"
 		class="com.ict.erp.security.LogoutSuccessHandler" />
@@ -48,6 +48,7 @@
 
 	<authentication-manager>
 		<authentication-provider>
+
 			<jdbc-user-service
 				data-source-ref="hikariDataSource"
 				users-by-username-query="select ui_email as username ,ui_id as password, 1 as enabled from user_info where ui_email=?"

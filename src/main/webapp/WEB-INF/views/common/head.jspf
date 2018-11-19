@@ -30,7 +30,7 @@
 
     <!-- FontAwesome CSS -->
     <link rel="stylesheet" href="/clib/css/font-awesome.min.css">
-
+	<script src="/js/jquery-3.3.1.js"></script>
     <!-- ElegantFonts CSS -->
     <link rel="stylesheet" href="/clib/css/elegant-fonts.css">
 
@@ -65,7 +65,7 @@
                                		<li><a href="${CONTEXT}/url/auth:login-service-test">로그인</a></li>
                               	</sec:authorize>
                               	<sec:authorize access="isAuthenticated()">
-                              		<li><a href="/clib/news.html">마이 페이지</a></li>
+                              		<li><a href="/url/main:myPage" >마이 페이지</a></li>
                                		<li><a href="" onclick="Logout()" >로그아웃</a></li>
                                	</sec:authorize> 
                             </ul>
@@ -99,6 +99,6 @@ function Logout() {
 			console.log(err);
 		}
 	});
-}
+};
 </script>
 </body>
