@@ -83,8 +83,9 @@
                         </nav><!-- .site-navigation -->
                         <sec:authorize access="isAuthenticated()">
 						<div id="lDiv"><sec:authentication property="name" var="loginID"/>
-							<div id="rDiv"><img src="/img/s_6f651704-89d3-4279-b066-840f85b69848image.png" class="rounded-circle"> </div>
+							<div id="proImg"></div>
 							<div id="rDiv1"><b class="vc">${loginID}</b></div>
+							<input type="hidden" id="userId" value="${loginID}">
 						</div>			
 						</sec:authorize> 		
                         <div class="hamburger-menu d-lg-none">	
@@ -100,6 +101,33 @@
         </div><!-- .nav-bar -->
     </header><!-- .site-header -->
     <script>
+     window.addEventListener('load',function(){
+    	var ui_email = document.querySelector("#userId").value;
+    	var data = {
+				ui_email : ui_email
+			};
+			data = JSON.stringify(data);
+			
+			var xhr = new XMLHttpRequest();
+			 $.ajax({
+				url : '/profileImg',
+				type : 'POST',
+				contentType: "application/json; charset=UTF-8",
+				beforeSend : function(xhr) {
+					xhr.setRequestHeader("${_csrf.headerName}",
+					"${_csrf.token}");
+				},
+				success : function(res) {
+					var html = '';
+					html += '<img src="'+res.ui_img+'" class="rounded-circle"> '
+					document.querySelector('#proImg').insertAdjacentHTML('beforeend', html);
+				},
+				error : function(err) {
+					console.log(err);
+				},
+				data : data
+			});
+    }); 
 function Logout() {
 	var xhr = new XMLHttpRequest();
 	$.ajax({
@@ -110,7 +138,8 @@ function Logout() {
 					"${_csrf.token}");
 		},
 		success : function(res) {
-			alert(res);
+			alert("로그아웃이 완료되었습니다.");
+			location.href='/url/clib:index';
 		},
 		error : function(err) {
 			console.log(err);

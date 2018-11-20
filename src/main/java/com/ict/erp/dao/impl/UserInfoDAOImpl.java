@@ -24,6 +24,11 @@ public class UserInfoDAOImpl implements UserInfoDAO{
 	public UserInfo selectUserInfo(UserInfo ui) {
 		return ss.selectOne("SQL.USERINFO.selectUserInfo",ui);
 	}
+	
+	@Override
+	public UserInfo selectUserImg(UserInfo ui) {
+		return ss.selectOne("SQL.USERINFO.selectUserImg",ui);
+	}
 
 	@Override
 	public int insertUserInfo(UserInfo ui) {

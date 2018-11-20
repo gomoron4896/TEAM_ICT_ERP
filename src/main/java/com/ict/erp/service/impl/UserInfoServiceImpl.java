@@ -24,6 +24,11 @@ public class UserInfoServiceImpl implements UserInfoService {
 	public UserInfo getUserInfo(UserInfo ui) {
 		return udao.selectUserInfo(ui);
 	}
+	
+	@Override
+	public UserInfo getUserImg(UserInfo ui) {
+		return udao.selectUserInfo(ui);
+	}
 
 	@Override
 	public int putUserInfo(UserInfo ui) {

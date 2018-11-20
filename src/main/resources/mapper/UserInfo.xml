@@ -14,6 +14,13 @@
 			<if test="ui_email!=null">ui_email like '%' || #{ui_email} || '%'</if>
 		</where>
 	</select>
+	
+	<select id="selectUserImg" resultType="Ui" parameterType="Ui">
+		select ui_img from user_info
+		<where>
+			<if test="ui_email!=null">ui_email like '%' || #{ui_email} || '%'</if>
+		</where>
+	</select>
 
 	<insert id="insertUserInfo" parameterType="Ui">
 		insert into

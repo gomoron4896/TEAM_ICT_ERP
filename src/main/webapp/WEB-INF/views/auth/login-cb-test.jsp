@@ -102,8 +102,8 @@
 							"${_csrf.token}");
 						},
 						success : function(res) {
-							alert(res);
-							alert("로그인 처리");
+							//alert(res);
+							alert("로그인");
 
 							window.location.replace("http://localhost/url/clib:index");
 
@@ -156,7 +156,7 @@
 					ui_name:ui_name
 				};
 			data = JSON.stringify(data)
-			alert(data);
+			//alert(data);
 			var url = "/logincheck";
 			var method = "POST";
 			xhr.open(method, url);
@@ -166,7 +166,7 @@
 				if (xhr.readyState == 4) {
 					if (xhr.status == "200") {
 						if (xhr.responseText == '1') {
-							alert("회원이 아니어서 회원으로 등록합니다.");
+							alert("회원으로 등록합니다.");
 						}
 						if (xhr.responseText == '0') {
 							alert("이미 등록된 회원입니다. 로그인 진행");

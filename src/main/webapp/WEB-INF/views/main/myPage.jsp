@@ -55,9 +55,9 @@
 							},
 							success : function(res) {
 								contentType: "application/json; charset=UTF-8";
-								alert(res)
+								
 								res = JSON.parse(res);
-								alert(res)
+								
 								var html = '';
 
 								html += '<form id="frm" action="/updateUser" method="post" enctype="multipart/form-data">'
