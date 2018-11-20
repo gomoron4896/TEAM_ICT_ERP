@@ -9,24 +9,24 @@
     });
 
     // Cause Slider
-    var causesSlider = new Swiper('.causes-slider-3', {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
-        },
-        breakpoints: {
-            1200: {
-                slidesPerView: 2,
-                spaceBetween: 30,
-            },
-            768: {
-                slidesPerView: 1,
-                spaceBetween: 0,
-            }
-        }
-    });
+//    var causesSlider = new Swiper('.causes-slider-3', {
+//        slidesPerView: 3,
+//        spaceBetween: 30,
+//        navigation: {
+//            nextEl: '.swiper-button-next',
+//            prevEl: '.swiper-button-prev'
+//        },
+//        breakpoints: {
+//            1200: {
+//                slidesPerView: 2,
+//                spaceBetween: 30,
+//            },
+//            768: {
+//                slidesPerView: 1,
+//                spaceBetween: 0,
+//            }
+//        }
+//    });
 
     // Accordion & Toggle
     $('.accordion-wrap.type-accordion').collapsible({
