@@ -36,7 +36,20 @@ public class UserInfoController {
 	public @ResponseBody Integer putUser2(@RequestBody UserInfo ui) {
 		return uis.putUserInfo(ui);
 	}
-
+	
+	@RequestMapping(value = "/profileImg", method = RequestMethod.POST)
+	public  @ResponseBody UserInfo getUserImg(@RequestBody UserInfo ui) {
+		UserInfo uimg = uis.getUserImg(ui);
+		String proImg = uimg.getUi_img();
+		String str = "s_";
+		int point = proImg.lastIndexOf("/");
+		String front = proImg.substring(0, point+1);
+		String rear = proImg.substring(point+1, proImg.length());
+		String thumbName = front+str+rear;
+		uimg.setUi_img(thumbName);
+		return uimg;
+	}
+	
 	@RequestMapping(value = "/logincheck", method = RequestMethod.POST)
 	public @ResponseBody Integer loginUser(HttpSession session, @RequestBody UserInfo ui) {
 		UserInfo user = uis.getUserInfo(ui);
