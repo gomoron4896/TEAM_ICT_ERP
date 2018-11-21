@@ -31,7 +31,7 @@
 
     <!-- FontAwesome CSS -->
     <link rel="stylesheet" href="/clib/css/font-awesome.min.css">
-	<script src="/js/jquery-3.3.1.js"></script>
+    
     <!-- ElegantFonts CSS -->
     <link rel="stylesheet" href="/clib/css/elegant-fonts.css">
 
@@ -68,7 +68,6 @@
                             <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
                                 <li class="current-menu-item"><a href="/url/clib:index">홈</a></li>
                                 <li><a href="/clib/causes.html">모든 프로젝트</a></li>
-                                <li><a href="/clib/portfolio.html">카테고리</a></li>
                               	<sec:authorize access="isAnonymous()">
                                		<li><a href="${CONTEXT}/url/auth:login-service-test">로그인</a></li>
                               	</sec:authorize>
@@ -119,7 +118,7 @@
 				},
 				success : function(res) {
 					var html = '';
-					html += '<img src="'+res.ui_img+'" class="rounded-circle"> '
+					html += '<img src="'+res.ui_img+'" class="nav-thumnail"> '
 					document.querySelector('#proImg').insertAdjacentHTML('beforeend', html);
 				},
 				error : function(err) {
@@ -127,7 +126,10 @@
 				},
 				data : data
 			});
+			 
+			 
     }); 
+     
 function Logout() {
 	var xhr = new XMLHttpRequest();
 	$.ajax({

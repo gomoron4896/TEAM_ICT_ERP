@@ -74,7 +74,7 @@ function addItem(res) {
 		
 	}
 	
-    var causesSlider = new Swiper('.causes-slider-3', {
+    var causesSlider = new Swiper('.lovit-slider', {
         slidesPerView: 3,
         spaceBetween: 30,
         navigation: {

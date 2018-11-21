@@ -2,12 +2,6 @@
 (function($) {
     // 'use strict';
 
-    // Main Navigation
-    $( '.hamburger-menu' ).on( 'click', function() {
-        $(this).toggleClass('open');
-        $('.site-navigation').toggleClass('show');
-    });
-
     // Cause Slider
 //    var causesSlider = new Swiper('.causes-slider-3', {
 //        slidesPerView: 3,
