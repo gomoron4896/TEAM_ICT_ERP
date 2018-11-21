@@ -68,22 +68,26 @@
 	                    	<div class="col-12 col-md-8">
 	                            <div class="tabs">
 	                                <ul class="tabs-nav d-flex">
-	                                    <li class="tab-nav d-flex justify-content-center align-items-center" data-target="#tab_1">Curabitur venen</li>
-	                                    <li class="tab-nav d-flex justify-content-center align-items-center" data-target="#tab_2">Nullam vestib</li>
-	                                    <li class="tab-nav d-flex justify-content-center align-items-center" data-target="#tab_3">Vestibulum con</li>
+	                                    <li class="tab-nav d-flex justify-content-center align-items-center" data-target="#tab_1">스토리</li>
+	                                    <li class="tab-nav d-flex justify-content-center align-items-center" data-target="#tab_2">평가 댓글</li>
+	                                    <li class="tab-nav d-flex justify-content-center align-items-center" data-target="#tab_3">구직 댓글</li>
+	                                    <li class="tab-nav d-flex justify-content-center align-items-center" data-target="#tab_4">업데이트</li>
 	                                </ul>
 	
 	                                <div class="tabs-container">
 	                                    <div id="tab_1" class="tab-content">
-	                                        <p>Vestibulum eget lacus at mauris sagittis varius. Etiam ut venenatis dui. Nullam tellus risus, pellentesque at facilisis et, scelerisque sit amet metus. Duis vel semper turpis, ac tempus libero. Maecenas id ultrices risus. Aenean nec ornare ipsum, lacinia volutpat urna. Maecenas ut aliquam purus, quis sodales dolor.</p>
+	                                        <p>스토리 내용란~~</p>
 	                                    </div>
-	
 	                                    <div id="tab_2" class="tab-content">
-	                                        <p>Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.</p>
+	                                        <p>평점댓글 내용란~~</p>
 	                                    </div>
 	
 	                                    <div id="tab_3" class="tab-content">
-	                                        <p>Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.</p>
+	                                        <p>구직댓글 내용란~~</p>
+	                                    </div>
+	                                    
+	                                    <div id="tab_4" class="tab-content">
+	                                        <p>업데이트 내용란~~</p>
 	                                    </div>
 	                                </div>
 	                            </div>
@@ -91,22 +95,25 @@
 	                    
 	                        <div class="col-12 col-md-4">
 	                            <div class="accordion-wrap type-accordion">
-	                                <h3 class="entry-title d-flex justify-content-between align-items-center active">Curabitur venenatis efficitur lotrem sed tempor<span class="arrow-r"></span></h3>
+	                                <h3 class="entry-title d-flex justify-content-between align-items-center active">요약1<span class="arrow-r"></span></h3>
 	
 	                                <div class="entry-content">
-	                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</p>
+	                                	<h6>요약 타이틀 1</h6>
+	                                    <p>요약 내용 1</p>
 	                                </div>
 	
-	                                <h3 class="entry-title d-flex justify-content-between align-items-center">Nullam vestibulum convallis risus vel condimentum<span class="arrow-r"></span></h3>
+	                                <h3 class="entry-title d-flex justify-content-between align-items-center">요약2<span class="arrow-r"></span></h3>
 	
 	                                <div class="entry-content">
-	                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</p>
+	                                	<h6>요약 타이틀 2</h6>
+	                                    <p>요약 내용 2</p>
 	                                </div>
 	
-	                                <h3 class="entry-title d-flex justify-content-between align-items-center">Vestibulum convallis risus vel condimentum<span class="arrow-r"></span></h3>
+	                                <h3 class="entry-title d-flex justify-content-between align-items-center">요약1<span class="arrow-r"></span></h3>
 	
 	                                <div class="entry-content">
-	                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</p>
+	                                	<h6>요약 타이틀 3</h6>
+	                                    <p>용</p>
 	                                </div>
 	                            </div>
 	                        </div>
@@ -117,6 +124,47 @@
 	        </div>
 	        </div><!-- .container -->
 	    </div><!-- .highlighted-cause -->
-    
+	    
+	  
+    <script type="text/javascript">
+	    $.ajax({
+			type:'get',
+			url:'/headbody/99999',
+			dataType:'json',
+			contentType: "application/json",
+			success:function(res) {
+				console.log(res);
+			}
+		});
+    	
+	    $('.accordion-wrap.type-accordion').collapsible({
+	        accordion: true,
+	        contentOpen: 0,
+	        arrowRclass: 'arrow-r',
+	        arrowDclass: 'arrow-d'
+	    });
+	
+	    $('.accordion-wrap .entry-title').on('click', function() {
+	        $('.accordion-wrap .entry-title').removeClass('active');
+	        $(this).addClass('active');
+	    });
+	
+	    // Tabs
+	    $(function() {
+	        $('.tab-content:first-child').show();
+	
+	        $('.tab-nav').bind('click', function(e) {
+	            $this = $(this);
+	            $tabs = $this.parent().parent().next();
+	            $target = $($this.data("target"));
+	            $this.siblings().removeClass('active');
+	            $target.siblings().css("display", "none");
+	            $this.addClass('active');
+	            $target.fadeIn("slow");
+	        });
+	
+	        $('.tab-nav:first-child').trigger('click');
+	    });
+    </script>
 </body>
 </html>

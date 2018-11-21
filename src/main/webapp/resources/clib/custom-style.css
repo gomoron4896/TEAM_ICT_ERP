@@ -421,7 +421,7 @@ a:active {
 --------------------------------------------------------------*/
 
 .elements-wrap {
-    margin-top: 80px;
+    margin-top: 100px;
 }
 
 .elements-page .elements-heading .entry-title {
@@ -555,12 +555,12 @@ a:active {
 
 ul.tabs-nav {
     margin: 0;
-    padding: 0;
+    padding: 0 15px;
     list-style: none;
 }
 
 ul.tabs-nav .tab-nav {
-    padding: 12px 32px;
+    padding: 12px 55px;
     margin-right: 6px;
     border-radius: 30px;
     background: #f3f3f3;
@@ -1284,7 +1284,7 @@ ul.tabs-nav .tab-nav.active {
 }
 
 .testimonial-cont::before {
-    content: '“';
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -1452,7 +1452,7 @@ ul.tabs-nav .tab-nav.active {
 
 .single-cause .highlighted-cause .entry-title {
     padding-right: 24px;
-    margin-top: 60px;
+    /* margin-top: 60px; */
     line-height: 1.6;
 }
 
@@ -2247,6 +2247,10 @@ ul.tabs-nav .tab-nav.active {
 
 .nav-bar {
 	background-color: #ffffff;
+}
+
+.accordion-wrap .entry-content h6 {
+	padding: 10px 38px 0 38px;
 }
 
 /* .nav-bar {

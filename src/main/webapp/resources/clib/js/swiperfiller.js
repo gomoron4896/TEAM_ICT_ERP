@@ -1,15 +1,4 @@
-window.addEventListener('load',function() {
-	$.ajax({
-		type:'get',
-		url:'/pjhead',
-		dataType:'json',
-		contentType: "application/json",
-		success:function(res) {
-			console.log(res);
-			addItem(res);
-		}
-	});
-});
+
 
 function addItem(res) {
 //	var causes = document.querySelectorAll('[data-cause="wrapper"]');
@@ -73,56 +62,6 @@ function addItem(res) {
 		html = '';
 		
 	}
-	
-    var causesSlider = new Swiper('.lovit-slider', {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
-        },
-        breakpoints: {
-            1200: {
-                slidesPerView: 2,
-                spaceBetween: 30,
-            },
-            768: {
-                slidesPerView: 1,
-                spaceBetween: 0,
-            }
-        }
-    });
-    
-    // Accordion & Toggle
-    $('.accordion-wrap.type-accordion').collapsible({
-        accordion: true,
-        contentOpen: 0,
-        arrowRclass: 'arrow-r',
-        arrowDclass: 'arrow-d'
-    });
-
-    $('.accordion-wrap .entry-title').on('click', function() {
-        $('.accordion-wrap .entry-title').removeClass('active');
-        $(this).addClass('active');
-    });
-
-    // Tabs
-    $(function() {
-        $('.tab-content:first-child').show();
-
-        $('.tab-nav').bind('click', function(e) {
-            $this = $(this);
-            $tabs = $this.parent().parent().next();
-            $target = $($this.data("target"));
-            $this.siblings().removeClass('active');
-            $target.siblings().css("display", "none");
-            $this.addClass('active');
-            $target.fadeIn("slow");
-        });
-
-        $('.tab-nav:first-child').trigger('click');
-    });
-
 }
 
 

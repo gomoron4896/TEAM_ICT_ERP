@@ -327,23 +327,37 @@
 	<!-- .site-footer -->
 	
 	<script type="text/javascript">
-	
+		window.addEventListener('load',function() {
+			$.ajax({
+				type:'get',
+				url:'/pjhead',
+				dataType:'json',
+				contentType: "application/json",
+				success:function(res) {
+					console.log(res);
+					addItem(res);
+					
+				    var causesSlider = new Swiper('.lovit-slider', {
+				        slidesPerView: 3,
+				        spaceBetween: 30,
+				        navigation: {
+				            nextEl: '.swiper-button-next',
+				            prevEl: '.swiper-button-prev'
+				        },
+				        breakpoints: {
+				            1200: {
+				                slidesPerView: 2,
+				                spaceBetween: 30,
+				            },
+				            768: {
+				                slidesPerView: 1,
+				                spaceBetween: 0,
+				            }
+				        }
+				    });
+				}
+			});
+		});
 	</script>
-
-
-	<!--    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-   	
-   	<script type='text/javascript' src='/clib/js/jquery.collapsible.min.js'></script>
-    <script type='text/javascript' src='/clib/js/jquery.countdown.min.js'></script>
-    <script type='text/javascript' src='/clib/js/circle-progress.min.js'></script>
-    <script type='text/javascript' src='/clib/js/jquery.countTo.min.js'></script>
-    <script type='text/javascript' src='/clib/js/jquery.barfiller.js'></script>
-	
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.js"></script>
-	
-	
-    <script type='text/javascript' src='/clib/js/custom-custom.js'></script>
-    <script type='text/javascript' src='/clib/js/swiperfiller.js'></script> -->
-
 </body>
 </html>
