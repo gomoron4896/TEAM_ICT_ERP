@@ -2231,6 +2231,24 @@ ul.tabs-nav .tab-nav.active {
 	border: 1px solid #e6e6e6;
 }
 
+.social-button img {
+	width: 30px ;
+	padding: 0 10% 0 10%;
+}
+.layer{
+  position:absolute;
+  top:30%;
+  left:45%;
+  width:100px;
+  height:100px;
+  background:#f00;
+  margin:-50px 0 0 -50px;
+}
+
+.nav-bar {
+	background-color: #ffffff;
+}
+
 /* .nav-bar {
     position: fixed;
     list-style: none;
