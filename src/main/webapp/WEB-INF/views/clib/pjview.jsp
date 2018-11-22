@@ -29,14 +29,10 @@
                     </div><!-- .entry-content -->
 
                     <div class="fund-raised w-100 mt-5">
-                        <div class="featured-fund-raised-bar barfiller">
-                            <div class="tipWrap">
-                                <span class="tip"></span>
-                            </div><!-- .tipWrap -->
-
-                            <span class="fill" data-percentage="83"></span>
-                        </div><!-- .fund-raised-bar -->
-
+                        <div class="progress">
+                        	<div class="progress-bar" role="progressbar" data-cause="cause-moneybar" style="background-color:#01abaf;">
+                        	</div>
+                        </div>
                         <div class="fund-raised-details d-flex flex-wrap justify-content-between align-items-center">
                             <div class="fund-raised-total mt-4">
                                 Raised: $56 880
@@ -76,7 +72,7 @@
 	
 	                                <div class="tabs-container">
 	                                    <div id="tab_1" class="tab-content">
-	                                        <p>스토리 내용란~~</p>
+	                                        <%@include file="/WEB-INF/storys/8dcc0173-2573-43de-9fef-9137d77d06f6.html" %>
 	                                    </div>
 	                                    <div id="tab_2" class="tab-content">
 	                                        <p>평점댓글 내용란~~</p>
