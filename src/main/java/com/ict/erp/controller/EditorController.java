@@ -2,6 +2,7 @@ package com.ict.erp.controller;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
@@ -45,6 +46,7 @@ public class EditorController {
 	                    + ")</script>");
 	            printWriter.flush();
 	            File oldFile = new File(fileUrl);
+	           
 	            if (oldFile.exists() == true) {
 	            	oldFile.delete();
 				}

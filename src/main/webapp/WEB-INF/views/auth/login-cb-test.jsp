@@ -102,7 +102,7 @@
 							"${_csrf.token}");
 						},
 						success : function(res) {
-							//alert(res);
+							alert(res);
 							alert("로그인");
 
 							window.location.replace("http://localhost/url/clib:index");
@@ -165,8 +165,8 @@
 			xhr.onreadystatechange = function() {
 				if (xhr.readyState == 4) {
 					if (xhr.status == "200") {
-						if (xhr.responseText == '1') {
-							alert("회원으로 등록합니다.");
+						if (xhr.responseText == '1') {	
+							alert("회원가입이 완료되었습니다.");
 						}
 						if (xhr.responseText == '0') {
 							alert("이미 등록된 회원입니다. 로그인 진행");

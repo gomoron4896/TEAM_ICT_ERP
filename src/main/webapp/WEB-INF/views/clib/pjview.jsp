@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+	<%@ page language="java" contentType="text/html; charset=UTF-8"
+		pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,7 +72,7 @@
 	
 	                                <div class="tabs-container">
 	                                    <div id="tab_1" class="tab-content">
-	                                        <%@include file="/WEB-INF/storys/8dcc0173-2573-43de-9fef-9137d77d06f6.html" %>
+	                                        <%@include file="/resources/text/3b53d11c-f52e-4c04-8d9b-3a7b0b4a2f9e.html" %>
 	                                    </div>
 	                                    <div id="tab_2" class="tab-content">
 	                                        <p>평점댓글 내용란~~</p>
@@ -161,6 +161,8 @@
 	
 	        $('.tab-nav:first-child').trigger('click');
 	    });
+	    
+
     </script>
 </body>
 </html>

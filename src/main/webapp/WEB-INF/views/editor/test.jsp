@@ -11,17 +11,17 @@
         </div>
         <div class="form-group">
             <div class="col-lg-12" align="right">
-                <button type="button" onclick="saveText()" class="btn btn-default">저장</button>
+                <button type="button" onclick="saveText()" 	class="btn btn-default">저장</button>
             </div>
         </div>
     </div>
 </form>
  	나의 페이지입니다. ${username} 님 환영합니다.
 <script>
-    $(function(){
-         
+    $(function(){    	 
         CKEDITOR.replace( 'ckeditor', {//해당 이름으로 된 textarea에 에디터를 적용
-            width:'100%',
+        	uiColor:'#33CCCC	',
+        	width:'100%',
             height:'400px',
             filebrowserImageUploadUrl: '/test' //여기 경로로 파일을 전달하여 업로드 시킨다.
         });
@@ -47,15 +47,15 @@
     	fWrite.write(CKEDITOR.instances.ckeditor.getData());
     	fWrite.close();
     	alser("저장되었습니다."); */
-		var cont_text = CKEDITOR.instances.ckeditor.getData()
-    	var data ={
+		var data = CKEDITOR.instances.ckeditor.getData()
+    	/* var data ={
     			cont_text:cont_text
-    	}
+    	} */
 		var xhr = new XMLHttpRequest();
-    	data = JSON.stringify(data);
+    	//data = JSON.stringify(data);
 			$.ajax({
 			url : '/saveText',
-			type : 'POST',
+			type : 'POST',	
 			contentType : 'application/json',
 			/* beforeSend : function(xhr) {
 				xhr.setRequestHeader("${_csrf.headerName}","${_csrf.token}");

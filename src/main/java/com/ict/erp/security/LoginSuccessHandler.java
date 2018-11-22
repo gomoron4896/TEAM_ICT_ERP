@@ -34,6 +34,7 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
 		String name = auth.getName(); // get logged in username
 		request.setAttribute("username",currentUserName());
 		System.out.println("로그인 성공");
+		map.put("message","로그인 성공");
 		// {"success" : true, "returnUrl" : "..."}
 		String jsonString = om.writeValueAsString(map);
 
