@@ -17,7 +17,7 @@ public class LogoutSuccessHandler extends SimpleUrlLogoutSuccessHandler{
       Authentication authentication)throws IOException, ServletException{
   System.out.println("LogoutSuccessHandler");
   if (authentication !=null){
-   //do something
+	  authentication = null;
   }
   setDefaultTargetUrl("/url/clib:index");
   super.onLogoutSuccess(request, response, authentication);

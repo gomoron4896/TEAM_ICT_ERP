@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 </head>
 <body class="single-page single-cause">
 
@@ -72,7 +73,7 @@
 	
 	                                <div class="tabs-container">
 	                                    <div id="tab_1" class="tab-content">
-	                                        <%@include file="/resources/text/3b53d11c-f52e-4c04-8d9b-3a7b0b4a2f9e.html" %>
+	                                        <%@include file="/resources/text/585e1ade-1ca4-4a23-999c-af5c40b5e023.html" %>
 	                                    </div>
 	                                    <div id="tab_2" class="tab-content">
 	                                        <p>평점댓글 내용란~~</p>

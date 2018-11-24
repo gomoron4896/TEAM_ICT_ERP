@@ -17,12 +17,13 @@
 	<http auto-config="true" use-expressions="true"
 		once-per-request="false">
 	 <intercept-url pattern="/*" access="permitAll" />
-		<!-- <intercept-url pattern="/url/main:admin" access="hasRole('ROLE_ADMIN')" 
+		<!-- 
 			/> <intercept-url pattern="/url/main:index" access="hasRole('ROLE_USER')" 
-			/> <intercept-url pattern="/url/main:authenticated" access="isAuthenticated()" 
-			/> <intercept-url pattern="/url/main:anonymous" access="isAnonymous()" /> -->
-
-		<form-login login-page="/url/auth:login-cb-test"
+			/> 
+			<intercept-url pattern="/url/main:anonymous" access="isAnonymous()" /> -->
+			<intercept-url pattern="/url/clib:pjview" access="isAuthenticated()" />
+			<intercept-url pattern="/url/main:admin" access="hasRole('ROLE_ADMIN')" />
+		<form-login login-page="/url/auth:login-service-test"
 			default-target-url="/url/main:index" 
 			username-parameter="ui_email"
 			password-parameter="ui_id"
@@ -38,7 +39,7 @@
 			<concurrency-control max-sessions="1"
 				error-if-maximum-exceeded="false" />
 		</session-management>
-	
+	<access-denied-handler error-page="/url/main:error"/>
 	</http>
 	<beans:bean id="logoutSuccessHandler"
 		class="com.ict.erp.security.LogoutSuccessHandler" />
@@ -49,7 +50,6 @@
 
 	<authentication-manager>
 		<authentication-provider>
-
 			<jdbc-user-service
 				data-source-ref="hikariDataSource"
 				users-by-username-query="select ui_email as username ,ui_id as password, 1 as enabled from user_info where ui_email=?"

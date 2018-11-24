@@ -31,6 +31,4 @@ public class HeadPlusBody {
 	public void setPjb(List<PjBodyInfo> pjb) {
 		this.pjb = pjb;
 	}
-	
-	
 }

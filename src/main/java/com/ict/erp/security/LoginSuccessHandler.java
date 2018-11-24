@@ -25,7 +25,7 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
 	@Override
 	public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
 			Authentication authentication) throws IOException, ServletException {
-
+		System.out.println(getReturnUrl(request, response)); 
 		ObjectMapper om = new ObjectMapper();
 
 		Map<String, String> map = new HashMap<String, String>();
@@ -33,8 +33,9 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		String name = auth.getName(); // get logged in username
 		request.setAttribute("username",currentUserName());
-		System.out.println("로그인 성공");
+		System.out.println(getReturnUrl(request, response)); 
 		map.put("message","로그인 성공");
+		map.put("returnUrl",getReturnUrl(request,response));
 		// {"success" : true, "returnUrl" : "..."}
 		String jsonString = om.writeValueAsString(map);
 
@@ -43,13 +44,6 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
 		System.out.println(jsonString.getBytes());
 	}
 
-	/**
-	 * 로그인 하기 전의 요청했던 URL을 알아낸다.
-	 * 
-	 * @param request
-	 * @param response
-	 * @return
-	 */
 	public static String currentUserName() {
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 		User user = (User) authentication.getPrincipal();

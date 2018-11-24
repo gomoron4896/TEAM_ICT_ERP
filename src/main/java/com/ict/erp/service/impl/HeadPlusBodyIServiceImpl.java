@@ -17,7 +17,6 @@ public class HeadPlusBodyIServiceImpl implements HeadPlusBodyService {
 	private PjHeadInfoDAO pjhdao;
 	@Autowired 
 	private PjBodyInfoDAO pjbdao;
-	@Autowired 
 	private HeadPlusBody hpb;
 	
 	@Override

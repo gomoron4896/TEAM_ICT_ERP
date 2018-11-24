@@ -20,13 +20,13 @@
 <script>
     $(function(){    	 
         CKEDITOR.replace( 'ckeditor', {//해당 이름으로 된 textarea에 에디터를 적용
-        	uiColor:'#33CCCC	',
+        	uiColor:'#FFFFFF',
         	width:'100%',
             height:'400px',
             filebrowserImageUploadUrl: '/test' //여기 경로로 파일을 전달하여 업로드 시킨다.
         });
          
-         
+        CKEDITOR.instances.ckeditor.setData('<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%><h2>펀딩 오픈 9시간만에&nbsp;100% 달성</h2><h2>펀딩 오픈 30시간만에 200% 달성</h2><h2>펀딩 오픈 46시간만에 300% 달성</h2><h2>펀딩 오픈&nbsp;3일 만에 500% 달성 감사&nbsp;세탁망 증정!</h2><p>&nbsp;</p>');
         CKEDITOR.on('dialogDefinition', function( ev ){
             var dialogName = ev.data.name;
             var dialogDefinition = ev.data.definition;
@@ -42,6 +42,7 @@
     });
     function saveText() {
     	console.log(CKEDITOR.instances.ckeditor.getData());
+    	
     	/* var fileObject = new ActiveXObject("Scripting.FileSystemObject");
     	var fWrite = fileObject.CreateTextFile("C:\\jsp_study\\workspace\\git\\ict1-erp1\\src\\main\\webapp\\resources\\text\\test.txt", true)
     	fWrite.write(CKEDITOR.instances.ckeditor.getData());

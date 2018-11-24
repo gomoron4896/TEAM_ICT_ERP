@@ -69,7 +69,7 @@
                         <nav class="site-navigation d-flex justify-content-end align-items-center">
                             <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
                                 <li class="current-menu-item"><a href="/url/clib:index">홈</a></li>
-                                <li><a href="/clib/causes.html">모든 프로젝트</a></li>
+                                <li><a href="/url/clib:pjview">모든 프로젝트</a></li>
                               	<sec:authorize access="isAnonymous()">
                                		<li><a href="${CONTEXT}/url/auth:login-service-test">로그인</a></li>
                               	</sec:authorize>
