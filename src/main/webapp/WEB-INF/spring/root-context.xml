@@ -11,7 +11,6 @@
 
 
 	<!-- Root Context: defines shared resources visible to all other web components -->
-
 	<context:property-placeholder
 		location="classpath:config/db.properties" />
 
@@ -56,9 +55,14 @@
 		class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg ref="sqlSessionFactory"></constructor-arg>
 	</bean>
-	<bean id="transactionManager"
+	<context:component-scan base-package="com.ict.erp.service" />
+	<context:component-scan base-package="com.ict.erp.dao" />
+	<context:component-scan base-package="com.ict.erp.vo" />
+	<context:component-scan base-package="com.ict.erp.security" />
+	
+<!-- 	<bean id="transactionManager"
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-		<property name="dataSource" ref="dataSource" />
+		<property name="dataSource" ref="hikariDataSource" />
 	</bean>
 
 	<tx:advice id="txAdvice"
@@ -75,6 +79,10 @@
 		<aop:advisor advice-ref="txAdvice"
 			pointcut-ref="txPointcut" />
 	</aop:config>
-
+	
+	<context:component-scan base-package="com.ict.erp.service" />
+	<context:component-scan base-package="com.ict.erp.dao" />
+	<context:component-scan base-package="com.ict.erp.vo" />
+	<context:component-scan base-package="com.ict.erp.security" /> -->
 
 </beans>
